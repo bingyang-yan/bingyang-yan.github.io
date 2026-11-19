@@ -36,12 +36,10 @@
       const details = [locationOf(entry), yearOf(entry)].filter(Boolean).join(' · ');
       card.querySelector('strong').textContent = entry.name;
       card.querySelector('small').textContent = details;
-      if (selectedCountry === featuredFilter && entry.city) {
-        card.classList.add('travel-card--featured');
-        card.querySelector('.travel-card-city').textContent = entry.city;
-        card.setAttribute('aria-label', [entry.name, details].filter(Boolean).join(', '));
-        card.addEventListener('click', revealOnTouch);
-      }
+      card.querySelector('.travel-card-label').textContent =
+        selectedCountry === featuredFilter && entry.city ? entry.city : entry.name;
+      card.setAttribute('aria-label', [entry.name, details].filter(Boolean).join(', '));
+      card.addEventListener('click', revealOnTouch);
       return card;
     });
     grid.replaceChildren(...cards);

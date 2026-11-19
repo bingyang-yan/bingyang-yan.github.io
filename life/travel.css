@@ -11,12 +11,12 @@
   margin-inline: auto;
   padding: clamp(36px, 7vw, 90px) var(--gutter) 72px;
   background: var(--bg);
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .travel h1 {
   margin: 0 0 clamp(24px, calc(5vw - 12px), 52px);
-  text-align: center;
   font-size: clamp(36px, 5.2vw, 64px);
   line-height: 1.0625;
   letter-spacing: -0.009em;
@@ -80,7 +80,6 @@
   background: #272b28;
   color: white;
   font: inherit;
-  text-align: start;
   text-decoration: none;
   cursor: pointer;
 }
@@ -104,15 +103,14 @@
 .travel-card:focus-visible span { color: white; }
 .travel-card:hover img { transform: scale(1.035); }
 .travel-card strong, .travel-card small { display: block; }
-.travel-card strong, .travel-card-city { font-size: clamp(0.9375rem, 1.5vw, 1.3125rem); line-height: 1.12; }
+.travel-card strong, .travel-card-label { font-size: clamp(0.9375rem, 1.5vw, 1.3125rem); line-height: 1.12; }
 .travel-card small { margin-top: 6px; font-size: .875rem; }
-.travel-card-city { display: none; font-weight: 700; }
-.travel-card--featured .travel-card-city,
-.travel-card--featured .travel-card-details { grid-area: 1 / 1; }
-.travel-card--featured .travel-card-city { display: block; }
-.travel-card--featured .travel-card-details { visibility: hidden; }
-.travel-card--featured:is(:hover, :focus-visible, .is-revealed) .travel-card-city { visibility: hidden; }
-.travel-card--featured:is(:hover, :focus-visible, .is-revealed) .travel-card-details { visibility: visible; }
+.travel-card-label { font-weight: 700; }
+.travel-card .travel-card-label,
+.travel-card .travel-card-details { grid-area: 1 / 1; }
+.travel-card .travel-card-details { visibility: hidden; }
+.travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-label { visibility: hidden; }
+.travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-details { visibility: visible; }
 @media (max-width: 1100px) { .travel-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
 @media (max-width: 850px) { .travel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 460px) {
