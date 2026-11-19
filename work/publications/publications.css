@@ -106,7 +106,13 @@
   font-size: 13px;
 }
 .publication-copy .news-card-links a {
+  display: inline-block;
   white-space: nowrap;
+  border-bottom: 1px solid transparent;
+}
+.publication-copy .news-card-links a:hover {
+  border-bottom-color: currentColor;
+  text-decoration: none;
 }
 .publication-copy .news-card-links .fa-fw {
   font-size: 11px;
