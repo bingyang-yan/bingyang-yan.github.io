@@ -1,7 +1,30 @@
 .publications-list {
   display: grid;
-  gap: 10px;
+  gap: 24px;
   margin-top: 20px;
+}
+
+.publication-year-group {
+  display: grid;
+  grid-template-columns: clamp(92px, 11vw, 150px) minmax(0, 1fr);
+  align-items: start;
+  column-gap: clamp(16px, 3vw, 42px);
+  padding-top: 20px;
+  border-top: 1px solid var(--hairline);
+  text-align: start;
+}
+
+.publication-year {
+  margin: 0;
+  font-size: clamp(24px, 3.2vw, 44px);
+  font-weight: 700;
+  line-height: 1.15;
+  font-variant-numeric: tabular-nums;
+}
+
+.publication-year-cards {
+  display: grid;
+  gap: 10px;
 }
 
 .publications-list:empty,
@@ -42,13 +65,14 @@
   padding: 11px 14px 10px;
   overflow-wrap: anywhere;
 }
-.publication-copy h3 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
+.publication-copy h4 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
 .publication-copy p { margin: 3px 0; font-size: 14px; line-height: 1.4; }
 .publication-authors strong { color: #c55300; font-weight: 700; }
 .publication-copy .publication-venue { color: var(--travel-muted); font-size: 14px; }
 .publication-copy .news-card-links { margin-top: 5px; }
 
 @media (max-width: 650px) {
+  .publication-year-group { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
   .publication-cover { min-height: clamp(136px, 42vw, 210px); }
 }

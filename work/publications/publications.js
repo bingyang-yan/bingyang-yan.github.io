@@ -45,7 +45,7 @@
 
     const fields = {
       authors: entry.authors,
-      venue: [entry.venue || entry.type, yearOf(entry)].filter(Boolean).join(' · '),
+      venue: entry.venue || entry.type,
     };
     for (const [field, value] of Object.entries(fields)) {
       const element = card.querySelector('.publication-' + field);
@@ -66,6 +66,21 @@
     return card;
   }
 
+  function makeYearGroup(year, entries) {
+    const group = document.createElement('div');
+    group.className = 'publication-year-group';
+
+    const heading = document.createElement('h3');
+    heading.className = 'publication-year';
+    heading.textContent = year || 'Undated';
+
+    const cards = document.createElement('div');
+    cards.className = 'publication-year-cards';
+    cards.append(...entries.map(makeCard));
+    group.append(heading, cards);
+    return group;
+  }
+
   function render() {
     for (const filter of filters) {
       const scoped = entries.filter((entry) => filters.every((other) => other === filter || matches(entry, other)));
@@ -78,7 +93,14 @@
       }
     }
     const visible = entries.filter((entry) => filters.every((filter) => matches(entry, filter)));
-    list.replaceChildren(...visible.map(makeCard));
+    const byYear = new Map();
+    for (const entry of visible) {
+      const year = yearOf(entry);
+      if (!byYear.has(year)) byYear.set(year, []);
+      byYear.get(year).push(entry);
+    }
+    const years = [...byYear.keys()].sort().reverse();
+    list.replaceChildren(...years.map((year) => makeYearGroup(year, byYear.get(year))));
     status.textContent = visible.length ? '' : 'No publications match these filters.';
   }
 
