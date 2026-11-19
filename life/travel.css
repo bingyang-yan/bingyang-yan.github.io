@@ -3,6 +3,7 @@
 
 .travel {
   --travel-muted: #6e6e73;
+  --travel-link: #0066cc;
   --travel-count: #86868b;
   --travel-tile: #f5f5f7;
   --travel-shadow: 0 4px 24px rgb(0 0 0 / 6%);
@@ -15,13 +16,36 @@
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.travel-heading {
+  margin-bottom: clamp(24px, calc(5vw - 12px), 52px);
+  text-align: start;
+}
 .travel h1 {
-  margin: 0 0 clamp(24px, calc(5vw - 12px), 52px);
+  margin: 0 0 8px;
   font-size: clamp(36px, 5.2vw, 64px);
   line-height: 1.0625;
   letter-spacing: -0.009em;
   font-weight: 700;
 }
+
+.travel-source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--travel-link);
+  font-size: 17px;
+  line-height: 1.4;
+  text-decoration: none;
+}
+.travel-source-link::after {
+  width: 0.42em;
+  height: 0.42em;
+  border-inline-end: 1.5px solid;
+  border-block-start: 1.5px solid;
+  transform: rotate(45deg);
+  content: "";
+}
+.travel-source-link:hover { text-decoration: underline; }
 
 .travel-filter-group {
   display: flex; gap: 4px; flex-wrap: wrap; width: fit-content; max-width: 100%;
@@ -58,11 +82,13 @@
 
 @media (max-width: 760px) {
   .travel-filter-group { border-radius: 22px; }
+  .travel-grid--featured .travel-card-label { font-size: 20px; }
 }
 
 @media (prefers-color-scheme: dark) {
   .travel {
     --travel-muted: #a1a1a6;
+    --travel-link: #2997ff;
     --travel-tile: #161617;
     --travel-shadow: 0 4px 24px rgb(0 0 0 / 40%);
   }
