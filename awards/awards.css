@@ -1,0 +1,39 @@
+#awards .travel-filters[hidden],
+.award-card[hidden] {
+  display: none;
+}
+.award-card {
+  min-height: 156px;
+  text-align: start;
+  background: #24394d;
+}
+.award-card[data-type="Scholarship"] {
+  background: #21453e;
+}
+.award-card:not([href]) {
+  cursor: default;
+}
+.award-card--photo .award-card-copy {
+  padding: 9px 12px;
+  border-radius: 6px;
+  background: rgb(0 0 0 / 75%);
+}
+.award-card h3 {
+  margin: 0;
+  color: white;
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  line-height: 1.2;
+}
+.award-card p {
+  margin: 6px 0 0;
+  color: #f0f2f4;
+  font-size: .8125rem;
+  line-height: 1.35;
+}
+.award-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
