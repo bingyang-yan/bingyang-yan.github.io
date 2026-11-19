@@ -5,15 +5,21 @@
   const status = document.getElementById('travel-status');
   const template = document.getElementById('travel-card-template');
   let entries = [];
+  let selectedCountry = '';
+  let selectedYear = '';
+
+  const yearOf = (entry) => entry.date?.slice(0, 4);
+  const matchesCountry = (entry) => !selectedCountry || entry.country === selectedCountry;
+  const matchesYear = (entry) => !selectedYear || yearOf(entry) === selectedYear;
 
   function locationOf(entry) {
     return [...new Set([entry.city, entry.country].filter(Boolean))].join(', ');
   }
 
   function render() {
-    const visible = entries.filter((entry) =>
-      (!country.value || entry.country === country.value) &&
-      (!year.value || entry.date?.slice(0, 4) === year.value));
+    const visible = entries.filter((entry) => matchesCountry(entry) && matchesYear(entry));
+    updateFilters(country, selectedCountry, entries.filter(matchesYear), (entry) => entry.country);
+    updateFilters(year, selectedYear, entries.filter(matchesCountry), yearOf);
     const cards = visible.map((entry, index) => {
       const card = template.content.firstElementChild.cloneNode(true);
       card.href = entry.url;
@@ -26,7 +32,7 @@
       }
       card.querySelector('strong').textContent = entry.name;
       card.querySelector('small').textContent =
-        [locationOf(entry), entry.date?.slice(0, 4)].filter(Boolean).join(' · ');
+        [locationOf(entry), yearOf(entry)].filter(Boolean).join(' · ');
       return card;
     });
     grid.replaceChildren(...cards);
@@ -35,12 +41,31 @@
       : 'No places match these filters.';
   }
 
-  function addOptions(select, values) {
-    select.append(...[...new Set(values.filter(Boolean))].map((value) => new Option(value, value)));
+  function addFilters(group, allLabel, values, select) {
+    const options = ['', ...new Set(values.filter(Boolean))];
+    group.replaceChildren(...options.map((value) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'travel-filter';
+      button.value = value;
+      button.textContent = value || allLabel;
+      button.append(document.createElement('span'));
+      button.addEventListener('click', () => {
+        select(value);
+        render();
+      });
+      return button;
+    }));
   }
 
-  country.addEventListener('change', render);
-  year.addEventListener('change', render);
+  function updateFilters(group, selected, records, valueOf) {
+    for (const button of group.children) {
+      const value = button.value;
+      const count = value ? records.filter((entry) => valueOf(entry) === value).length : records.length;
+      button.setAttribute('aria-pressed', String(value === selected));
+      button.lastElementChild.textContent = count;
+    }
+  }
   const embedded = document.getElementById('travel-data');
   const data = embedded ? Promise.resolve().then(() => JSON.parse(embedded.textContent)) :
     fetch('./travel-data.json').then((response) => {
@@ -49,8 +74,12 @@
     });
   data.then((records) => {
     entries = records;
-    addOptions(country, entries.map((entry) => entry.country).filter(Boolean).sort((a, b) => a.localeCompare(b)));
-    addOptions(year, entries.map((entry) => entry.date?.slice(0, 4)).filter(Boolean).sort().reverse());
+    addFilters(country, 'All countries', entries.map((entry) => entry.country).filter(Boolean).sort((a, b) => a.localeCompare(b)), (value) => {
+      selectedCountry = value;
+    });
+    addFilters(year, 'All years', entries.map(yearOf).filter(Boolean).sort().reverse(), (value) => {
+      selectedYear = value;
+    });
     render();
   }).catch(() => { status.textContent = 'Travel records are currently unavailable.'; });
 })();
