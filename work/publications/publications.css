@@ -1,6 +1,4 @@
 .publications-list {
-  --publication-year-width: clamp(92px, 11vw, 150px);
-  --publication-year-gap: clamp(16px, 3vw, 42px);
   display: grid;
   gap: 24px;
   margin-top: 20px;
@@ -8,21 +6,16 @@
 
 .publication-year-group {
   display: grid;
-  grid-template-columns: var(--publication-year-width) minmax(0, 1fr);
-  align-items: start;
-  column-gap: var(--publication-year-gap);
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
   padding-top: 20px;
   border-top: 1px solid var(--hairline);
   text-align: start;
 }
 
-.publications-list > .publication-card {
-  margin-inline-start: calc(var(--publication-year-width) + var(--publication-year-gap));
-}
-
 .publication-year {
   margin: 0;
-  font-size: clamp(24px, 3.2vw, 44px);
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-weight: 700;
   line-height: 1.15;
   font-variant-numeric: tabular-nums;
@@ -74,12 +67,30 @@
 .publication-copy h4 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
 .publication-copy p { margin: 3px 0; font-size: 14px; line-height: 1.4; }
 .publication-authors strong { color: #c55300; font-weight: 700; }
-.publication-copy .publication-venue { color: var(--travel-muted); font-size: 14px; }
+.publication-copy .publication-venue {
+  margin: 0 0 4px;
+  font-family: var(--font);
+  font-weight: 700;
+}
+.publication-copy .news-card-title {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.15em;
+  transition: text-decoration-color 180ms ease;
+}
+.publication-copy .news-card-title:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+@media (hover: hover) {
+  .publication-card:hover .news-card-title { text-decoration-color: currentColor; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .publication-copy .news-card-title { transition: none; }
+}
 .publication-copy .news-card-links { margin-top: 5px; }
 
 @media (max-width: 650px) {
-  .publications-list > .publication-card { margin-inline-start: 0; }
-  .publication-year-group { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
   .publication-cover { min-height: clamp(136px, 42vw, 210px); }
 }
