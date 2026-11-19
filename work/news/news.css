@@ -58,10 +58,14 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+:is(.news-card-photo, .publication-cover, .award-card-cover) img {
   transition: transform 250ms ease;
 }
+
 @media (hover: hover) {
-  .news-card-photo:hover img { transform: scale(1.035); }
+  :is(.news-card-photo, .publication-cover, .award-card-cover):hover img { transform: scale(1.035); }
 }
 .news-card-copy { min-height: var(--news-visible-copy-height, 0px); }
 .news-card-copy-content { padding: 11px 12px 10px; }
@@ -98,7 +102,7 @@ a.news-card-title:hover { text-decoration: underline; }
 .news-card-links a:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
-  .news-card-photo img { transition: none; }
+  :is(.news-card-photo, .publication-cover, .award-card-cover) img { transition: none; }
 }
 
 
