@@ -7,7 +7,7 @@
   const status = section.querySelector('[role="status"]');
   const yearGroups = [...section.querySelectorAll('.awards-year')].map((group) => ({
     group,
-    limit: pageSize,
+    count: group.querySelector('.award-year-count'),
     moreButton: group.querySelector('.award-load-more'),
     cards: [...group.querySelectorAll('.award-card')],
   }));
@@ -28,6 +28,7 @@
     };
   });
 
+  let expanded = false;
   let pendingFrame = 0;
 
   function updateVisibleYear() {
@@ -63,14 +64,15 @@
     const matchingCards = yearGroup.cards.filter((card) =>
       filters.every((filter) => matches(card, filter))
     );
-    const shownCards = matchingCards.slice(0, yearGroup.limit);
+    const shownCards = expanded ? matchingCards : matchingCards.slice(0, pageSize);
     for (const card of yearGroup.cards) {
       card.hidden = !shownCards.includes(card);
     }
     yearGroup.group.hidden = matchingCards.length === 0;
     yearGroup.button.hidden = yearGroup.group.hidden;
     yearGroup.button.lastElementChild.textContent = matchingCards.length;
-    yearGroup.moreButton.hidden = matchingCards.length <= yearGroup.limit;
+    yearGroup.count.textContent = matchingCards.length;
+    yearGroup.moreButton.hidden = expanded || matchingCards.length <= pageSize;
     return shownCards;
   }
 
@@ -111,7 +113,7 @@
     for (const [value, label] of filter.options) {
       filter.group.append(makeButton(value, label, () => {
         filter.value = filter.value === value ? '' : value;
-        for (const yearGroup of yearGroups) yearGroup.limit = pageSize;
+        expanded = false;
         render();
         yearRail.scrollLeft = 0;
       }));
@@ -122,10 +124,11 @@
     yearGroup.button = makeButton(year, year, () => jumpToYear(yearGroup.group));
     yearPicker.append(yearGroup.button);
     yearGroup.moreButton.addEventListener('click', () => {
-      const previousLimit = yearGroup.limit;
-      yearGroup.limit += pageSize;
+      const nextCard = yearGroup.cards.find((card) =>
+        card.hidden && filters.every((filter) => matches(card, filter))
+      );
+      expanded = true;
       render();
-      const nextCard = yearGroup.cards.filter((card) => !card.hidden)[previousLimit];
       if (nextCard) {
         nextCard.tabIndex = -1;
         nextCard.focus();

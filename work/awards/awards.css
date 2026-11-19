@@ -38,6 +38,14 @@
   line-height: 1.25;
 }
 
+.award-year-count {
+  margin-inline-start: 4px;
+  color: var(--travel-count);
+  font-size: 12px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
 .awards-year-grid {
   display: grid;
   gap: clamp(14px, 2vw, 22px);
