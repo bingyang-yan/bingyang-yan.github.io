@@ -80,7 +80,7 @@
   font-family: var(--font);
   font-weight: 700;
 }
-.publication-copy .news-card-title,
+.publication-copy a.news-card-title,
 .award-card-details {
   text-decoration: underline;
   text-decoration-color: transparent;
@@ -93,14 +93,24 @@
 }
 
 @media (hover: hover) {
-  .publication-card:hover .news-card-title,
+  .publication-copy a.news-card-title:hover,
   .award-card-details:hover { text-decoration-color: currentColor; }
 }
 @media (prefers-reduced-motion: reduce) {
   .publication-copy .news-card-title,
   .award-card-details { transition: none; }
 }
-.publication-copy .news-card-links { margin-top: 9px; }
+.publication-copy .news-card-links {
+  column-gap: 18px;
+  margin-top: 9px;
+  font-size: 13px;
+}
+.publication-copy .news-card-links a {
+  white-space: nowrap;
+}
+.publication-copy .news-card-links .fa-fw {
+  font-size: 11px;
+}
 
 @media (max-width: 650px) {
   .publications-list {
