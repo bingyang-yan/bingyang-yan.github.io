@@ -24,6 +24,7 @@
 @media (prefers-color-scheme: dark) {
   #bio {
     --text-2: #a1a1a6;
+    --bio-heading: var(--text);
     --bg-tile: #161617;
     --border: #424245;
     --link: #2997ff;
@@ -76,6 +77,7 @@
 #bio .about-bio .prose a:hover { background-size: 100% 1px; }
 
 #bio .about-bio h2 {
+  color: var(--bio-heading, #000);
   margin: 0 0 8px;
   font-size: inherit;
   font-weight: 700;
