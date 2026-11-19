@@ -138,7 +138,7 @@
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
-  fetch(new URL('./data.json', document.currentScript.src))
+  fetch(new URL('./data.json?v=9', document.currentScript.src))
     .then((response) => {
       if (!response.ok) throw new Error('News records unavailable');
       return response.json();
