@@ -37,6 +37,7 @@
   min-width: 0;
   text-align: start;
   scroll-snap-align: start;
+  border: 1px solid #dddde2;
   border-radius: 16px;
   background: var(--travel-tile);
 }
