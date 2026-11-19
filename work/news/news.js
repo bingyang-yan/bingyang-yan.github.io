@@ -10,7 +10,7 @@
     month: 'short', year: 'numeric', timeZone: 'UTC',
   });
   const yearOf = (entry) => entry.date?.slice(0, 4);
-  const dataUrl = new URL('./data.json?v=10', document.currentScript.src);
+  const dataUrl = new URL('./data.json?v=11', document.currentScript.src);
   let entries = [];
   let selectedCategory = 'Work';
   let cards = [];
