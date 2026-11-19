@@ -1,6 +1,3 @@
-/* Navigation adapted from breadli428/breadli428.github.io.
-   MIT license and copyright notice: navigation.LICENSE.txt. */
-
 const nav = document.querySelector('.gnav');
 const menuButton = nav.querySelector('.gnav-menu-btn');
 const menuLinks = nav.querySelector('.gnav-links');
