@@ -1,19 +1,24 @@
 (() => {
   const grid = document.getElementById('travel-grid');
   const country = document.getElementById('travel-country');
+  const city = document.getElementById('travel-city');
   const year = document.getElementById('travel-year');
   const status = document.getElementById('travel-status');
   const template = document.getElementById('travel-card-template');
   let entries = [];
   const featuredFilter = 'featured';
   let selectedCountry = featuredFilter;
+  let selectedCity = '';
   let selectedYear = '';
 
   const yearOf = (entry) => entry.date?.slice(0, 4);
   const matchesPlaceFilter = (entry, value) =>
     value === featuredFilter ? entry.featured === true : entry.country === value;
   const matchesCountry = (entry) => !selectedCountry || matchesPlaceFilter(entry, selectedCountry);
-  const matchesYear = (entry) => !selectedYear || yearOf(entry) === selectedYear;
+  const cityIs = (entry, value) => entry.city === value;
+  const yearIs = (entry, value) => yearOf(entry) === value;
+  const matchesCity = (entry) => !selectedCity || cityIs(entry, selectedCity);
+  const matchesYear = (entry) => !selectedYear || yearIs(entry, selectedYear);
 
   function locationOf(entry) {
     return [...new Set([entry.city, entry.country].filter(Boolean))].join(', ');
@@ -22,9 +27,14 @@
   function render() {
     const featured = selectedCountry === featuredFilter;
     grid.classList.toggle('travel-grid--featured', featured);
-    const visible = entries.filter((entry) => matchesCountry(entry) && matchesYear(entry));
+    const countryRecords = entries.filter(matchesCountry);
+    if (selectedCity && !countryRecords.some(matchesCity)) selectedCity = '';
+    const locationRecords = countryRecords.filter(matchesCity);
+    if (selectedYear && !locationRecords.some(matchesYear)) selectedYear = '';
+    const visible = locationRecords.filter(matchesYear);
     updateFilters(country, selectedCountry, entries.filter(matchesYear), matchesPlaceFilter);
-    updateFilters(year, selectedYear, entries.filter(matchesCountry), (entry, value) => yearOf(entry) === value);
+    updateFilters(city, selectedCity, countryRecords.filter(matchesYear), cityIs, countryRecords);
+    updateFilters(year, selectedYear, locationRecords, yearIs, locationRecords);
     const cards = visible.map((entry, index) => {
       const card = template.content.firstElementChild.cloneNode(true);
       card.href = entry.url;
@@ -66,10 +76,11 @@
     }));
   }
 
-  function updateFilters(group, selected, records, matches) {
+  function updateFilters(group, selected, records, matches, available) {
     for (const button of group.children) {
       const value = button.value;
       const count = value ? records.filter((entry) => matches(entry, value)).length : records.length;
+      button.hidden = Boolean(value && available && !available.some((entry) => matches(entry, value)));
       button.setAttribute('aria-pressed', String(value === selected));
       button.lastElementChild.textContent = count;
     }
@@ -84,6 +95,8 @@
     entries = records;
     const countries = [...new Set(entries.map((entry) => entry.country).filter(Boolean))]
       .sort((a, b) => a.localeCompare(b));
+    const cities = [...new Set(entries.map((entry) => entry.city).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b));
     const years = [...new Set(entries.map(yearOf).filter(Boolean))].sort().reverse();
     addFilters(country, [
       ['', 'All countries'],
@@ -91,6 +104,9 @@
       ...countries.map((value) => [value, value]),
     ], (value) => {
       selectedCountry = value;
+    });
+    addFilters(city, [['', 'All cities'], ...cities.map((value) => [value, value])], (value) => {
+      selectedCity = value;
     });
     addFilters(year, [['', 'All years'], ...years.map((value) => [value, value])], (value) => {
       selectedYear = value;
