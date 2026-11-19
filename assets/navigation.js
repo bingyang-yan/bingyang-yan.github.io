@@ -1,52 +1,14 @@
 /* Navigation adapted from breadli428/breadli428.github.io.
    MIT license and copyright notice: navigation.LICENSE.txt. */
 
-const root = document.documentElement;
 const nav = document.querySelector('.gnav');
 const menuButton = nav.querySelector('.gnav-menu-btn');
 const menuLinks = nav.querySelector('.gnav-links');
 const compact = window.matchMedia('(max-width: 900px)');
-const systemDark = window.matchMedia('(prefers-color-scheme: dark)');
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-const themeButton = nav.querySelector('[data-theme-toggle]');
 const dialog = document.querySelector('.search-modal');
 const searchField = dialog.querySelector('input');
 const searchResults = dialog.querySelector('.search-results');
 const searchStatus = dialog.querySelector('[role="status"]');
-
-const currentTheme = () => root.dataset.theme || (systemDark.matches ? 'dark' : 'light');
-
-function syncThemeButton() {
-  const dark = currentTheme() === 'dark';
-  themeButton.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-  themeButton.setAttribute('aria-pressed', String(dark));
-}
-
-themeButton.addEventListener('click', () => {
-  const applyTheme = () => {
-    const next = currentTheme() === 'dark' ? 'light' : 'dark';
-    const followsSystem = next === (systemDark.matches ? 'dark' : 'light');
-    if (followsSystem) delete root.dataset.theme;
-    else root.dataset.theme = next;
-
-    try {
-      if (followsSystem) localStorage.removeItem('theme');
-      else localStorage.setItem('theme', next);
-    } catch {
-      // The current page can still switch themes when storage is unavailable.
-    }
-
-    syncThemeButton();
-  };
-
-  if (document.startViewTransition && !reduceMotion.matches) {
-    document.startViewTransition(applyTheme);
-  } else {
-    applyTheme();
-  }
-});
-systemDark.addEventListener('change', syncThemeButton);
-syncThemeButton();
 
 function setMenuOpen(open) {
   nav.classList.toggle('is-open', open);
