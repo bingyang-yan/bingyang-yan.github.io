@@ -7,7 +7,7 @@
   const photoDialog = document.getElementById('news-photo-dialog');
   const enlargedPhoto = photoDialog.querySelector('img');
   const dateFormat = new Intl.DateTimeFormat('en-US', {
-    month: 'short', day: '2-digit', year: 'numeric', timeZone: 'UTC',
+    month: 'short', year: 'numeric', timeZone: 'UTC',
   });
   const yearOf = (entry) => entry.date?.slice(0, 4);
   const dataUrl = new URL('./data.json?v=10', document.currentScript.src);
