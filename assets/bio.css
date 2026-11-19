@@ -92,6 +92,7 @@
 }
 #bio .about-bio .bio-lead { max-width: 760px; }
 #bio .bio-lead p { margin: 0; }
+#bio .bio-lead + h2 { margin-top: 24px; }
 
 @media (max-width: 820px) {
   #bio .about-grid { grid-template-columns: 1fr; }
