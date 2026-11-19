@@ -59,11 +59,14 @@
 
     .site-sections a {
       color: inherit;
+      opacity: .78;
       text-decoration: none;
+      transition: opacity 160ms ease-out;
     }
 
     .site-sections a:hover,
     .site-sections a:focus-visible {
+      opacity: 1;
       text-decoration: underline;
     }
 
@@ -93,20 +96,45 @@
       .menu-toggle { display: block; }
 
       .site-sections {
-        display: none;
+        display: grid;
+        gap: 12px;
         position: absolute;
         inset: 100% 0 auto;
+        max-height: calc(100dvh - var(--header-height));
+        box-sizing: border-box;
+        overflow-y: auto;
+        visibility: hidden;
+        transform: translateY(-6px);
         padding: 16px var(--gutter) 24px;
         background: Canvas;
-        opacity: 1;
+        opacity: 0;
+        transition: opacity 180ms ease-out, transform 180ms ease-out,
+          visibility 0s linear 180ms;
         font-size: 24px;
         font-weight: 600;
       }
 
       .menu-toggle[aria-expanded="true"] + .site-sections {
-        display: grid;
-        gap: 12px;
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+        transition-delay: 0s;
       }
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      @view-transition { navigation: auto; }
+
+      ::view-transition-old(root),
+      ::view-transition-new(root) {
+        animation-duration: 180ms;
+        animation-timing-function: ease-out;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .site-sections,
+      .site-sections a { transition: none; }
     }
   </style>
 </head>
@@ -138,6 +166,13 @@
     const menu = document.querySelector('.menu-toggle');
     menu.addEventListener('click', () => {
       menu.setAttribute('aria-expanded', menu.getAttribute('aria-expanded') === 'false');
+    });
+
+    document.querySelector('.site-nav').addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
+        menu.setAttribute('aria-expanded', 'false');
+        menu.focus();
+      }
     });
   </script>
 </body>
