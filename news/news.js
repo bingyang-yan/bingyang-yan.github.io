@@ -10,7 +10,8 @@
   const yearOf = (entry) => entry.date?.slice(0, 4);
   let entries = [];
   let selectedCategory = 'Work';
-  let selectedYear = '';
+  let cards = [];
+  let pendingFrame = 0;
 
   function addFilters(group, options, select) {
     group.replaceChildren(...options.map(([value, label]) => {
@@ -20,10 +21,7 @@
       button.value = value;
       button.textContent = label;
       button.append(document.createElement('span'));
-      button.addEventListener('click', () => {
-        const anchorYear = select(value);
-        render(anchorYear);
-      });
+      button.addEventListener('click', () => select(value));
       return button;
     }));
   }
@@ -75,36 +73,50 @@
     return card;
   }
 
-  function updateVisibleYear() {
-    const left = grid.getBoundingClientRect().left;
-    const firstVisible = [...grid.children].find((card) => {
+  function updateViewport() {
+    pendingFrame = 0;
+    const left = grid.getBoundingClientRect().left + grid.clientLeft;
+    const right = left + grid.clientWidth;
+    const visible = cards.filter(({ card }) => {
       const bounds = card.getBoundingClientRect();
-      return bounds.right > left + Math.min(bounds.width / 2, 32);
+      return bounds.right > left + 1 && bounds.left < right - 1;
     });
-    const currentYear = selectedYear || firstVisible?.dataset.year;
+    const currentYear = visible[0]?.card.dataset.year;
+    const copyHeight = Math.max(0, ...visible.map(({ copy }) => copy.offsetHeight));
+    const height = copyHeight + 'px';
+    if (grid.style.getPropertyValue('--news-visible-copy-height') !== height) {
+      grid.style.setProperty('--news-visible-copy-height', height);
+    }
     for (const button of yearGroup.children) {
-      if (currentYear && button.value === currentYear) button.setAttribute('aria-current', 'date');
-      else button.removeAttribute('aria-current');
+      button.setAttribute('aria-pressed', String(button.value === currentYear));
     }
   }
 
-  grid.addEventListener('scroll', updateVisibleYear, { passive: true });
+  function scheduleViewportUpdate() {
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateViewport);
+  }
 
-  function render(anchorYear) {
-    const categoryRecords = entries.filter((entry) => !selectedCategory || entry.category === selectedCategory);
-    if (selectedYear && !categoryRecords.some((entry) => yearOf(entry) === selectedYear)) selectedYear = '';
-    const matchesYear = (entry) => !selectedYear || yearOf(entry) === selectedYear;
-    updateFilters(categoryGroup, selectedCategory, entries.filter(matchesYear), (entry) => entry.category);
-    updateFilters(yearGroup, selectedYear, categoryRecords, yearOf, true);
-    const visible = categoryRecords.filter(matchesYear);
-    const cards = visible.map(makeCard);
-    grid.replaceChildren(...cards);
-    const anchorIndex = anchorYear ? visible.findIndex((entry) => yearOf(entry) === anchorYear) : 0;
-    const anchor = cards[anchorIndex];
-    grid.scrollLeft = anchor && anchorIndex > 0
-      ? anchor.getBoundingClientRect().left - cards[0].getBoundingClientRect().left
-      : 0;
-    updateVisibleYear();
+  grid.addEventListener('scroll', scheduleViewportUpdate, { passive: true });
+  window.addEventListener('resize', scheduleViewportUpdate);
+
+  function jumpToYear(year) {
+    const target = cards.find(({ card }) => card.dataset.year === year)?.card;
+    if (!target) return;
+    grid.scrollLeft = target.getBoundingClientRect().left - cards[0].card.getBoundingClientRect().left;
+    scheduleViewportUpdate();
+  }
+
+  function render() {
+    const visible = entries.filter((entry) => !selectedCategory || entry.category === selectedCategory);
+    updateFilters(categoryGroup, selectedCategory, entries, (entry) => entry.category);
+    updateFilters(yearGroup, '', visible, yearOf, true);
+    cards = visible.map((entry, index) => {
+      const card = makeCard(entry, index);
+      return { card, copy: card.querySelector('.news-card-copy-content') };
+    });
+    grid.replaceChildren(...cards.map(({ card }) => card));
+    grid.scrollLeft = 0;
+    scheduleViewportUpdate();
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
@@ -118,12 +130,9 @@
       const years = [...new Set(entries.map(yearOf).filter(Boolean))].sort().reverse();
       addFilters(categoryGroup, [['', 'All categories'], ['Work', 'Work'], ['Life', 'Life']], (value) => {
         selectedCategory = value;
+        render();
       });
-      addFilters(yearGroup, [['', 'All years'], ...years.map((year) => [year, year])], (value) => {
-        const anchorYear = value || selectedYear;
-        selectedYear = value;
-        return anchorYear;
-      });
+      addFilters(yearGroup, years.map((year) => [year, year]), jumpToYear);
       render();
     })
     .catch(() => { status.textContent = 'News records are currently unavailable.'; });
