@@ -93,7 +93,7 @@
   background: linear-gradient(transparent 32%, rgb(0 0 0 / 82%));
   transition: opacity 250ms ease;
 }
-.travel-card:is(:hover, :focus-visible, .is-revealed)::after {
+.travel-card:focus-visible::after {
   opacity: 0;
 }
 .travel-card img {
@@ -107,7 +107,6 @@
 }
 .travel-card:focus-visible { outline: 3px solid currentColor; outline-offset: 3px; color: var(--text); }
 .travel-card:focus-visible span { color: white; }
-.travel-card:hover img { transform: scale(1.035); }
 .travel-card strong, .travel-card small { display: block; }
 .travel-card strong, .travel-card-label { font-size: clamp(0.9375rem, 1.5vw, 1.3125rem); line-height: 1.12; }
 .travel-card small { margin-top: 6px; font-size: .875rem; }
@@ -115,8 +114,15 @@
 .travel-card .travel-card-label,
 .travel-card .travel-card-details { grid-area: 1 / 1; }
 .travel-card .travel-card-details { visibility: hidden; }
-.travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-label { visibility: hidden; }
-.travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-details { visibility: visible; }
+.travel-card:focus-visible .travel-card-label { visibility: hidden; }
+.travel-card:focus-visible .travel-card-details { visibility: visible; }
+
+@media (hover: hover) {
+  .travel-card:hover::after { opacity: 0; }
+  .travel-card:hover img { transform: scale(1.035); }
+  .travel-card:hover .travel-card-label { visibility: hidden; }
+  .travel-card:hover .travel-card-details { visibility: visible; }
+}
 
 .travel-card-details {
   justify-self: center;

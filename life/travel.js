@@ -44,20 +44,10 @@
       card.querySelector('.travel-card-label').textContent =
         featured && entry.city ? entry.city : entry.name;
       card.setAttribute('aria-label', [entry.name, location, visitYear].filter(Boolean).join(', '));
-      card.addEventListener('click', revealOnTouch);
       return card;
     });
     grid.replaceChildren(...cards);
     status.textContent = visible.length ? '' : 'No places match these filters.';
-  }
-
-  function revealOnTouch(event) {
-    const touch = event.pointerType === 'touch' || (event.detail > 0 && window.matchMedia('(hover: none)').matches);
-    const card = event.currentTarget;
-    if (!touch || card.classList.contains('is-revealed')) return;
-    event.preventDefault();
-    grid.querySelector('.is-revealed')?.classList.remove('is-revealed');
-    card.classList.add('is-revealed');
   }
 
   function addFilters(group, options, select) {
