@@ -5,14 +5,14 @@
     "university": "University of Alberta (UA)",
     "researchTopic": "Reinforcement Learning for Sequential Decision-Making and Optimal Control in Mining and Petroleum Engineering.",
     "cover": "../news/photos/3e17cf0907d08096a38bdf074d44b45c.jpg",
+    "researchLink": {
+      "label": "Prof. Jeff Boisvert",
+      "url": "https://sites.ualberta.ca/~jbb/"
+    },
     "links": [
       {
         "label": "Details",
         "url": "https://bryce-yan.notion.site/21d7cf0907d080ceae2dce9982b08b2a"
-      },
-      {
-        "label": "Prof. Jeff Boisvert",
-        "url": "https://sites.ualberta.ca/~jbb/"
       }
     ]
   },
@@ -22,14 +22,14 @@
     "university": "China University of Geosciences (CUG)",
     "researchTopic": "Reinforcement Learning for Hydraulic Fracturing Treatment Parameter Optimization.",
     "cover": "../news/photos/3e17cf0907d0800981d6f66c89201c34.jpg",
+    "researchLink": {
+      "label": "Prof. Zhi Zhong",
+      "url": "https://grzy.cug.edu.cn/zhongzhi/en/about.htm"
+    },
     "links": [
       {
         "label": "Details",
         "url": "https://bryce-yan.notion.site/21d7cf0907d0804aa73eec02e2fa9635"
-      },
-      {
-        "label": "Prof. Zhi Zhong",
-        "url": "https://grzy.cug.edu.cn/zhongzhi/en/about.htm"
       },
       {
         "label": "PhD Thesis",
@@ -47,14 +47,14 @@
     "university": "China University of Geosciences (CUG)",
     "researchTopic": "Petroleum Engineering.",
     "cover": "../../life/travel/travel-photos/3237cf0907d080568d84ea05ec3975b8.jpg",
+    "researchLink": {
+      "label": "Exam-Exempt Master’s Admission (Top 15%)",
+      "url": "https://bryce-yan.notion.site/1ec7cf0907d08085aa3ace2501299901?pvs=25"
+    },
     "links": [
       {
         "label": "Details",
         "url": "https://bryce-yan.notion.site/21d7cf0907d080c186d1e9c47648f6d3"
-      },
-      {
-        "label": "Exam-Exempt Master’s Admission (Top 15%)",
-        "url": "https://bryce-yan.notion.site/1ec7cf0907d08085aa3ace2501299901?pvs=25"
       }
     ]
   }

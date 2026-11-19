@@ -88,7 +88,9 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 :is(#experience, #news) .news-card-links { margin-top: 6px; font-size: 14px; }
 .news-card-links:empty { display: none; }
+.experience-research-topic a,
 .news-card-links a { color: var(--travel-link); text-decoration: none; }
+.experience-research-topic a:hover,
 .news-card-links a:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {

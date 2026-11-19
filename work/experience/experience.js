@@ -7,25 +7,32 @@
   const workPlaceholder = document.getElementById('experience-work-placeholder');
   const dialog = document.getElementById('experience-photo-dialog');
   const enlargedPhoto = dialog.querySelector('img');
-  const dataUrl = new URL('./education.json?v=4', document.currentScript.src);
+  const dataUrl = new URL('./education.json?v=5', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
   let educationCards = [];
   let educationStatus = 'Loading education…';
+
+  function makeLink({ label, url }) {
+    const link = document.createElement('a');
+    link.href = url;
+    link.textContent = label;
+    return link;
+  }
 
   function makeCard(entry) {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
     card.querySelector('.news-card-date').textContent = entry.duration;
     card.querySelector('.news-card-title').textContent = entry.title;
     card.querySelector('.experience-university strong').textContent = entry.university;
-    card.querySelector('.experience-research-topic').textContent = entry.researchTopic;
+    const topic = card.querySelector('.experience-research-topic');
+    topic.textContent = entry.researchTopic;
+    if (entry.researchLink) topic.append(' ', makeLink(entry.researchLink));
+
     const links = card.querySelector('.news-card-links');
-    for (const { label, url } of entry.links) {
+    for (const link of entry.links) {
       const item = document.createElement('li');
-      const link = document.createElement('a');
-      link.href = url;
-      link.textContent = label;
-      item.append(link);
+      item.append(makeLink(link));
       links.append(item);
     }
 
