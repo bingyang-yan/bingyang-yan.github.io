@@ -21,8 +21,8 @@
       button.textContent = label;
       button.append(document.createElement('span'));
       button.addEventListener('click', () => {
-        select(value);
-        render();
+        const anchorYear = select(value);
+        render(anchorYear);
       });
       return button;
     }));
@@ -74,15 +74,20 @@
     return card;
   }
 
-  function render() {
+  function render(anchorYear) {
     const categoryRecords = entries.filter((entry) => !selectedCategory || entry.category === selectedCategory);
     if (selectedYear && !categoryRecords.some((entry) => yearOf(entry) === selectedYear)) selectedYear = '';
     const matchesYear = (entry) => !selectedYear || yearOf(entry) === selectedYear;
     updateFilters(categoryGroup, selectedCategory, entries.filter(matchesYear), (entry) => entry.category);
     updateFilters(yearGroup, selectedYear, categoryRecords, yearOf, true);
     const visible = categoryRecords.filter(matchesYear);
-    grid.replaceChildren(...visible.map(makeCard));
-    grid.scrollLeft = 0;
+    const cards = visible.map(makeCard);
+    grid.replaceChildren(...cards);
+    const anchorIndex = anchorYear ? visible.findIndex((entry) => yearOf(entry) === anchorYear) : 0;
+    const anchor = cards[anchorIndex];
+    grid.scrollLeft = anchor && anchorIndex > 0
+      ? anchor.getBoundingClientRect().left - cards[0].getBoundingClientRect().left
+      : 0;
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
@@ -98,7 +103,9 @@
         selectedCategory = value;
       });
       addFilters(yearGroup, [['', 'All years'], ...years.map((year) => [year, year])], (value) => {
+        const anchorYear = value || selectedYear;
         selectedYear = value;
+        return anchorYear;
       });
       render();
     })
