@@ -76,7 +76,7 @@
 }
 #bio .about-bio .prose a:hover { background-size: 100% 1px; }
 
-#bio .about-bio .bio-lead { font-size: clamp(20px, 1.9vw, 25px); line-height: 1.4; letter-spacing: 0.004em; color: var(--text-2); max-width: 760px; }
+#bio .about-bio .bio-lead { font-size: 16px; line-height: 1.6; letter-spacing: -0.005em; color: var(--text-2); max-width: 760px; }
 #bio .bio-lead p { margin: 0; }
 
 #bio .bio-cards { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; margin-top: 40px; }
