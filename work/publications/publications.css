@@ -1,5 +1,6 @@
 .publications-list {
   --publication-year-width: 5rem;
+  --publication-sticky-top: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
   --publication-year-gap: clamp(24px, 3vw, 32px);
   display: grid;
   gap: 24px;
@@ -18,6 +19,8 @@
 }
 
 .publication-year {
+  position: sticky;
+  inset-block-start: calc(var(--publication-sticky-top) + 12px);
   margin: 0;
   font-size: clamp(1.25rem, 2.5vw, 2rem);
   font-weight: 700;
@@ -128,7 +131,14 @@
     --publication-year-gap: 0px;
     width: 100%;
   }
-  .publication-year-group { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
+  .publication-year-group { display: block; }
+  .publication-year {
+    inset-block-start: var(--publication-sticky-top);
+    z-index: 2;
+    margin-block-end: 6px;
+    padding-block: 4px;
+    background-color: var(--work-section-background, var(--bg));
+  }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
   .publication-cover {
     min-height: clamp(136px, 42vw, 210px);
