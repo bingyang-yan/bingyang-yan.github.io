@@ -42,7 +42,12 @@
 .news-card-photo {
   display: block;
   overflow: hidden;
+  width: 100%;
   aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
   border-radius: 14px;
 }
 .news-card-photo img {
@@ -89,4 +94,48 @@
 
 @media (prefers-reduced-motion: reduce) {
   .news-card-photo img { transition: none; }
+}
+
+
+.news-card-photo:focus-visible {
+  outline: 2px solid var(--travel-link);
+  outline-offset: -3px;
+}
+
+.news-photo-dialog {
+  overflow: visible;
+  max-width: calc(100% - 32px);
+  max-height: calc(100% - 32px);
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+.news-photo-dialog::backdrop { background: rgb(0 0 0 / 78%); }
+.news-photo-dialog img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100dvh - 32px);
+  object-fit: contain;
+  border-radius: 12px;
+}
+.news-photo-dialog form {
+  position: absolute;
+  inset: 8px 8px auto auto;
+}
+.news-photo-dialog button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #1d1d1f;
+  color: #fff;
+  font: 26px/1 system-ui, sans-serif;
+  cursor: pointer;
+}
+.news-photo-dialog button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
 }

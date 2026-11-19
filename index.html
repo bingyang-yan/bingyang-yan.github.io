@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/bio.css?v=11">
   <link rel="stylesheet" href="life/travel.css?v=13">
-  <link rel="stylesheet" href="news/news.css?v=12">
+  <link rel="stylesheet" href="news/news.css?v=13">
   <link rel="stylesheet" href="publications/publications.css?v=4">
-  <script src="news/news.js?v=9" defer></script>
+  <script src="news/news.js?v=10" defer></script>
   <script src="publications/publications.js?v=2" defer></script>
   <script src="assets/navigation.js?v=2" defer></script>
 </head>
@@ -93,14 +93,20 @@
             <div class="news-card-copy">
               <div class="news-card-copy-content">
                 <time class="news-card-date"></time>
-                <h3><a class="news-card-title"></a></h3>
+                <h3 class="news-card-title"></h3>
                 <ul class="news-card-links"></ul>
               </div>
             </div>
-            <a class="news-card-photo" tabindex="-1" aria-hidden="true"><img alt="" decoding="async"></a>
+            <button class="news-card-photo" type="button" aria-haspopup="dialog"><img alt="" decoding="async"></button>
           </article>
         </template>
       </div>
+      <dialog class="news-photo-dialog" id="news-photo-dialog" aria-label="Enlarged news photo">
+        <form method="dialog">
+          <button type="submit" aria-label="Close enlarged photo" autofocus>×</button>
+        </form>
+        <img alt="">
+      </dialog>
     </section>
     <section id="publications" aria-labelledby="publications-title">
       <div class="travel">

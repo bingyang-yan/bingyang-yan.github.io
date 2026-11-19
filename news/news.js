@@ -4,6 +4,8 @@
   const yearGroup = document.getElementById('news-year');
   const status = document.getElementById('news-status');
   const template = document.getElementById('news-card-template');
+  const photoDialog = document.getElementById('news-photo-dialog');
+  const enlargedPhoto = photoDialog.querySelector('img');
   const dateFormat = new Intl.DateTimeFormat('en-US', {
     month: 'short', day: '2-digit', year: 'numeric', timeZone: 'UTC',
   });
@@ -13,6 +15,10 @@
   let cards = [];
   let pendingFrame = 0;
   let alignTimer;
+
+  photoDialog.addEventListener('click', (event) => {
+    if (event.target === photoDialog) photoDialog.close();
+  });
 
   function addFilters(group, options, select) {
     group.replaceChildren(...options.map(([value, label]) => {
@@ -40,13 +46,16 @@
   function makeCard(entry, index) {
     const card = template.content.firstElementChild.cloneNode(true);
     card.dataset.year = yearOf(entry) ?? '';
-    const headline = card.querySelector('.news-card-title');
-    headline.href = entry.url;
-    headline.textContent = entry.title;
+    card.querySelector('.news-card-title').textContent = entry.title;
 
     const photo = card.querySelector('.news-card-photo');
     if (entry.cover) {
-      photo.href = entry.url;
+      photo.setAttribute('aria-label', 'Enlarge photo: ' + entry.title);
+      photo.addEventListener('click', () => {
+        enlargedPhoto.src = entry.cover;
+        enlargedPhoto.alt = entry.title;
+        photoDialog.showModal();
+      });
       const image = photo.querySelector('img');
       image.loading = index < 4 ? 'eager' : 'lazy';
       image.src = entry.cover;
