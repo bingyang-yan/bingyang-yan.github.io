@@ -2,7 +2,7 @@
   const list = document.getElementById('publications-list');
   const status = document.getElementById('publications-status');
   const template = document.getElementById('publication-card-template');
-  const dataUrl = new URL('./data.json', document.currentScript.src);
+  const dataUrl = new URL('./data.json?v=2', document.currentScript.src);
   const yearOf = (entry) => entry.date.slice(0, 4);
   const filters = [
     { group: document.getElementById('publications-type'), all: 'All types', valueOf: (entry) => entry.type },

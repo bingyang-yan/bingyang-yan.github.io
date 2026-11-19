@@ -101,6 +101,10 @@ def publication(page, staging):
     if doi_url and doi_url not in seen:
         links.append({"label": "DOI", "url": doi_url})
     page_id = page["id"].replace("-", "")
+    pdf = Path("pdfs") / f"{page_id}.pdf"
+    if (ROOT / pdf).is_file():
+        links = [link for link in links if link["label"].casefold() != "pdf"]
+        links.insert(0, {"label": "PDF", "url": pdf.as_posix()})
     return {
         "title": title,
         "authors": plain_text(properties, "Authors"),
