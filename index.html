@@ -57,6 +57,16 @@
       opacity: .8;
     }
 
+    .site-sections a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .site-sections a:hover,
+    .site-sections a:focus-visible {
+      text-decoration: underline;
+    }
+
     .search-button {
       display: grid;
       place-items: center;
@@ -111,7 +121,7 @@
         <li>Research</li>
         <li>Publications</li>
         <li>Awards</li>
-        <li>Life</li>
+        <li><a href="life/index.html">Life</a></li>
         <li>Contact</li>
       </ul>
       <button class="search-button" type="button" aria-label="Search" disabled>
