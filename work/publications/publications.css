@@ -59,6 +59,7 @@
   overflow: hidden;
   border-radius: 14px;
   min-height: clamp(126px, 12.8vw, 158px);
+  box-shadow: 6px 0 12px -4px rgb(0 0 0 / 28%);
 }
 .publication-cover img {
   position: absolute;
@@ -126,5 +127,8 @@
   }
   .publication-year-group { grid-template-columns: minmax(0, 1fr); row-gap: 14px; }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
-  .publication-cover { min-height: clamp(136px, 42vw, 210px); }
+  .publication-cover {
+    min-height: clamp(136px, 42vw, 210px);
+    box-shadow: 0 6px 12px -4px rgb(0 0 0 / 28%);
+  }
 }
