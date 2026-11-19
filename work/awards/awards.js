@@ -72,7 +72,12 @@
     yearGroup.button.hidden = yearGroup.group.hidden;
     yearGroup.button.lastElementChild.textContent = matchingCards.length;
     yearGroup.count.textContent = matchingCards.length;
-    yearGroup.moreButton.hidden = expanded || matchingCards.length <= pageSize;
+    const { moreButton } = yearGroup;
+    const buttonText = expanded ? 'Show less' : 'Load more';
+    moreButton.hidden = matchingCards.length <= pageSize;
+    moreButton.textContent = buttonText;
+    moreButton.setAttribute('aria-expanded', String(expanded));
+    moreButton.setAttribute('aria-label', `${buttonText} for all years`);
     return shownCards;
   }
 
@@ -124,6 +129,13 @@
     yearGroup.button = makeButton(year, year, () => jumpToYear(yearGroup.group));
     yearPicker.append(yearGroup.button);
     yearGroup.moreButton.addEventListener('click', () => {
+      if (expanded) {
+        expanded = false;
+        render();
+        yearGroup.moreButton.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+        return;
+      }
+
       const nextCard = yearGroup.cards.find((card) =>
         card.hidden && filters.every((filter) => matches(card, filter))
       );
