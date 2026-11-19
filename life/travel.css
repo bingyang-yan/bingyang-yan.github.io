@@ -82,7 +82,7 @@
 
 @media (max-width: 760px) {
   .travel-filter-group { border-radius: 22px; }
-  .travel-grid--featured .travel-card-label { font-size: 20px; }
+  .travel-card .travel-card-label { font-size: 20px; }
 }
 
 @media (prefers-color-scheme: dark) {
