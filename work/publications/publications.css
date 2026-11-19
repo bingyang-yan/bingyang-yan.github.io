@@ -1,4 +1,6 @@
 .publications-list {
+  --publication-year-width: clamp(92px, 11vw, 150px);
+  --publication-year-gap: clamp(16px, 3vw, 42px);
   display: grid;
   gap: 24px;
   margin-top: 20px;
@@ -6,12 +8,16 @@
 
 .publication-year-group {
   display: grid;
-  grid-template-columns: clamp(92px, 11vw, 150px) minmax(0, 1fr);
+  grid-template-columns: var(--publication-year-width) minmax(0, 1fr);
   align-items: start;
-  column-gap: clamp(16px, 3vw, 42px);
+  column-gap: var(--publication-year-gap);
   padding-top: 20px;
   border-top: 1px solid var(--hairline);
   text-align: start;
+}
+
+.publications-list > .publication-card {
+  margin-inline-start: calc(var(--publication-year-width) + var(--publication-year-gap));
 }
 
 .publication-year {
@@ -72,6 +78,7 @@
 .publication-copy .news-card-links { margin-top: 5px; }
 
 @media (max-width: 650px) {
+  .publications-list > .publication-card { margin-inline-start: 0; }
   .publication-year-group { grid-template-columns: minmax(0, 1fr); row-gap: 10px; }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
   .publication-cover { min-height: clamp(136px, 42vw, 210px); }

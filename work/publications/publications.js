@@ -72,7 +72,7 @@
 
     const heading = document.createElement('h3');
     heading.className = 'publication-year';
-    heading.textContent = year || 'Undated';
+    heading.textContent = year;
 
     const cards = document.createElement('div');
     cards.className = 'publication-year-cards';
@@ -99,8 +99,10 @@
       if (!byYear.has(year)) byYear.set(year, []);
       byYear.get(year).push(entry);
     }
-    const years = [...byYear.keys()].sort().reverse();
-    list.replaceChildren(...years.map((year) => makeYearGroup(year, byYear.get(year))));
+    const years = [...byYear.keys()].filter(Boolean).sort().reverse();
+    const yearGroups = years.map((year) => makeYearGroup(year, byYear.get(year)));
+    const trailingCards = (byYear.get('') ?? []).map(makeCard);
+    list.replaceChildren(...yearGroups, ...trailingCards);
     status.textContent = visible.length ? '' : 'No publications match these filters.';
   }
 
