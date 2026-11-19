@@ -5,8 +5,6 @@
   const status = document.getElementById('experience-status');
   const cardTemplate = document.getElementById('experience-card-template');
   const workPlaceholder = document.getElementById('experience-work-placeholder');
-  const dialog = document.getElementById('experience-photo-dialog');
-  const enlargedPhoto = dialog.querySelector('img');
   const dataUrl = new URL('./education.json?v=5', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
@@ -30,30 +28,21 @@
     topic.textContent = entry.researchTopic;
     if (entry.researchLink) topic.append(' ', makeLink(entry.researchLink));
 
-    const links = card.querySelector('.news-card-links');
     for (const link of entry.links) {
       if (link.label === 'Details') {
         const titleLink = makeLink({ label: entry.title, url: link.url });
-        titleLink.className = 'news-card-title';
+        titleLink.className = 'news-card-title experience-details-link';
+        card.classList.add('experience-linked-card');
         title.replaceChildren(titleLink);
         continue;
       }
 
-      const item = document.createElement('li');
-      item.append(makeLink(link));
-      links.append(item);
+      topic.append(' ', makeLink(link));
     }
 
     const photo = card.querySelector('.news-card-photo');
     if (entry.cover) {
-      const coverUrl = new URL(entry.cover, dataUrl);
-      photo.querySelector('img').src = coverUrl;
-      photo.setAttribute('aria-label', 'Enlarge photo: ' + entry.title);
-      photo.addEventListener('click', () => {
-        enlargedPhoto.src = coverUrl;
-        enlargedPhoto.alt = entry.title;
-        dialog.showModal();
-      });
+      photo.querySelector('img').src = new URL(entry.cover, dataUrl);
     } else {
       photo.remove();
     }
@@ -80,10 +69,6 @@
     selected = button.value;
     grid.scrollLeft = 0;
     render();
-  });
-
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) dialog.close();
   });
 
   fetch(dataUrl)

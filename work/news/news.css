@@ -160,10 +160,28 @@ a.news-card-title:hover { text-decoration: underline; }
 #experience .news-card-photo { border-radius: 0 0 16px 16px; }
 #experience .news-card-copy { flex: 1; }
 
-@media (hover: hover) {
-  #experience .news-card:hover a.news-card-title { text-decoration: underline; }
+#experience .experience-linked-card { position: relative; }
+#experience .news-card-photo { cursor: inherit; }
+#experience .experience-details-link { text-decoration-skip-ink: none; }
+#experience .experience-details-link::after {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  content: "";
 }
-#experience a.news-card-title:focus-visible { text-decoration: underline; }
+#experience .experience-research-topic a {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+@media (hover: hover) {
+  #experience .experience-linked-card:hover .experience-details-link { text-decoration: underline; }
+}
+#experience .experience-details-link:focus-visible { text-decoration: underline; }
+#experience .experience-details-link:focus-visible::after {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
 
 .experience-university,
 .experience-research-topic {
