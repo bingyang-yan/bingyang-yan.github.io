@@ -20,6 +20,12 @@ ROOT = Path(__file__).resolve().parent
 SOURCE = "1c17cf09-07d0-81d1-b01f-000bbfe1b67a"
 NOTION_SITE = "https://bryce-yan.notion.site"
 
+HOSTED_PDF_FILENAMES = {
+    "1c17cf0907d08138bc20c7563df77864": "CNN24.pdf",
+    "1c17cf0907d0816abb40c198091f3274": "PPO25.pdf",
+    "3997cf0907d080d7bd6afc51cfaf924e": "Thesis26.pdf",
+}
+
 
 def rich_text(properties, name):
     prop = properties.get(name, {})
@@ -101,9 +107,10 @@ def publication(page, staging):
     if doi_url and doi_url not in seen:
         links.append({"label": "DOI", "url": doi_url})
     page_id = page["id"].replace("-", "")
-    pdf = Path("pdfs") / f"{page_id}.pdf"
-    if (ROOT / pdf).is_file():
-        links = [link for link in links if link["label"].casefold() != "pdf"]
+    filename = HOSTED_PDF_FILENAMES.get(page_id, f"{page_id}.pdf")
+    pdf = Path("pdfs") / filename
+    has_pdf_link = any(link["label"].casefold() == "pdf" for link in links)
+    if not has_pdf_link and (ROOT / pdf).is_file():
         links.insert(0, {"label": "PDF", "url": pdf.as_posix()})
     return {
         "title": title,
