@@ -19,15 +19,30 @@
     return preview.slice(0, preview.lastIndexOf(' ')).trimEnd() + '…';
   }
 
+  function highlightAuthor(element, authors) {
+    const name = 'Bingyang Yan';
+    for (const part of authors.split(/\b(Bingyang Yan)\b/g)) {
+      if (part === name) {
+        const highlight = document.createElement('strong');
+        highlight.textContent = part;
+        element.append(highlight);
+      } else if (part) {
+        element.append(part);
+      }
+    }
+  }
+
   function makeCard(entry) {
     const card = template.content.firstElementChild.cloneNode(true);
     const title = card.querySelector('.news-card-title');
-    title.href = entry.url;
+    const hostedPdf = entry.links.find(({ label, url }) => label === 'PDF' && url.startsWith('pdfs/'));
+    const destination = hostedPdf ? new URL(hostedPdf.url, dataUrl).href : entry.url;
+    title.href = destination;
     title.textContent = entry.title;
 
     const cover = card.querySelector('.publication-cover');
     if (entry.cover) {
-      cover.href = entry.url;
+      cover.href = destination;
       const image = cover.querySelector('img');
       image.addEventListener('error', () => cover.remove(), { once: true });
       image.src = new URL(entry.cover, dataUrl);
@@ -42,15 +57,16 @@
     };
     for (const [field, value] of Object.entries(fields)) {
       const element = card.querySelector('.publication-' + field);
-      if (value) element.textContent = value;
-      else element.remove();
+      if (!value) element.remove();
+      else if (field === 'authors') highlightAuthor(element, value);
+      else element.textContent = value;
     }
 
     const links = card.querySelector('.news-card-links');
     for (const { label, url } of entry.links) {
       const item = document.createElement('li');
       const anchor = document.createElement('a');
-      anchor.href = url;
+      anchor.href = new URL(url, dataUrl).href;
       anchor.textContent = label;
       item.append(anchor);
       links.append(item);
