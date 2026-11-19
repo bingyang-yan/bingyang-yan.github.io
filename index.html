@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="work/bio/bio.css?v=14">
   <link rel="stylesheet" href="life/travel/travel.css?v=13">
   <link rel="stylesheet" href="work/news/news.css?v=27">
-  <link rel="stylesheet" href="work/publications/publications.css?v=16">
+  <link rel="stylesheet" href="work/publications/publications.css?v=17">
   <script src="work/experience/experience.js?v=8" defer></script>
   <script src="work/news/news.js?v=11" defer></script>
   <script src="work/publications/publications.js?v=10" defer></script>
@@ -65,7 +65,8 @@
       }
 
       #work-index > section:nth-of-type(even) {
-        background-color: #f5f5f7;
+        --work-section-background: #f5f5f7;
+        background-color: var(--work-section-background);
       }
 
       #work-index > section > .travel {
