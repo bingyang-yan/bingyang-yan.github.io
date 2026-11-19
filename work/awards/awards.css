@@ -4,12 +4,23 @@
 }
 
 .awards-grid {
+  --award-gap: clamp(16px, 2.8vw, 32px);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   align-items: start;
-  gap: clamp(16px, 2vw, 28px);
+  gap: var(--award-gap);
   margin-top: 24px;
   text-align: start;
+}
+
+.awards-grid.is-masonry {
+  grid-auto-rows: 1px;
+  row-gap: 0;
+  margin-block-end: calc(-1 * var(--award-gap));
+}
+
+.awards-grid.is-masonry .award-card {
+  grid-row-end: span var(--award-rows);
 }
 
 .award-card {
@@ -22,29 +33,24 @@
   color: var(--text);
   text-decoration: none;
   box-shadow: var(--work-card-shadow, var(--travel-shadow));
-  transition: border-color 180ms ease, transform 180ms ease;
+  transition: background-color 180ms ease;
 }
 
 .award-card img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: cover;
-  background: var(--bg);
-}
-
-.award-card[data-type="Certificate"] img {
-  object-fit: contain;
+  height: auto;
+  aspect-ratio: auto 3 / 2;
 }
 
 .award-card-copy {
-  padding: 16px;
+  padding: clamp(16px, 2vw, 28px);
   overflow-wrap: anywhere;
 }
 
 .award-card-title {
   margin: 0;
-  font-size: 1rem;
+  font-size: 1.125rem;
   font-weight: 650;
   line-height: 1.35;
 }
@@ -61,19 +67,9 @@ a.award-card:focus-visible {
   outline-offset: 3px;
 }
 
-a.award-card:focus-visible .award-card-title {
-  text-decoration: underline;
-  text-underline-offset: .18em;
-}
-
 @media (hover: hover) {
   a.award-card:hover {
-    border-color: var(--travel-muted);
-    transform: translateY(-2px);
-  }
-  a.award-card:hover .award-card-title {
-    text-decoration: underline;
-    text-underline-offset: .18em;
+    background-color: color-mix(in srgb, var(--travel-tile), var(--text) 10%);
   }
 }
 
@@ -91,7 +87,6 @@ a.award-card:focus-visible .award-card-title {
 
 @media (prefers-reduced-motion: reduce) {
   .award-card { transition: none; }
-  a.award-card:hover { transform: none; }
 }
 
 .award-status {
