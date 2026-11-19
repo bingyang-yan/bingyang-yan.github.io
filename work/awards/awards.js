@@ -2,7 +2,11 @@
   const section = document.getElementById('awards');
   const controls = section.querySelector('.travel-filters');
   const status = section.querySelector('[role="status"]');
-  const cards = [...section.querySelectorAll('.award-card')];
+  const yearGroups = [...section.querySelectorAll('.awards-year')].map((group) => ({
+    group,
+    cards: [...group.querySelectorAll('.award-card')],
+  }));
+  const cards = yearGroups.flatMap((yearGroup) => yearGroup.cards);
 
   const levelOrder = ['National Level', 'School Level', 'University Level', 'Misc'];
   const filters = [...controls.querySelectorAll('[data-filter]')].map((group) => {
@@ -25,9 +29,14 @@
 
   function render() {
     let visible = 0;
-    for (const card of cards) {
-      card.hidden = !filters.every((filter) => matches(card, filter));
-      if (!card.hidden) visible++;
+    for (const yearGroup of yearGroups) {
+      let groupVisible = 0;
+      for (const card of yearGroup.cards) {
+        card.hidden = !filters.every((filter) => matches(card, filter));
+        if (!card.hidden) groupVisible++;
+      }
+      yearGroup.group.hidden = groupVisible === 0;
+      visible += groupVisible;
     }
 
     for (const filter of filters) {
