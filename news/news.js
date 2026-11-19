@@ -82,6 +82,7 @@
     updateFilters(yearGroup, selectedYear, categoryRecords, yearOf, true);
     const visible = categoryRecords.filter(matchesYear);
     grid.replaceChildren(...visible.map(makeCard));
+    grid.scrollLeft = 0;
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
