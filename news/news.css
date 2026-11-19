@@ -12,7 +12,7 @@
 }
 
 .news-rail {
-  --news-card-width: min(80%, clamp(235px, 23vw, 300px));
+  --news-card-width: min(82%, clamp(260px, 26vw, 340px));
   --news-gap: 12px;
   display: flex;
   align-items: flex-start;
@@ -45,7 +45,7 @@
   overflow: hidden;
   position: relative;
   aspect-ratio: 16 / 10;
-  border-radius: 0 0 16px 16px;
+  border-radius: 14px;
 }
 .news-card-photo::after {
   position: absolute;
@@ -71,13 +71,13 @@
 .news-card-date {
   display: block;
   color: var(--travel-muted);
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 1.4;
 }
 .news-card h3 {
   margin: 5px 0 0;
-  font-size: clamp(15px, 1.25vw, 18px);
+  font-size: clamp(17px, 1.4vw, 20px);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -92,7 +92,7 @@
   list-style: none;
   font-size: 14px;
 }
-#news .news-card-links { margin-top: 6px; font-size: 13px; }
+#news .news-card-links { margin-top: 6px; font-size: 14px; }
 .news-card-links:empty { display: none; }
 .news-card-links a { color: var(--travel-link); text-decoration: none; }
 .news-card-links a:hover { text-decoration: underline; }
