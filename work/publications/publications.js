@@ -2,6 +2,8 @@
   const list = document.getElementById('publications-list');
   const status = document.getElementById('publications-status');
   const template = document.getElementById('publication-card-template');
+  const coverDialog = document.getElementById('publication-cover-dialog');
+  const enlargedCover = coverDialog.querySelector('img');
   const dataUrl = new URL('./data.json?v=3', document.currentScript.src);
   const yearOf = (entry) => entry.date.slice(0, 4);
   const filters = [
@@ -17,6 +19,10 @@
     ['Slides', ['fa-solid', 'fa-chalkboard']],
   ]);
   let entries = [];
+
+  coverDialog.addEventListener('click', (event) => {
+    if (event.target === coverDialog) coverDialog.close();
+  });
 
   function highlightAuthor(element, authors) {
     const name = 'Bingyang Yan';
@@ -42,10 +48,15 @@
 
     const cover = card.querySelector('.publication-cover');
     if (entry.cover) {
-      cover.href = destination;
       const image = cover.querySelector('img');
+      cover.setAttribute('aria-label', 'Enlarge cover: ' + entry.title);
+      cover.addEventListener('click', () => {
+        enlargedCover.src = image.src;
+        enlargedCover.alt = entry.title;
+        coverDialog.showModal();
+      });
       image.addEventListener('error', () => cover.remove(), { once: true });
-      image.src = new URL(entry.cover, dataUrl);
+      image.src = new URL(entry.cover, dataUrl).href;
     } else {
       cover.remove();
     }
