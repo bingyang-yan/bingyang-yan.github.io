@@ -24,7 +24,7 @@
 }
 
 .travel-filter-group {
-  display: flex; gap: 4px; flex-wrap: wrap; width: max-content; max-width: 100%;
+  display: flex; gap: 4px; flex-wrap: wrap; width: fit-content; max-width: 100%;
   padding: 4px;
   border-radius: 980px; background: var(--travel-tile);
 }
@@ -32,6 +32,7 @@
   border: 0;
   background: transparent;
   cursor: pointer;
+  white-space: nowrap;
   font: inherit;
   padding: 7px 14px; border-radius: 980px;
   font-size: 14px; font-weight: 500; color: var(--travel-muted);
@@ -43,8 +44,9 @@
 .travel-filter[aria-pressed="true"] span { color: inherit; }
 
 .travel-filters {
-  display: grid;
-  justify-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   gap: 10px;
 }
 .travel-filter-group:empty { display: none; }
