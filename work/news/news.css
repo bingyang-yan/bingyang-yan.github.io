@@ -144,7 +144,20 @@ a.news-card-title:hover { text-decoration: underline; }
 #experience-status { margin: 18px 0 12px; font-size: 14px; color: var(--travel-muted); }
 #experience-status:empty { display: none; }
 
-#experience .news-rail { align-items: stretch; }
+#experience .news-rail {
+  --news-gap: 20px;
+  align-items: stretch;
+  margin-inline: -10px;
+  padding: 10px 14px 22px;
+}
+
+#experience .news-card { border: 0; }
+
+#experience .news-card:not(.experience-placeholder) {
+  box-shadow: 0 2px 5px rgb(0 0 0 / 8%), 0 7px 14px -3px rgb(0 0 0 / 16%);
+}
+
+#experience .news-card-photo { border-radius: 0 0 16px 16px; }
 #experience .news-card-copy { flex: 1; }
 
 @media (hover: hover) {
