@@ -2,7 +2,7 @@
   const list = document.getElementById('publications-list');
   const status = document.getElementById('publications-status');
   const template = document.getElementById('publication-card-template');
-  const dataUrl = new URL('./data.json?v=2', document.currentScript.src);
+  const dataUrl = new URL('./data.json?v=3', document.currentScript.src);
   const yearOf = (entry) => entry.date.slice(0, 4);
   const filters = [
     { group: document.getElementById('publications-type'), all: 'All types', valueOf: (entry) => entry.type },
@@ -35,8 +35,8 @@
   function makeCard(entry) {
     const card = template.content.firstElementChild.cloneNode(true);
     const title = card.querySelector('.news-card-title');
-    const hostedPdf = entry.links.find(({ label, url }) => label === 'PDF' && url.startsWith('pdfs/'));
-    const destination = hostedPdf ? new URL(hostedPdf.url, dataUrl).href : entry.url;
+    const pdf = entry.links.find(({ label }) => label === 'PDF');
+    const destination = pdf ? new URL(pdf.url, dataUrl).href : entry.url;
     title.href = destination;
     title.textContent = entry.title;
 
