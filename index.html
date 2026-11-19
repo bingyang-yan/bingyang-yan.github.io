@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bingyang Yan</title>
   <link rel="stylesheet" href="assets/navigation.css">
-  <link rel="stylesheet" href="assets/bio.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="assets/bio.css?v=2">
   <script src="assets/navigation.js?v=2" defer></script>
 </head>
 <body>
@@ -36,31 +38,44 @@
     </nav>
   </header>
   <main>
-    <!-- Profile and biography structure adapted from breadli428/breadli428.github.io
-         (MIT). See assets/navigation.LICENSE.txt. -->
-    <section id="bio" class="work-bio" aria-labelledby="bio-title">
-      <aside class="work-profile" aria-label="Bingyang Yan’s profile">
-        <img src="assets/bingyang-yan.png" alt="Portrait of Bingyang Yan" width="210" height="228">
-        <p class="work-profile-name">Bingyang Yan</p>
-        <p class="work-profile-detail">Reinforcement Learning and Sequential Decision-Making</p>
-        <p class="work-profile-detail">PhD, China University of Geosciences (Wuhan)</p>
-        <ul class="work-profile-links">
-          <li><a href="mailto:bryce.yan@outlook.com">Email</a></li>
-          <li><a href="https://github.com/bingyang-yan">GitHub</a></li>
-        </ul>
-      </aside>
-      <div>
-        <h1 id="bio-title">Hi, I’m <span>Bingyang</span>.</h1>
-        <p class="work-bio-intro">I study how reinforcement learning can improve sequential decisions in engineering systems. I earned my PhD at China University of Geosciences (Wuhan), where I was advised by Prof. Zhi Zhong.</p>
-        <div class="work-bio-notes">
-          <section class="work-bio-note" aria-labelledby="bio-research">
-            <h2 id="bio-research">Research</h2>
-            <p>I combine deep reinforcement learning and surrogate modeling to optimize hydraulic fracturing treatments and predict reservoir production.</p>
-          </section>
-          <section class="work-bio-note" aria-labelledby="bio-previously">
-            <h2 id="bio-previously">Previously</h2>
-            <p>I was a visiting PhD researcher at the University of Alberta from September 2024 to February 2026, hosted by Prof. Jeff Boisvert.</p>
-          </section>
+    <!-- Bio adapted from breadli428/breadli428.github.io (MIT).
+         See assets/navigation.LICENSE.txt. -->
+    <section id="bio" class="section" aria-labelledby="bio-title">
+      <div class="wrap about-grid">
+        <aside class="about-portrait" aria-label="Bingyang Yan’s profile">
+          <img src="assets/bingyang-yan.png" alt="Portrait of Bingyang Yan" width="210" height="228" decoding="async">
+          <p class="name">Bingyang Yan</p>
+          <p class="role">Reinforcement Learning and Sequential Decision-Making</p>
+          <ul class="org-list">
+            <li><a href="https://en.cug.edu.cn/">China University of Geosciences (Wuhan)</a></li>
+            <li><a href="https://www.ualberta.ca/">University of Alberta</a></li>
+          </ul>
+          <ul class="social">
+            <li><a href="mailto:bryce.yan@outlook.com" aria-label="Email" title="Email"><i class="fa-solid fa-at" aria-hidden="true"></i></a></li>
+            <li><a href="https://github.com/bingyang-yan" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a></li>
+          </ul>
+        </aside>
+        <div class="about-bio">
+          <h1 class="headline-section" id="bio-title">Hello, I’m <span class="gradient-text">Bingyang</span>.</h1>
+          <div class="bio-lead prose">
+            <p>I study how reinforcement learning can improve sequential decisions in engineering systems. I earned my PhD at <a href="https://en.cug.edu.cn/">China University of Geosciences (Wuhan)</a>, where I was advised by <a href="https://grzy.cug.edu.cn/zhongzhi/en/index.htm">Prof. Zhi Zhong</a>.</p>
+          </div>
+          <div class="bio-cards">
+            <section class="bio-card prose" aria-labelledby="bio-research">
+              <h2 id="bio-research">Research</h2>
+              <p>I combine deep reinforcement learning and surrogate modeling to optimize hydraulic fracturing treatments and predict reservoir production.</p>
+            </section>
+            <section class="bio-card prose" aria-labelledby="bio-previously">
+              <h2 id="bio-previously">Previously</h2>
+              <p>I was a visiting PhD researcher at the <a href="https://www.ualberta.ca/">University of Alberta</a> from September 2024 to February 2026, hosted by <strong>Prof. Jeff Boisvert</strong>.</p>
+            </section>
+          </div>
+          <ul class="interest-list" aria-label="Interests">
+            <li>Reinforcement Learning</li>
+            <li>Sequential Decision-Making</li>
+            <li>Surrogate Modeling</li>
+          </ul>
+          <a class="more" href="mailto:bryce.yan@outlook.com">Get in touch</a>
         </div>
       </div>
     </section>
