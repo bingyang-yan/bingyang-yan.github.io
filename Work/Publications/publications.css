@@ -46,12 +46,6 @@
 .publication-copy p { margin: 3px 0; font-size: 14px; line-height: 1.4; }
 .publication-authors strong { color: #c55300; font-weight: 700; }
 .publication-copy .publication-venue { color: var(--travel-muted); font-size: 14px; }
-.publication-copy .publication-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  overflow: hidden;
-}
 .publication-copy .news-card-links { margin-top: 5px; }
 
 @media (max-width: 650px) {

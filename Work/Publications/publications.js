@@ -11,14 +11,6 @@
   const matches = (entry, filter) => !filter.value || filter.valueOf(entry) === filter.value;
   let entries = [];
 
-  function summarize(description) {
-    if (description.length <= 280) return description;
-    const preview = description.slice(0, 281);
-    const sentence = preview.lastIndexOf('. ');
-    if (sentence >= 110) return preview.slice(0, sentence + 1);
-    return preview.slice(0, preview.lastIndexOf(' ')).trimEnd() + '…';
-  }
-
   function highlightAuthor(element, authors) {
     const name = 'Bingyang Yan';
     for (const part of authors.split(/\b(Bingyang Yan)\b/g)) {
@@ -54,7 +46,6 @@
     const fields = {
       authors: entry.authors,
       venue: [entry.venue || entry.type, yearOf(entry)].filter(Boolean).join(' · '),
-      description: summarize(entry.description),
     };
     for (const [field, value] of Object.entries(fields)) {
       const element = card.querySelector('.publication-' + field);
