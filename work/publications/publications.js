@@ -9,6 +9,13 @@
     { group: document.getElementById('publications-year'), all: 'All years', valueOf: yearOf, newestFirst: true },
   ];
   const matches = (entry, filter) => !filter.value || filter.valueOf(entry) === filter.value;
+  const linkIcons = new Map([
+    ['PDF', 'fa-file-pdf'],
+    ['Code', 'fa-code'],
+    ['DOI', 'fa-link'],
+    ['Slide', 'fa-chalkboard'],
+    ['Slides', 'fa-chalkboard'],
+  ]);
   let entries = [];
 
   function highlightAuthor(element, authors) {
@@ -59,7 +66,14 @@
       const item = document.createElement('li');
       const anchor = document.createElement('a');
       anchor.href = new URL(url, dataUrl).href;
-      anchor.textContent = label;
+      const iconClass = linkIcons.get(label);
+      if (iconClass) {
+        const icon = document.createElement('i');
+        icon.classList.add('fa-solid', 'fa-fw', iconClass);
+        icon.setAttribute('aria-hidden', 'true');
+        anchor.append(icon, ' ');
+      }
+      anchor.append(label);
       item.append(anchor);
       links.append(item);
     }
