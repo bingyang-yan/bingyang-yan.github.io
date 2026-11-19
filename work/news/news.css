@@ -162,8 +162,9 @@ a.news-card-title:hover { text-decoration: underline; }
 
 #experience .experience-linked-card { position: relative; }
 #experience .news-card-photo {
+  position: relative;
+  z-index: 1;
   border-radius: 16px;
-  cursor: inherit;
 }
 #experience .experience-details-link { text-decoration-skip-ink: none; }
 #experience .experience-details-link::after {

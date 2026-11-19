@@ -5,6 +5,8 @@
   const status = document.getElementById('experience-status');
   const cardTemplate = document.getElementById('experience-card-template');
   const workPlaceholder = document.getElementById('experience-work-placeholder');
+  const photoDialog = document.getElementById('experience-photo-dialog');
+  const enlargedPhoto = photoDialog.querySelector('img');
   const dataUrl = new URL('./education.json?v=5', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
@@ -42,7 +44,14 @@
 
     const photo = card.querySelector('.news-card-photo');
     if (entry.cover) {
-      photo.querySelector('img').src = new URL(entry.cover, dataUrl);
+      const coverUrl = new URL(entry.cover, dataUrl);
+      photo.querySelector('img').src = coverUrl;
+      photo.setAttribute('aria-label', 'Enlarge photo: ' + entry.title);
+      photo.addEventListener('click', () => {
+        enlargedPhoto.src = coverUrl;
+        enlargedPhoto.alt = entry.title;
+        photoDialog.showModal();
+      });
     } else {
       photo.remove();
     }
@@ -69,6 +78,10 @@
     selected = button.value;
     grid.scrollLeft = 0;
     render();
+  });
+
+  photoDialog.addEventListener('click', (event) => {
+    if (event.target === photoDialog) photoDialog.close();
   });
 
   fetch(dataUrl)

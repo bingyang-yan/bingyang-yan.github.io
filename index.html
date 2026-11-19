@@ -9,9 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="work/bio/bio.css?v=14">
   <link rel="stylesheet" href="life/travel/travel.css?v=13">
-  <link rel="stylesheet" href="work/news/news.css?v=24">
+  <link rel="stylesheet" href="work/news/news.css?v=25">
   <link rel="stylesheet" href="work/publications/publications.css?v=9">
-  <script src="work/experience/experience.js?v=7" defer></script>
+  <script src="work/experience/experience.js?v=8" defer></script>
   <script src="work/news/news.js?v=11" defer></script>
   <script src="work/publications/publications.js?v=8" defer></script>
   <link rel="stylesheet" href="work/awards/awards.css?v=5">
@@ -123,13 +123,19 @@
                 <p class="experience-research-topic"></p>
               </div>
             </div>
-            <div class="news-card-photo"><img alt="" decoding="async"></div>
+            <button class="news-card-photo" type="button" aria-haspopup="dialog"><img alt="" decoding="async"></button>
           </article>
         </template>
         <template id="experience-work-placeholder">
           <div class="news-card experience-placeholder" aria-hidden="true"></div>
         </template>
       </div>
+      <dialog class="news-photo-dialog" id="experience-photo-dialog" aria-label="Enlarged experience photo">
+        <form method="dialog">
+          <button type="submit" aria-label="Close enlarged photo" autofocus>×</button>
+        </form>
+        <img alt="">
+      </dialog>
     </section>
     <section id="news" aria-labelledby="news-title">
       <div class="travel">
