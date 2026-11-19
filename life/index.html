@@ -3,9 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Bingyang Yan</title>
+  <title>Travel · Bingyang Yan</title>
   <link rel="stylesheet" href="../assets/navigation.css">
   <script src="../assets/navigation.js?v=2" defer></script>
+  <link rel="stylesheet" href="./travel.css">
+  <script src="./travel.js" defer></script>
 </head>
 <body>
   <!-- Navigation adapted from breadli428/breadli428.github.io (MIT).
@@ -35,6 +37,21 @@
       </div>
     </nav>
   </header>
+  <main class="travel" id="travel">
+    <h1>Travel</h1>
+    <div class="travel-filters">
+      <label>Country <select id="travel-country"><option value="">All countries</option></select></label>
+      <label>Year <select id="travel-year"><option value="">All years</option></select></label>
+      <p id="travel-status" role="status">Loading travel records…</p>
+    </div>
+    <div class="travel-grid" id="travel-grid"></div>
+    <template id="travel-card-template">
+      <a class="travel-card" target="_blank" rel="noopener noreferrer">
+        <img alt="" decoding="async">
+        <span><strong></strong><small></small></span>
+      </a>
+    </template>
+  </main>
   <dialog class="search-modal" aria-label="Search">
     <div class="search-field">
       <input type="search" aria-label="Search pages" placeholder="Search pages" autofocus>
