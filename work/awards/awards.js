@@ -150,9 +150,16 @@
     });
   }
 
+  yearRail.addEventListener('mousedown', (event) => {
+    if (event.button === 0 && event.target.closest('.award-card-cover')) {
+      event.preventDefault();
+    }
+  });
+
   yearRail.addEventListener('click', (event) => {
     const cover = event.target.closest('.award-card-cover');
     if (!cover) return;
+    if (event.detail > 0 && document.activeElement === cover) cover.blur();
     const image = cover.querySelector('img');
     enlargedPhoto.src = image.currentSrc || image.src;
     enlargedPhoto.alt = cover.closest('.award-card').querySelector('.award-card-title').textContent;

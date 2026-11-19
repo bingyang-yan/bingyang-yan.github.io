@@ -73,6 +73,7 @@
   border: 0;
   background: transparent;
   cursor: zoom-in;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .award-card-cover:focus-visible {
