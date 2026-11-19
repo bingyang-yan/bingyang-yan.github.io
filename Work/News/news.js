@@ -10,6 +10,7 @@
     month: 'short', day: '2-digit', year: 'numeric', timeZone: 'UTC',
   });
   const yearOf = (entry) => entry.date?.slice(0, 4);
+  const dataUrl = new URL('./data.json?v=10', document.currentScript.src);
   let entries = [];
   let selectedCategory = 'Work';
   let cards = [];
@@ -52,13 +53,13 @@
     if (entry.cover) {
       photo.setAttribute('aria-label', 'Enlarge photo: ' + entry.title);
       photo.addEventListener('click', () => {
-        enlargedPhoto.src = entry.cover;
+        enlargedPhoto.src = new URL(entry.cover, dataUrl);
         enlargedPhoto.alt = entry.title;
         photoDialog.showModal();
       });
       const image = photo.querySelector('img');
       image.loading = index < 4 ? 'eager' : 'lazy';
-      image.src = entry.cover;
+      image.src = new URL(entry.cover, dataUrl);
     } else {
       photo.remove();
     }
@@ -147,7 +148,7 @@
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
-  fetch(new URL('./data.json?v=10', document.currentScript.src))
+  fetch(dataUrl)
     .then((response) => {
       if (!response.ok) throw new Error('News records unavailable');
       return response.json();

@@ -5,6 +5,7 @@
   const year = document.getElementById('travel-year');
   const status = document.getElementById('travel-status');
   const template = document.getElementById('travel-card-template');
+  const dataUrl = new URL('./travel-data.json?v=2', document.currentScript.src);
   let entries = [];
   const featuredFilter = 'featured';
   let selectedCountry = featuredFilter;
@@ -41,7 +42,7 @@
       const photo = card.querySelector('img');
       if (entry.cover) {
         photo.loading = index < 3 ? 'eager' : 'lazy';
-        photo.src = entry.cover;
+        photo.src = new URL(entry.cover, dataUrl);
       } else {
         photo.remove();
       }
@@ -87,7 +88,7 @@
   }
   const embedded = document.getElementById('travel-data');
   const data = embedded ? Promise.resolve().then(() => JSON.parse(embedded.textContent)) :
-    fetch('./travel-data.json?v=2').then((response) => {
+    fetch(dataUrl).then((response) => {
       if (!response.ok) throw new Error('Travel records unavailable');
       return response.json();
     });
