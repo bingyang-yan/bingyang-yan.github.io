@@ -1,6 +1,7 @@
 #awards .travel-filters[hidden],
 .awards-year[hidden],
-.award-card[hidden] {
+.award-card[hidden],
+.award-load-more[hidden] {
   display: none;
 }
 
@@ -9,7 +10,6 @@
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% - 3 * var(--award-column-gap)) / 4);
-  align-items: start;
   gap: var(--award-column-gap);
   margin: 24px -10px 0;
   padding: 4px 10px 18px;
@@ -20,6 +20,20 @@
 .awards-years:focus-visible {
   outline: 2px solid var(--travel-link);
   outline-offset: 2px;
+}
+
+.awards-year {
+  position: relative;
+  min-width: 0;
+}
+
+.awards-year:not([hidden]) ~ .awards-year:not([hidden])::before {
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: calc(var(--award-column-gap) / -2);
+  width: 1px;
+  background: var(--hairline);
+  content: "";
 }
 
 .awards-year h3 {
@@ -43,7 +57,6 @@
   color: var(--text);
   text-decoration: none;
   box-shadow: var(--work-card-shadow);
-  transition: background-color 180ms ease;
 }
 
 .award-card-cover {
@@ -84,15 +97,36 @@
   line-height: 1.4;
 }
 
-a.award-card:focus-visible {
-  outline: 2px solid var(--travel-link);
-  outline-offset: 3px;
+.award-card-details,
+.award-load-more {
+  color: var(--travel-link);
+  font-size: .8125rem;
+  font-weight: 600;
 }
 
-@media (hover: hover) {
-  a.award-card:hover {
-    background-color: color-mix(in srgb, var(--travel-tile), var(--text) 10%);
-  }
+.award-card-details {
+  align-self: flex-start;
+  margin-top: 4px;
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.award-load-more {
+  margin-top: 14px;
+  padding: 7px 12px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--travel-tile);
+  cursor: pointer;
+}
+
+.award-load-more:hover {
+  text-decoration: underline;
+}
+
+:is(.award-card, .award-card-details, .award-load-more):focus-visible {
+  outline: 2px solid var(--travel-link);
+  outline-offset: 2px;
 }
 
 @media (max-width: 1100px) {
@@ -101,10 +135,6 @@ a.award-card:focus-visible {
 
 @media (max-width: 850px) {
   .awards-years { grid-auto-columns: calc((100% - var(--award-column-gap)) / 2); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .award-card { transition: none; }
 }
 
 .award-status {

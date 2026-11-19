@@ -1,9 +1,13 @@
 (() => {
   const section = document.getElementById('awards');
+  const pageSize = 2;
+  const yearRail = section.querySelector('.awards-years');
   const controls = section.querySelector('.travel-filters');
   const status = section.querySelector('[role="status"]');
   const yearGroups = [...section.querySelectorAll('.awards-year')].map((group) => ({
     group,
+    limit: pageSize,
+    moreButton: group.querySelector('.award-load-more'),
     cards: [...group.querySelectorAll('.award-card')],
   }));
   const cards = yearGroups.flatMap((yearGroup) => yearGroup.cards);
@@ -27,17 +31,21 @@
     return !filter.value || card.dataset[filter.key] === filter.value;
   }
 
-  function render() {
-    let visible = 0;
-    for (const yearGroup of yearGroups) {
-      let groupVisible = 0;
-      for (const card of yearGroup.cards) {
-        card.hidden = !filters.every((filter) => matches(card, filter));
-        if (!card.hidden) groupVisible++;
-      }
-      yearGroup.group.hidden = groupVisible === 0;
-      visible += groupVisible;
+  function renderYear(yearGroup) {
+    const matchingCards = yearGroup.cards.filter((card) =>
+      filters.every((filter) => matches(card, filter))
+    );
+    const shownCards = matchingCards.slice(0, yearGroup.limit);
+    for (const card of yearGroup.cards) {
+      card.hidden = !shownCards.includes(card);
     }
+    yearGroup.group.hidden = matchingCards.length === 0;
+    yearGroup.moreButton.hidden = matchingCards.length <= yearGroup.limit;
+    return shownCards;
+  }
+
+  function render() {
+    const visible = yearGroups.reduce((total, yearGroup) => total + renderYear(yearGroup).length, 0);
 
     for (const filter of filters) {
       const candidates = cards.filter((card) =>
@@ -67,11 +75,26 @@
       button.append(document.createElement('span'));
       button.addEventListener('click', () => {
         filter.value = filter.value === value ? '' : value;
+        for (const yearGroup of yearGroups) yearGroup.limit = pageSize;
         render();
+        yearRail.scrollLeft = 0;
       });
       filter.group.append(button);
     }
   }
+  for (const yearGroup of yearGroups) {
+    yearGroup.moreButton.addEventListener('click', () => {
+      const previousLimit = yearGroup.limit;
+      yearGroup.limit += pageSize;
+      render();
+      const nextCard = yearGroup.cards.filter((card) => !card.hidden)[previousLimit];
+      if (nextCard) {
+        nextCard.tabIndex = -1;
+        nextCard.focus();
+      }
+    });
+  }
+
   render();
   controls.hidden = false;
 })();
