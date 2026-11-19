@@ -37,7 +37,8 @@
     const title = card.querySelector('.news-card-title');
     const pdf = entry.links.find(({ label }) => label === 'PDF');
     const destination = pdf ? new URL(pdf.url, dataUrl).href : entry.url;
-    title.href = destination;
+    const doi = entry.links.find(({ label }) => label === 'DOI');
+    title.href = doi ? new URL(doi.url, dataUrl).href : destination;
     title.textContent = entry.title;
 
     const cover = card.querySelector('.publication-cover');
