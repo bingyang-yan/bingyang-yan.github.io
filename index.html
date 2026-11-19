@@ -17,6 +17,38 @@
   <link rel="stylesheet" href="work/awards/awards.css?v=6">
   <script src="work/awards/awards.js?v=2" defer></script>
   <style>
+    .work-footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 12px 24px;
+      max-width: var(--wrap-wide);
+      margin-inline: auto;
+      text-align: left;
+    }
+
+    .work-footer-inner p {
+      margin: 0;
+    }
+
+    .work-footer-nav {
+      margin-inline-start: auto;
+    }
+
+    .work-footer-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .work-footer-nav a {
+      color: inherit;
+    }
+
     @media (prefers-color-scheme: light) {
       #work-index > section {
         background-color: #fff;
@@ -540,7 +572,21 @@
       </div>
     </section>
   </main>
-  <footer class="site-footer">This site is currently under development.</footer>
+  <footer class="site-footer">
+    <div class="work-footer-inner">
+      <p>This site is currently under development.</p>
+      <nav class="work-footer-nav" aria-label="Footer">
+        <ul>
+          <li><a href="#bio">Bio</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#publications">Publications</a></li>
+          <li><a href="#awards">Awards</a></li>
+          <li><a href="life/index.html">Life</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
   <dialog class="search-modal" aria-label="Search">
     <div class="search-field">
       <input type="search" aria-label="Search pages" placeholder="Search pages" autofocus>
