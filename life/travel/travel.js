@@ -29,13 +29,11 @@
     const featured = selectedCountry === featuredFilter;
     grid.classList.toggle('travel-grid--featured', featured);
     const countryRecords = entries.filter(matchesCountry);
-    if (selectedCity && !countryRecords.some(matchesCity)) selectedCity = '';
     const locationRecords = countryRecords.filter(matchesCity);
-    if (selectedYear && !locationRecords.some(matchesYear)) selectedYear = '';
     const visible = locationRecords.filter(matchesYear);
-    updateFilters(country, selectedCountry, entries.filter(matchesYear), matchesPlaceFilter);
-    updateFilters(city, selectedCity, countryRecords.filter(matchesYear), cityIs, countryRecords);
-    updateFilters(year, selectedYear, locationRecords, yearIs, locationRecords);
+    updateFilters(country, selectedCountry, entries.filter(matchesCity).filter(matchesYear), matchesPlaceFilter);
+    updateFilters(city, selectedCity, countryRecords.filter(matchesYear), cityIs);
+    updateFilters(year, selectedYear, locationRecords, yearIs);
     const cards = visible.map((entry, index) => {
       const card = template.content.firstElementChild.cloneNode(true);
       card.href = entry.url;
@@ -77,11 +75,11 @@
     }));
   }
 
-  function updateFilters(group, selected, records, matches, available) {
+  function updateFilters(group, selected, records, matches) {
     for (const button of group.children) {
       const value = button.value;
       const count = value ? records.filter((entry) => matches(entry, value)).length : records.length;
-      button.hidden = Boolean(value && available && !available.some((entry) => matches(entry, value)));
+      button.hidden = value !== '' && count === 0 && value !== selected;
       button.setAttribute('aria-pressed', String(value === selected));
       button.lastElementChild.textContent = count;
     }
