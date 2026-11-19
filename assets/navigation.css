@@ -178,3 +178,18 @@ body {
     transition: none;
   }
 }
+
+body.has-site-footer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-footer {
+  margin-top: auto;
+  padding: 20px var(--gutter) max(20px, env(safe-area-inset-bottom));
+  border-top: 1px solid var(--hairline);
+  color: var(--nav-text);
+  font-size: 14px;
+  text-align: center;
+}
