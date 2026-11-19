@@ -1,0 +1,122 @@
+.work-bio {
+  --bio-muted: #525b58;
+  --bio-accent: #0b6359;
+  --bio-surface: #f3f7f5;
+  --bio-edge: #d9e5df;
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 2fr);
+  align-items: start;
+  gap: clamp(32px, 7vw, 96px);
+  width: min(100% - 2 * var(--gutter), 1080px);
+  margin-inline: auto;
+  padding-block: clamp(42px, 8vw, 106px) 64px;
+}
+
+.work-profile {
+  padding: 24px;
+  border: 1px solid var(--bio-edge);
+  border-radius: 22px;
+  background: var(--bio-surface);
+}
+
+.work-profile img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #d5ece1, #b8d8d1);
+}
+
+.work-profile-name {
+  margin: 20px 0 6px;
+  font-size: 1.35rem;
+  font-weight: 680;
+}
+
+.work-profile-detail {
+  margin: 0 0 12px;
+  color: var(--bio-muted);
+  font-size: .95rem;
+  line-height: 1.5;
+}
+
+.work-profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 14px;
+  margin: 18px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--bio-edge);
+  list-style: none;
+  font-size: .9rem;
+}
+
+.work-profile-links a {
+  display: inline-block;
+  padding-block: 4px;
+  color: var(--bio-accent);
+  text-underline-offset: .22em;
+}
+
+.work-bio h1 {
+  margin: 0;
+  font-size: clamp(2.65rem, 6vw, 5rem);
+  font-weight: 700;
+  letter-spacing: -.065em;
+  line-height: 1.04;
+}
+
+.work-bio h1 span { color: var(--bio-accent); }
+
+.work-bio-intro {
+  max-width: 34em;
+  margin: 22px 0 28px;
+  font-size: clamp(1.1rem, 2.25vw, 1.45rem);
+  line-height: 1.55;
+}
+
+.work-bio-notes {
+  border-top: 1px solid var(--bio-edge);
+}
+
+.work-bio-note {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+  padding-block: 19px;
+  border-bottom: 1px solid var(--bio-edge);
+}
+
+.work-bio-note h2,
+.work-bio-note p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.work-bio-note h2 { color: var(--bio-accent); }
+.work-bio-note p { color: var(--bio-muted); }
+
+@media (max-width: 700px) {
+  .work-bio { grid-template-columns: 1fr; }
+  .work-profile { max-width: 320px; }
+}
+
+@media (max-width: 420px) {
+  .work-bio-note {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .work-bio {
+    --bio-muted: #b4c2bd;
+    --bio-accent: #90d8c9;
+    --bio-surface: #131b19;
+    --bio-edge: #2d4039;
+  }
+}
