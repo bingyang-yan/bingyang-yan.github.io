@@ -1,6 +1,5 @@
 (() => {
   const section = document.getElementById('awards');
-  const grid = section.querySelector('.awards-grid');
   const controls = section.querySelector('.travel-filters');
   const status = section.querySelector('[role="status"]');
   const cards = [...section.querySelectorAll('.award-card')];
@@ -22,17 +21,6 @@
 
   function matches(card, filter) {
     return !filter.value || card.dataset[filter.key] === filter.value;
-  }
-
-  function layoutAwards() {
-    const gap = parseFloat(getComputedStyle(grid).columnGap);
-    const spans = cards.filter((card) => !card.hidden).map((card) => [
-      card, Math.ceil(card.getBoundingClientRect().height + gap),
-    ]);
-    for (const [card, rows] of spans) {
-      card.style.setProperty('--award-rows', rows);
-    }
-    grid.classList.add('is-masonry');
   }
 
   function render() {
@@ -57,7 +45,6 @@
       }
     }
 
-    if (grid.classList.contains('is-masonry')) layoutAwards();
     status.textContent = visible === 1 ? '1 award shown.' : `${visible} awards shown.`;
   }
 
@@ -78,10 +65,4 @@
   }
   render();
   controls.hidden = false;
-
-  if ('ResizeObserver' in window) {
-    layoutAwards();
-    const observer = new ResizeObserver(layoutAwards);
-    cards.forEach((card) => observer.observe(card));
-  }
 })();

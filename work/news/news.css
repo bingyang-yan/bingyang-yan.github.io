@@ -8,8 +8,11 @@
   --travel-count: #6e6e73;
   --travel-tile: #f5f5f7;
   --travel-shadow: 0 4px 24px rgb(0 0 0 / 6%);
-  --work-card-shadow: 0 2px 5px rgb(0 0 0 / 8%), 0 7px 14px -3px rgb(0 0 0 / 16%);
   color: var(--text);
+}
+
+:is(#experience, #news, #publications, #awards) .travel {
+  --work-card-shadow: 0 2px 5px rgb(0 0 0 / 8%), 0 7px 14px -3px rgb(0 0 0 / 16%);
 }
 
 .news-rail {

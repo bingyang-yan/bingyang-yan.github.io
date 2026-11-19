@@ -7,43 +7,36 @@
   --award-gap: clamp(16px, 2.8vw, 32px);
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  align-items: start;
   gap: var(--award-gap);
   margin-top: 24px;
   text-align: start;
 }
 
-.awards-grid.is-masonry {
-  grid-auto-rows: 1px;
-  row-gap: 0;
-  margin-block-end: calc(-1 * var(--award-gap));
-}
-
-.awards-grid.is-masonry .award-card {
-  grid-row-end: span var(--award-rows);
-}
-
 .award-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
   min-width: 0;
-  border: 1px solid var(--hairline);
   border-radius: 14px;
   background: var(--travel-tile);
   color: var(--text);
   text-decoration: none;
-  box-shadow: var(--work-card-shadow, var(--travel-shadow));
+  box-shadow: var(--work-card-shadow);
   transition: background-color 180ms ease;
 }
 
 .award-card img {
   display: block;
+  flex: none;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
 .award-card-copy {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
   padding: clamp(16px, 2vw, 28px);
   overflow-wrap: anywhere;
 }
@@ -56,7 +49,8 @@
 }
 
 .award-card-meta {
-  margin: 8px 0 0;
+  margin: auto 0 0;
+  padding-top: 8px;
   color: var(--travel-muted);
   font-size: .8125rem;
   line-height: 1.4;
