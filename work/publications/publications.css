@@ -60,9 +60,17 @@
 .publication-cover {
   position: relative;
   overflow: hidden;
+  padding: 0;
+  border: 0;
   border-radius: 14px;
+  background: transparent;
+  cursor: zoom-in;
   min-height: clamp(126px, 12.8vw, 158px);
   box-shadow: 6px 0 12px -4px rgb(0 0 0 / 28%);
+}
+.publication-cover:focus-visible {
+  outline: 2px solid var(--travel-link);
+  outline-offset: -3px;
 }
 .publication-cover img {
   position: absolute;
