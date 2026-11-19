@@ -91,6 +91,10 @@
   inset: 0;
   z-index: -1;
   background: linear-gradient(transparent 32%, rgb(0 0 0 / 82%));
+  transition: opacity 250ms ease;
+}
+.travel-card:is(:hover, :focus-visible, .is-revealed)::after {
+  opacity: 0;
 }
 .travel-card img {
   position: absolute;
@@ -114,9 +118,7 @@
 .travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-label { visibility: hidden; }
 .travel-card:is(:hover, :focus-visible, .is-revealed) .travel-card-details { visibility: visible; }
 
-.travel-grid--featured .travel-card::after { content: none; }
-.travel-grid--featured .travel-card-label { display: none; }
-.travel-grid--featured .travel-card-details {
+.travel-card-details {
   justify-self: center;
   max-width: 100%;
   padding: 6px 10px;
@@ -140,5 +142,5 @@
   .travel-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .travel-card img, .travel-filter { transition: none; }
+  .travel-card::after, .travel-card img, .travel-filter { transition: none; }
 }

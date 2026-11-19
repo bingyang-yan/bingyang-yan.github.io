@@ -41,7 +41,8 @@
       card.querySelector('.travel-card-country').textContent = featured ? (entry.country ?? '') : '';
       card.querySelector('small').textContent = [featured ? entry.name : location, visitYear]
         .filter(Boolean).join(' · ');
-      card.querySelector('.travel-card-label').textContent = featured ? '' : entry.name;
+      card.querySelector('.travel-card-label').textContent =
+        featured && entry.city ? entry.city : entry.name;
       card.setAttribute('aria-label', [entry.name, location, visitYear].filter(Boolean).join(', '));
       card.addEventListener('click', revealOnTouch);
       return card;
