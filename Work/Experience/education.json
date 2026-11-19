@@ -1,0 +1,43 @@
+[
+  {
+    "duration": "2024.09 – 2026.02",
+    "title": "Visiting PhD · University of Alberta (UA)",
+    "cover": "../News/photos/3e17cf0907d08096a38bdf074d44b45c.jpg",
+    "links": [
+      {
+        "label": "Details",
+        "url": "https://bryce-yan.notion.site/21d7cf0907d080ceae2dce9982b08b2a"
+      },
+      {
+        "label": "Prof. Jeff Boisvert",
+        "url": "https://sites.ualberta.ca/~jbb/"
+      }
+    ]
+  },
+  {
+    "duration": "2020.09 – 2026.06",
+    "title": "PhD · China University of Geosciences (CUG)",
+    "cover": "../News/photos/3e17cf0907d0800981d6f66c89201c34.jpg",
+    "links": [
+      {
+        "label": "Details",
+        "url": "https://bryce-yan.notion.site/21d7cf0907d0804aa73eec02e2fa9635"
+      },
+      {
+        "label": "Prof. Zhi Zhong",
+        "url": "https://grzy.cug.edu.cn/zhongzhi/en/about.htm"
+      }
+    ]
+  },
+  {
+    "duration": "2016.09 – 2020.06",
+    "title": "BEng · China University of Geosciences (CUG)",
+    "cover": "../News/photos/3e17cf0907d0809287c1d85dc019af83.jpg",
+    "links": [
+      {
+        "label": "Details",
+        "url": "https://bryce-yan.notion.site/21d7cf0907d080c186d1e9c47648f6d3"
+      }
+    ]
+  }
+]

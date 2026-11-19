@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="Work/Bio/bio.css?v=14">
   <link rel="stylesheet" href="Life/Travel/travel.css?v=13">
-  <link rel="stylesheet" href="Work/News/news.css?v=14">
+  <link rel="stylesheet" href="Work/News/news.css?v=15">
   <link rel="stylesheet" href="Work/Publications/publications.css?v=4">
+  <script src="Work/Experience/experience.js?v=1" defer></script>
   <script src="Work/News/news.js?v=11" defer></script>
   <script src="Work/Publications/publications.js?v=5" defer></script>
   <link rel="stylesheet" href="Work/Awards/awards.css?v=4">
@@ -25,6 +26,7 @@
       <a class="gnav-brand" href="./">Bingyang Yan</a>
       <ul class="gnav-links" id="gnav-links">
         <li><a href="#bio" data-section="bio">Bio</a></li>
+        <li><a href="#experience" data-section="experience">Experience</a></li>
         <li><a href="#news" data-section="news">News</a></li>
         <li><a href="#publications" data-section="publications">Publications</a></li>
         <li><a href="#awards" data-section="awards">Awards</a></li>
@@ -77,6 +79,43 @@
           </ul>
         </div>
       </div>
+    </section>
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="travel">
+        <div class="travel-heading">
+          <h2 id="experience-title">Experience</h2>
+          <a class="travel-source-link" href="https://bryce-yan.notion.site/db-education">View source database</a>
+        </div>
+        <div class="travel-filters">
+          <div class="travel-filter-group" id="experience-category" role="group" aria-label="Filter experience by category">
+            <button class="travel-filter" type="button" value="work" aria-controls="experience-grid" aria-pressed="false">Work<span>0</span></button>
+            <button class="travel-filter" type="button" value="education" aria-controls="experience-grid" aria-pressed="true">Education<span></span></button>
+          </div>
+        </div>
+        <p id="experience-status" role="status">Loading education…</p>
+        <div class="news-rail" id="experience-grid" role="region" aria-label="Experience cards"></div>
+        <template id="experience-card-template">
+          <article class="news-card">
+            <div class="news-card-copy">
+              <div class="news-card-copy-content">
+                <span class="news-card-date"></span>
+                <h3 class="news-card-title"></h3>
+                <ul class="news-card-links"></ul>
+              </div>
+            </div>
+            <button class="news-card-photo" type="button" aria-haspopup="dialog"><img alt="" decoding="async"></button>
+          </article>
+        </template>
+        <template id="experience-work-placeholder">
+          <div class="news-card experience-placeholder" aria-hidden="true"></div>
+        </template>
+      </div>
+      <dialog class="news-photo-dialog" id="experience-photo-dialog" aria-label="Enlarged experience photo">
+        <form method="dialog">
+          <button type="submit" aria-label="Close enlarged photo" autofocus>×</button>
+        </form>
+        <img alt="">
+      </dialog>
     </section>
     <section id="news" aria-labelledby="news-title">
       <div class="travel">

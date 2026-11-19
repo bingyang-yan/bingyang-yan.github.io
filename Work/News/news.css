@@ -1,6 +1,6 @@
-:is(#news, #publications) { background: #fff; }
+:is(#experience, #news, #publications) { background: #fff; }
 
-:is(#news, #publications) .travel {
+:is(#experience, #news, #publications) .travel {
   --bg: #fff;
   --text: #1d1d1f;
   --travel-muted: #6e6e73;
@@ -86,7 +86,7 @@ a.news-card-title:hover { text-decoration: underline; }
   list-style: none;
   font-size: 14px;
 }
-#news .news-card-links { margin-top: 6px; font-size: 14px; }
+:is(#experience, #news) .news-card-links { margin-top: 6px; font-size: 14px; }
 .news-card-links:empty { display: none; }
 .news-card-links a { color: var(--travel-link); text-decoration: none; }
 .news-card-links a:hover { text-decoration: underline; }
@@ -137,4 +137,22 @@ a.news-card-title:hover { text-decoration: underline; }
 .news-photo-dialog button:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
+}
+
+#experience-status { margin: 18px 0 12px; font-size: 14px; color: var(--travel-muted); }
+#experience-status:empty { display: none; }
+
+#experience .news-rail { align-items: stretch; }
+#experience .news-card-copy { flex: 1; }
+
+.experience-placeholder { aspect-ratio: 16 / 10; }
+
+#experience[data-category="work"] #experience-status {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
