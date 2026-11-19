@@ -180,7 +180,6 @@ a.news-card-title:hover { text-decoration: underline; }
 #experience .experience-research-topic a + a { margin-inline-start: 0.45em; }
 @media (hover: hover) {
   #experience .experience-linked-card:hover .experience-details-link {
-    color: var(--travel-link);
     text-decoration: underline;
   }
 }
