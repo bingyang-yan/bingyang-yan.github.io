@@ -5,11 +5,14 @@
   const status = document.getElementById('travel-status');
   const template = document.getElementById('travel-card-template');
   let entries = [];
-  let selectedCountry = '';
+  const featuredFilter = 'featured';
+  let selectedCountry = featuredFilter;
   let selectedYear = '';
 
   const yearOf = (entry) => entry.date?.slice(0, 4);
-  const matchesCountry = (entry) => !selectedCountry || entry.country === selectedCountry;
+  const matchesPlaceFilter = (entry, value) =>
+    value === featuredFilter ? entry.featured === true : entry.country === value;
+  const matchesCountry = (entry) => !selectedCountry || matchesPlaceFilter(entry, selectedCountry);
   const matchesYear = (entry) => !selectedYear || yearOf(entry) === selectedYear;
 
   function locationOf(entry) {
@@ -18,8 +21,8 @@
 
   function render() {
     const visible = entries.filter((entry) => matchesCountry(entry) && matchesYear(entry));
-    updateFilters(country, selectedCountry, entries.filter(matchesYear), (entry) => entry.country);
-    updateFilters(year, selectedYear, entries.filter(matchesCountry), yearOf);
+    updateFilters(country, selectedCountry, entries.filter(matchesYear), matchesPlaceFilter);
+    updateFilters(year, selectedYear, entries.filter(matchesCountry), (entry, value) => yearOf(entry) === value);
     const cards = visible.map((entry, index) => {
       const card = template.content.firstElementChild.cloneNode(true);
       card.href = entry.url;
@@ -30,25 +33,37 @@
       } else {
         photo.remove();
       }
+      const details = [locationOf(entry), yearOf(entry)].filter(Boolean).join(' · ');
       card.querySelector('strong').textContent = entry.name;
-      card.querySelector('small').textContent =
-        [locationOf(entry), yearOf(entry)].filter(Boolean).join(' · ');
+      card.querySelector('small').textContent = details;
+      if (selectedCountry === featuredFilter && entry.city) {
+        card.classList.add('travel-card--featured');
+        card.querySelector('.travel-card-city').textContent = entry.city;
+        card.setAttribute('aria-label', [entry.name, details].filter(Boolean).join(', '));
+        card.addEventListener('click', revealOnTouch);
+      }
       return card;
     });
     grid.replaceChildren(...cards);
-    status.textContent = visible.length
-      ? visible.length + (visible.length === 1 ? ' place' : ' places')
-      : 'No places match these filters.';
+    status.textContent = visible.length ? '' : 'No places match these filters.';
   }
 
-  function addFilters(group, allLabel, values, select) {
-    const options = ['', ...new Set(values.filter(Boolean))];
-    group.replaceChildren(...options.map((value) => {
+  function revealOnTouch(event) {
+    const touch = event.pointerType === 'touch' || (event.detail > 0 && window.matchMedia('(hover: none)').matches);
+    const card = event.currentTarget;
+    if (!touch || card.classList.contains('is-revealed')) return;
+    event.preventDefault();
+    grid.querySelector('.is-revealed')?.classList.remove('is-revealed');
+    card.classList.add('is-revealed');
+  }
+
+  function addFilters(group, options, select) {
+    group.replaceChildren(...options.map(([value, label]) => {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'travel-filter';
       button.value = value;
-      button.textContent = value || allLabel;
+      button.textContent = label;
       button.append(document.createElement('span'));
       button.addEventListener('click', () => {
         select(value);
@@ -58,26 +73,33 @@
     }));
   }
 
-  function updateFilters(group, selected, records, valueOf) {
+  function updateFilters(group, selected, records, matches) {
     for (const button of group.children) {
       const value = button.value;
-      const count = value ? records.filter((entry) => valueOf(entry) === value).length : records.length;
+      const count = value ? records.filter((entry) => matches(entry, value)).length : records.length;
       button.setAttribute('aria-pressed', String(value === selected));
       button.lastElementChild.textContent = count;
     }
   }
   const embedded = document.getElementById('travel-data');
   const data = embedded ? Promise.resolve().then(() => JSON.parse(embedded.textContent)) :
-    fetch('./travel-data.json').then((response) => {
+    fetch('./travel-data.json?v=2').then((response) => {
       if (!response.ok) throw new Error('Travel records unavailable');
       return response.json();
     });
   data.then((records) => {
     entries = records;
-    addFilters(country, 'All countries', entries.map((entry) => entry.country).filter(Boolean).sort((a, b) => a.localeCompare(b)), (value) => {
+    const countries = [...new Set(entries.map((entry) => entry.country).filter(Boolean))]
+      .sort((a, b) => a.localeCompare(b));
+    const years = [...new Set(entries.map(yearOf).filter(Boolean))].sort().reverse();
+    addFilters(country, [
+      ['', 'All countries'],
+      [featuredFilter, 'Featured'],
+      ...countries.map((value) => [value, value]),
+    ], (value) => {
       selectedCountry = value;
     });
-    addFilters(year, 'All years', entries.map(yearOf).filter(Boolean).sort().reverse(), (value) => {
+    addFilters(year, [['', 'All years'], ...years.map((value) => [value, value])], (value) => {
       selectedYear = value;
     });
     render();

@@ -6,8 +6,8 @@
   <title>Travel · Bingyang Yan</title>
   <link rel="stylesheet" href="../assets/navigation.css?v=2">
   <script src="../assets/navigation.js?v=2" defer></script>
-  <link rel="stylesheet" href="./travel.css?v=2">
-  <script src="./travel.js?v=2" defer></script>
+  <link rel="stylesheet" href="./travel.css?v=3">
+  <script src="./travel.js?v=3" defer></script>
 </head>
 <body class="has-site-footer">
   <!-- Navigation adapted from breadli428/breadli428.github.io (MIT).
@@ -40,7 +40,7 @@
   <main class="travel" id="travel">
     <h1>Travel</h1>
     <div class="travel-filters">
-      <div class="travel-filter-group" id="travel-country" role="group" aria-label="Filter by country"></div>
+      <div class="travel-filter-group" id="travel-country" role="group" aria-label="Filter by featured places or country"></div>
       <div class="travel-filter-group" id="travel-year" role="group" aria-label="Filter by year"></div>
     </div>
     <p id="travel-status" role="status">Loading travel records…</p>
@@ -48,7 +48,8 @@
     <template id="travel-card-template">
       <a class="travel-card" target="_blank" rel="noopener noreferrer">
         <img alt="" decoding="async">
-        <span><strong></strong><small></small></span>
+        <span class="travel-card-city"></span>
+        <span class="travel-card-details"><strong></strong><small></small></span>
       </a>
     </template>
   </main>

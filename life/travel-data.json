@@ -5,7 +5,8 @@
     "country": "China",
     "date": "2026-08-20",
     "url": "https://app.notion.com/p/3c37cf0907d0808ea861de4fe29ebe0a?pvs=204",
-    "cover": "./travel-photos/3c37cf0907d0808ea861de4fe29ebe0a.jpg"
+    "cover": "./travel-photos/3c37cf0907d0808ea861de4fe29ebe0a.jpg",
+    "featured": false
   },
   {
     "name": "Guilin Road",
@@ -13,7 +14,8 @@
     "country": "China",
     "date": "2026-08-20",
     "url": "https://app.notion.com/p/3c37cf0907d080538297c7ab4a5f0721?pvs=204",
-    "cover": "./travel-photos/3c37cf0907d080538297c7ab4a5f0721.jpg"
+    "cover": "./travel-photos/3c37cf0907d080538297c7ab4a5f0721.jpg",
+    "featured": false
   },
   {
     "name": "Museum of the Imperial Palace of Manchukuo",
@@ -21,7 +23,8 @@
     "country": "China",
     "date": "2026-08-20",
     "url": "https://app.notion.com/p/3c37cf0907d0802ca9bbc5977cc5c8c0?pvs=204",
-    "cover": "./travel-photos/3c37cf0907d0802ca9bbc5977cc5c8c0.jpg"
+    "cover": "./travel-photos/3c37cf0907d0802ca9bbc5977cc5c8c0.jpg",
+    "featured": true
   },
   {
     "name": "Jingyuetan National Forest Park",
@@ -29,7 +32,8 @@
     "country": "China",
     "date": "2026-08-19",
     "url": "https://app.notion.com/p/3c37cf0907d080d08d0ede41916b6c8d?pvs=204",
-    "cover": "./travel-photos/3c37cf0907d080d08d0ede41916b6c8d.jpg"
+    "cover": "./travel-photos/3c37cf0907d080d08d0ede41916b6c8d.jpg",
+    "featured": false
   },
   {
     "name": "Siji Nanhe",
@@ -37,7 +41,8 @@
     "country": "China",
     "date": "2026-08-19",
     "url": "https://app.notion.com/p/3c37cf0907d080b0a584d463ae015e98?pvs=204",
-    "cover": "./travel-photos/3c37cf0907d080b0a584d463ae015e98.jpg"
+    "cover": "./travel-photos/3c37cf0907d080b0a584d463ae015e98.jpg",
+    "featured": true
   },
   {
     "name": "Lushun Museum",
@@ -45,7 +50,8 @@
     "country": "China",
     "date": "2026-08-07",
     "url": "https://app.notion.com/p/3b77cf0907d080b29193e6dc1f087440?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080b29193e6dc1f087440.jpg"
+    "cover": "./travel-photos/3b77cf0907d080b29193e6dc1f087440.jpg",
+    "featured": false
   },
   {
     "name": "Lushun Russo-Japanese Prison Site Museum",
@@ -53,7 +59,8 @@
     "country": "China",
     "date": "2026-08-07",
     "url": "https://app.notion.com/p/3b77cf0907d0800bb8cec4e7bc1a3f13?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0800bb8cec4e7bc1a3f13.jpg"
+    "cover": "./travel-photos/3b77cf0907d0800bb8cec4e7bc1a3f13.jpg",
+    "featured": false
   },
   {
     "name": "Yellow Sea–Bohai Sea Boundary",
@@ -61,7 +68,8 @@
     "country": "China",
     "date": "2026-08-07",
     "url": "https://app.notion.com/p/3b77cf0907d080aba7c7c8129b520dd7?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080aba7c7c8129b520dd7.jpg"
+    "cover": "./travel-photos/3b77cf0907d080aba7c7c8129b520dd7.jpg",
+    "featured": false
   },
   {
     "name": "Jinshitan Geological Park",
@@ -69,7 +77,8 @@
     "country": "China",
     "date": "2026-08-06",
     "url": "https://app.notion.com/p/3b77cf0907d080738bd4fd82f8ab79f1?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080738bd4fd82f8ab79f1.jpg"
+    "cover": "./travel-photos/3b77cf0907d080738bd4fd82f8ab79f1.jpg",
+    "featured": false
   },
   {
     "name": "Jinshitan Golden Coast",
@@ -77,7 +86,8 @@
     "country": "China",
     "date": "2026-08-06",
     "url": "https://app.notion.com/p/3b77cf0907d0802c8925f49db4aed0fe?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0802c8925f49db4aed0fe.jpg"
+    "cover": "./travel-photos/3b77cf0907d0802c8925f49db4aed0fe.jpg",
+    "featured": true
   },
   {
     "name": "Bangchui Island",
@@ -85,7 +95,8 @@
     "country": "China",
     "date": "2026-08-05",
     "url": "https://app.notion.com/p/3b77cf0907d080e3af06da5538cd48ee?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080e3af06da5538cd48ee.jpg"
+    "cover": "./travel-photos/3b77cf0907d080e3af06da5538cd48ee.jpg",
+    "featured": false
   },
   {
     "name": "Fisherman’s Wharf",
@@ -93,7 +104,8 @@
     "country": "China",
     "date": "2026-08-05",
     "url": "https://app.notion.com/p/3b77cf0907d080cfa2e7c62a46922063?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080cfa2e7c62a46922063.jpg"
+    "cover": "./travel-photos/3b77cf0907d080cfa2e7c62a46922063.jpg",
+    "featured": false
   },
   {
     "name": "Fujiazhuang Park",
@@ -101,7 +113,8 @@
     "country": "China",
     "date": "2026-08-05",
     "url": "https://app.notion.com/p/3b77cf0907d0806b93fac9a89d76b285?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0806b93fac9a89d76b285.jpg"
+    "cover": "./travel-photos/3b77cf0907d0806b93fac9a89d76b285.jpg",
+    "featured": false
   },
   {
     "name": "Heishijiao Park",
@@ -109,7 +122,8 @@
     "country": "China",
     "date": "2026-08-05",
     "url": "https://app.notion.com/p/3b77cf0907d0809483c2c99374ee4e33?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0809483c2c99374ee4e33.jpg"
+    "cover": "./travel-photos/3b77cf0907d0809483c2c99374ee4e33.jpg",
+    "featured": false
   },
   {
     "name": "Lingjiaowan",
@@ -117,7 +131,8 @@
     "country": "China",
     "date": "2026-08-05",
     "url": "https://app.notion.com/p/3b77cf0907d080da8f57edfb929d4ffc?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080da8f57edfb929d4ffc.jpg"
+    "cover": "./travel-photos/3b77cf0907d080da8f57edfb929d4ffc.jpg",
+    "featured": false
   },
   {
     "name": "Haizhiyun Park",
@@ -125,7 +140,8 @@
     "country": "China",
     "date": "2026-08-04",
     "url": "https://app.notion.com/p/3b77cf0907d08094bb64f976a9b45b16?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d08094bb64f976a9b45b16.jpg"
+    "cover": "./travel-photos/3b77cf0907d08094bb64f976a9b45b16.jpg",
+    "featured": false
   },
   {
     "name": "No. 201 Heritage Tram",
@@ -133,7 +149,8 @@
     "country": "China",
     "date": "2026-08-04",
     "url": "https://app.notion.com/p/3b77cf0907d0801b9b0ef5a2af9bf789?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0801b9b0ef5a2af9bf789.jpg"
+    "cover": "./travel-photos/3b77cf0907d0801b9b0ef5a2af9bf789.jpg",
+    "featured": false
   },
   {
     "name": "Xinghai Bay Bridge",
@@ -141,7 +158,8 @@
     "country": "China",
     "date": "2026-08-04",
     "url": "https://app.notion.com/p/3b77cf0907d080abaedefa4f3ac54448?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080abaedefa4f3ac54448.jpg"
+    "cover": "./travel-photos/3b77cf0907d080abaedefa4f3ac54448.jpg",
+    "featured": false
   },
   {
     "name": "Xinghai Plaza",
@@ -149,7 +167,8 @@
     "country": "China",
     "date": "2026-08-04",
     "url": "https://app.notion.com/p/3b77cf0907d080ecb7d2ebe89d96d238?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080ecb7d2ebe89d96d238.jpg"
+    "cover": "./travel-photos/3b77cf0907d080ecb7d2ebe89d96d238.jpg",
+    "featured": false
   },
   {
     "name": "Yinshatan",
@@ -157,7 +176,8 @@
     "country": "China",
     "date": "2026-08-04",
     "url": "https://app.notion.com/p/3b77cf0907d080bc8afcc3cba2b4c5ae?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080bc8afcc3cba2b4c5ae.jpg"
+    "cover": "./travel-photos/3b77cf0907d080bc8afcc3cba2b4c5ae.jpg",
+    "featured": false
   },
   {
     "name": "Donggang Music Fountain",
@@ -165,7 +185,8 @@
     "country": "China",
     "date": "2026-08-03",
     "url": "https://app.notion.com/p/3b77cf0907d080039689d0935e93ac04?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080039689d0935e93ac04.jpg"
+    "cover": "./travel-photos/3b77cf0907d080039689d0935e93ac04.jpg",
+    "featured": true
   },
   {
     "name": "Nanshan Tourism Folk Street",
@@ -173,7 +194,8 @@
     "country": "China",
     "date": "2026-08-03",
     "url": "https://app.notion.com/p/3b77cf0907d0804bb471c4513a6c602e?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0804bb471c4513a6c602e.jpg"
+    "cover": "./travel-photos/3b77cf0907d0804bb471c4513a6c602e.jpg",
+    "featured": false
   },
   {
     "name": "Oriental Venice Water City",
@@ -181,7 +203,8 @@
     "country": "China",
     "date": "2026-08-03",
     "url": "https://app.notion.com/p/3b77cf0907d0802f975ee59e119c1396?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d0802f975ee59e119c1396.jpg"
+    "cover": "./travel-photos/3b77cf0907d0802f975ee59e119c1396.jpg",
+    "featured": false
   },
   {
     "name": "Russia Folk Street",
@@ -189,7 +212,8 @@
     "country": "China",
     "date": "2026-08-03",
     "url": "https://app.notion.com/p/3b77cf0907d080139db4d4435963633e?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d080139db4d4435963633e.jpg"
+    "cover": "./travel-photos/3b77cf0907d080139db4d4435963633e.jpg",
+    "featured": false
   },
   {
     "name": "Zhongshan Square",
@@ -197,7 +221,8 @@
     "country": "China",
     "date": "2026-08-03",
     "url": "https://app.notion.com/p/3b77cf0907d08041af0fd487a919ac43?pvs=204",
-    "cover": "./travel-photos/3b77cf0907d08041af0fd487a919ac43.jpg"
+    "cover": "./travel-photos/3b77cf0907d08041af0fd487a919ac43.jpg",
+    "featured": false
   },
   {
     "name": "Liutiao Village",
@@ -205,7 +230,8 @@
     "country": "China",
     "date": "2026-07-29",
     "url": "https://app.notion.com/p/3ac7cf0907d080dd8f39f39790a5cf39?pvs=204",
-    "cover": "./travel-photos/3ac7cf0907d080dd8f39f39790a5cf39.jpg"
+    "cover": "./travel-photos/3ac7cf0907d080dd8f39f39790a5cf39.jpg",
+    "featured": false
   },
   {
     "name": "Bayi Lake",
@@ -213,7 +239,8 @@
     "country": "China",
     "date": "2026-07-24",
     "url": "https://app.notion.com/p/3a77cf0907d0808fb43fc1d063847e2d?pvs=204",
-    "cover": "./travel-photos/3a77cf0907d0808fb43fc1d063847e2d.jpg"
+    "cover": "./travel-photos/3a77cf0907d0808fb43fc1d063847e2d.jpg",
+    "featured": false
   },
   {
     "name": "Heping Village",
@@ -221,7 +248,8 @@
     "country": "China",
     "date": "2026-07-10",
     "url": "https://app.notion.com/p/3997cf0907d0803595aee7a6de8ad4eb?pvs=204",
-    "cover": "./travel-photos/3997cf0907d0803595aee7a6de8ad4eb.jpg"
+    "cover": "./travel-photos/3997cf0907d0803595aee7a6de8ad4eb.jpg",
+    "featured": false
   },
   {
     "name": "Liaohe Sports Park",
@@ -229,7 +257,8 @@
     "country": "China",
     "date": "2026-07-08",
     "url": "https://app.notion.com/p/3977cf0907d080beb2cbed0b94e75e62?pvs=204",
-    "cover": "./travel-photos/3977cf0907d080beb2cbed0b94e75e62.jpg"
+    "cover": "./travel-photos/3977cf0907d080beb2cbed0b94e75e62.jpg",
+    "featured": false
   },
   {
     "name": "Lingbo Gate",
@@ -237,7 +266,8 @@
     "country": "China",
     "date": "2026-06-25",
     "url": "https://app.notion.com/p/38d7cf0907d0804f8123fa6c2d7618ed?pvs=204",
-    "cover": "./travel-photos/38d7cf0907d0804f8123fa6c2d7618ed.jpg"
+    "cover": "./travel-photos/38d7cf0907d0804f8123fa6c2d7618ed.jpg",
+    "featured": false
   },
   {
     "name": "Jiefang Park",
@@ -245,7 +275,8 @@
     "country": "China",
     "date": "2026-06-23",
     "url": "https://app.notion.com/p/3887cf0907d080c1a457f16802436fdf?pvs=204",
-    "cover": "./travel-photos/3887cf0907d080c1a457f16802436fdf.jpg"
+    "cover": "./travel-photos/3887cf0907d080c1a457f16802436fdf.jpg",
+    "featured": false
   },
   {
     "name": "China University of Geosciences",
@@ -253,7 +284,8 @@
     "country": "China",
     "date": "2026-06-22",
     "url": "https://app.notion.com/p/3237cf0907d080568d84ea05ec3975b8?pvs=204",
-    "cover": "./travel-photos/3237cf0907d080568d84ea05ec3975b8.jpg"
+    "cover": "./travel-photos/3237cf0907d080568d84ea05ec3975b8.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Polar Ocean Resort",
@@ -261,7 +293,8 @@
     "country": "China",
     "date": "2026-06-20",
     "url": "https://app.notion.com/p/3867cf0907d080f69f63d157786e85b6?pvs=204",
-    "cover": "./travel-photos/3867cf0907d080f69f63d157786e85b6.jpg"
+    "cover": "./travel-photos/3867cf0907d080f69f63d157786e85b6.jpg",
+    "featured": true
   },
   {
     "name": "World City Square",
@@ -269,7 +302,8 @@
     "country": "China",
     "date": "2026-06-19",
     "url": "https://app.notion.com/p/32a7cf0907d080b4badaceddc5c14666?pvs=204",
-    "cover": "./travel-photos/32a7cf0907d080b4badaceddc5c14666.jpg"
+    "cover": "./travel-photos/32a7cf0907d080b4badaceddc5c14666.jpg",
+    "featured": false
   },
   {
     "name": "Central Silom Complex",
@@ -277,7 +311,8 @@
     "country": "Thailand",
     "date": "2026-06-09",
     "url": "https://app.notion.com/p/37d7cf0907d0804da808d941965e8756?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0804da808d941965e8756.jpg"
+    "cover": "./travel-photos/37d7cf0907d0804da808d941965e8756.jpg",
+    "featured": false
   },
   {
     "name": "City Coffee Pattaya",
@@ -285,7 +320,8 @@
     "country": "Thailand",
     "date": "2026-06-09",
     "url": "https://app.notion.com/p/37e7cf0907d080ed9c9dfbfa5dac70d6?pvs=204",
-    "cover": "./travel-photos/37e7cf0907d080ed9c9dfbfa5dac70d6.jpg"
+    "cover": "./travel-photos/37e7cf0907d080ed9c9dfbfa5dac70d6.jpg",
+    "featured": false
   },
   {
     "name": "Sauna Mania",
@@ -293,7 +329,8 @@
     "country": "Thailand",
     "date": "2026-06-09",
     "url": "https://app.notion.com/p/37d7cf0907d0802a8623e68da37c2de1?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0802a8623e68da37c2de1.jpg"
+    "cover": "./travel-photos/37d7cf0907d0802a8623e68da37c2de1.jpg",
+    "featured": false
   },
   {
     "name": "Urban Thai Massage",
@@ -301,7 +338,8 @@
     "country": "Thailand",
     "date": "2026-06-09",
     "url": "https://app.notion.com/p/37d7cf0907d08041bcf4f8b6c7441c5f?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d08041bcf4f8b6c7441c5f.jpg"
+    "cover": "./travel-photos/37d7cf0907d08041bcf4f8b6c7441c5f.jpg",
+    "featured": false
   },
   {
     "name": "Koh Larn",
@@ -309,7 +347,8 @@
     "country": "Thailand",
     "date": "2026-06-08",
     "url": "https://app.notion.com/p/37d7cf0907d080419f48d3ce8c833dbe?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080419f48d3ce8c833dbe.jpg"
+    "cover": "./travel-photos/37d7cf0907d080419f48d3ce8c833dbe.jpg",
+    "featured": true
   },
   {
     "name": "69 Show",
@@ -317,7 +356,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d08074aa28dc0c7efbfac3?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d08074aa28dc0c7efbfac3.jpg"
+    "cover": "./travel-photos/37d7cf0907d08074aa28dc0c7efbfac3.jpg",
+    "featured": false
   },
   {
     "name": "Pattaya Beach",
@@ -325,7 +365,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d0802e91fedad8a4a66905?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0802e91fedad8a4a66905.jpg"
+    "cover": "./travel-photos/37d7cf0907d0802e91fedad8a4a66905.jpg",
+    "featured": false
   },
   {
     "name": "Pattaya Walking Street",
@@ -333,7 +374,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d080c882fbd83b8a584821?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080c882fbd83b8a584821.jpg"
+    "cover": "./travel-photos/37d7cf0907d080c882fbd83b8a584821.jpg",
+    "featured": false
   },
   {
     "name": "Runaway Market",
@@ -341,7 +383,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d080b393fef011a1a7c4d1?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080b393fef011a1a7c4d1.jpg"
+    "cover": "./travel-photos/37d7cf0907d080b393fef011a1a7c4d1.jpg",
+    "featured": false
   },
   {
     "name": "Sanctuary of Truth",
@@ -349,7 +392,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d080afbaa8fa753eaa709f?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080afbaa8fa753eaa709f.jpg"
+    "cover": "./travel-photos/37d7cf0907d080afbaa8fa753eaa709f.jpg",
+    "featured": false
   },
   {
     "name": "Terminal 21 Pattaya",
@@ -357,7 +401,8 @@
     "country": "Thailand",
     "date": "2026-06-07",
     "url": "https://app.notion.com/p/37d7cf0907d0809c95bbe1b0b90e768f?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0809c95bbe1b0b90e768f.jpg"
+    "cover": "./travel-photos/37d7cf0907d0809c95bbe1b0b90e768f.jpg",
+    "featured": false
   },
   {
     "name": "Asiatique The Riverfront",
@@ -365,7 +410,8 @@
     "country": "Thailand",
     "date": "2026-06-06",
     "url": "https://app.notion.com/p/37d7cf0907d080a6b5bafd034909202c?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080a6b5bafd034909202c.jpg"
+    "cover": "./travel-photos/37d7cf0907d080a6b5bafd034909202c.jpg",
+    "featured": false
   },
   {
     "name": "Chao Phraya River Cruise",
@@ -373,7 +419,8 @@
     "country": "Thailand",
     "date": "2026-06-06",
     "url": "https://app.notion.com/p/37d7cf0907d0802d916edb978f47413b?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0802d916edb978f47413b.jpg"
+    "cover": "./travel-photos/37d7cf0907d0802d916edb978f47413b.jpg",
+    "featured": true
   },
   {
     "name": "Patpong Night Market",
@@ -381,7 +428,8 @@
     "country": "Thailand",
     "date": "2026-06-06",
     "url": "https://app.notion.com/p/37d7cf0907d080f7af99d526d65a1798?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080f7af99d526d65a1798.jpg"
+    "cover": "./travel-photos/37d7cf0907d080f7af99d526d65a1798.jpg",
+    "featured": false
   },
   {
     "name": "Wat Paknam Phasi Charoen",
@@ -389,7 +437,8 @@
     "country": "Thailand",
     "date": "2026-06-06",
     "url": "https://app.notion.com/p/37d7cf0907d0801486c3df163917530b?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0801486c3df163917530b.jpg"
+    "cover": "./travel-photos/37d7cf0907d0801486c3df163917530b.jpg",
+    "featured": true
   },
   {
     "name": "ICONSIAM",
@@ -397,7 +446,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d080cc983cc6201b04811e?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080cc983cc6201b04811e.jpg"
+    "cover": "./travel-photos/37d7cf0907d080cc983cc6201b04811e.jpg",
+    "featured": false
   },
   {
     "name": "Jodd Fairs Night Market",
@@ -405,7 +455,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d080f29838c3de3daf55e1?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080f29838c3de3daf55e1.jpg"
+    "cover": "./travel-photos/37d7cf0907d080f29838c3de3daf55e1.jpg",
+    "featured": false
   },
   {
     "name": "The Grand Palace",
@@ -413,7 +464,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d08076aa10f66c73fb3aef?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d08076aa10f66c73fb3aef.jpg"
+    "cover": "./travel-photos/37d7cf0907d08076aa10f66c73fb3aef.jpg",
+    "featured": false
   },
   {
     "name": "The Temple of the Emerald Buddha",
@@ -421,7 +473,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d08036a01fc26919a7dd91?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d08036a01fc26919a7dd91.jpg"
+    "cover": "./travel-photos/37d7cf0907d08036a01fc26919a7dd91.jpg",
+    "featured": false
   },
   {
     "name": "Wat Arun Ratchawararam Ratchawaramahawihan",
@@ -429,7 +482,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d080c286cbdca80cbac1b8?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080c286cbdca80cbac1b8.jpg"
+    "cover": "./travel-photos/37d7cf0907d080c286cbdca80cbac1b8.jpg",
+    "featured": false
   },
   {
     "name": "Wat Phra Chetuphon Wimon Mangkhalaram Rajwaramahawihan",
@@ -437,7 +491,8 @@
     "country": "Thailand",
     "date": "2026-06-05",
     "url": "https://app.notion.com/p/37d7cf0907d0802982ccdaa73d7a5c62?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d0802982ccdaa73d7a5c62.jpg"
+    "cover": "./travel-photos/37d7cf0907d0802982ccdaa73d7a5c62.jpg",
+    "featured": false
   },
   {
     "name": "Chula Night Market",
@@ -445,7 +500,8 @@
     "country": "Thailand",
     "date": "2026-06-04",
     "url": "https://app.notion.com/p/37d7cf0907d080acbe35ca14d305b58e?pvs=204",
-    "cover": "./travel-photos/37d7cf0907d080acbe35ca14d305b58e.jpg"
+    "cover": "./travel-photos/37d7cf0907d080acbe35ca14d305b58e.jpg",
+    "featured": false
   },
   {
     "name": "Hankou River Beach",
@@ -453,7 +509,8 @@
     "country": "China",
     "date": "2026-05-14",
     "url": "https://app.notion.com/p/1ce7cf0907d080ba8a24f5d85e9602e2?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d080ba8a24f5d85e9602e2.jpg"
+    "cover": "./travel-photos/1ce7cf0907d080ba8a24f5d85e9602e2.jpg",
+    "featured": false
   },
   {
     "name": "East Lake Moshan Scenic Spot",
@@ -461,7 +518,8 @@
     "country": "China",
     "date": "2026-05-12",
     "url": "https://app.notion.com/p/35f7cf0907d080b5bd13fc6c1a559549?pvs=204",
-    "cover": "./travel-photos/35f7cf0907d080b5bd13fc6c1a559549.jpg"
+    "cover": "./travel-photos/35f7cf0907d080b5bd13fc6c1a559549.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Zoo",
@@ -469,7 +527,8 @@
     "country": "China",
     "date": "2026-05-09",
     "url": "https://app.notion.com/p/2517cf0907d0804e8c6fcd1b0f36b112?pvs=204",
-    "cover": "./travel-photos/2517cf0907d0804e8c6fcd1b0f36b112.jpg"
+    "cover": "./travel-photos/2517cf0907d0804e8c6fcd1b0f36b112.jpg",
+    "featured": true
   },
   {
     "name": "Lihuangpi Road",
@@ -477,7 +536,8 @@
     "country": "China",
     "date": "2026-05-04",
     "url": "https://app.notion.com/p/3397cf0907d080379cc0e84a0f0e20c0?pvs=204",
-    "cover": "./travel-photos/3397cf0907d080379cc0e84a0f0e20c0.jpg"
+    "cover": "./travel-photos/3397cf0907d080379cc0e84a0f0e20c0.jpg",
+    "featured": false
   },
   {
     "name": "Yangtze River Bridge",
@@ -485,7 +545,8 @@
     "country": "China",
     "date": "2026-05-04",
     "url": "https://app.notion.com/p/32a7cf0907d080b2b059e5bc1fb73197?pvs=204",
-    "cover": "./travel-photos/32a7cf0907d080b2b059e5bc1fb73197.jpg"
+    "cover": "./travel-photos/32a7cf0907d080b2b059e5bc1fb73197.jpg",
+    "featured": false
   },
   {
     "name": "Zhongshan Park",
@@ -493,7 +554,8 @@
     "country": "China",
     "date": "2026-05-04",
     "url": "https://app.notion.com/p/3577cf0907d080018e94e6703640e8c3?pvs=204",
-    "cover": "./travel-photos/3577cf0907d080018e94e6703640e8c3.jpg"
+    "cover": "./travel-photos/3577cf0907d080018e94e6703640e8c3.jpg",
+    "featured": false
   },
   {
     "name": "Shahu Park",
@@ -501,7 +563,8 @@
     "country": "China",
     "date": "2026-04-29",
     "url": "https://app.notion.com/p/3537cf0907d080bca6f4edb17dc2b480?pvs=204",
-    "cover": "./travel-photos/3537cf0907d080bca6f4edb17dc2b480.jpg"
+    "cover": "./travel-photos/3537cf0907d080bca6f4edb17dc2b480.jpg",
+    "featured": true
   },
   {
     "name": "Shaw Museum of CUG",
@@ -509,7 +572,8 @@
     "country": "China",
     "date": "2026-04-29",
     "url": "https://app.notion.com/p/3537cf0907d08044b53ee908a81a2978?pvs=204",
-    "cover": "./travel-photos/3537cf0907d08044b53ee908a81a2978.jpg"
+    "cover": "./travel-photos/3537cf0907d08044b53ee908a81a2978.jpg",
+    "featured": false
   },
   {
     "name": "The Han Show: Water Show",
@@ -517,7 +581,8 @@
     "country": "China",
     "date": "2026-04-29",
     "url": "https://app.notion.com/p/3537cf0907d080279ff3c8457147a633?pvs=204",
-    "cover": "./travel-photos/3537cf0907d080279ff3c8457147a633.jpg"
+    "cover": "./travel-photos/3537cf0907d080279ff3c8457147a633.jpg",
+    "featured": true
   },
   {
     "name": "Hubei Museum of Art",
@@ -525,7 +590,8 @@
     "country": "China",
     "date": "2026-04-19",
     "url": "https://app.notion.com/p/3477cf0907d080fda009dfc56769ba4b?pvs=204",
-    "cover": "./travel-photos/3477cf0907d080fda009dfc56769ba4b.jpg"
+    "cover": "./travel-photos/3477cf0907d080fda009dfc56769ba4b.jpg",
+    "featured": false
   },
   {
     "name": "Baotong Temple",
@@ -533,7 +599,8 @@
     "country": "China",
     "date": "2026-04-17",
     "url": "https://app.notion.com/p/3457cf0907d080b085e9d31e92f4f801?pvs=204",
-    "cover": "./travel-photos/3457cf0907d080b085e9d31e92f4f801.jpg"
+    "cover": "./travel-photos/3457cf0907d080b085e9d31e92f4f801.jpg",
+    "featured": false
   },
   {
     "name": "Guqintai",
@@ -541,7 +608,8 @@
     "country": "China",
     "date": "2026-04-17",
     "url": "https://app.notion.com/p/33f7cf0907d0803faf2edc49b699430d?pvs=204",
-    "cover": "./travel-photos/33f7cf0907d0803faf2edc49b699430d.jpg"
+    "cover": "./travel-photos/33f7cf0907d0803faf2edc49b699430d.jpg",
+    "featured": false
   },
   {
     "name": "Guiyuan Temple",
@@ -549,7 +617,8 @@
     "country": "China",
     "date": "2026-04-10",
     "url": "https://app.notion.com/p/33f7cf0907d0806bb23ff15b0b51db73?pvs=204",
-    "cover": "./travel-photos/33f7cf0907d0806bb23ff15b0b51db73.jpg"
+    "cover": "./travel-photos/33f7cf0907d0806bb23ff15b0b51db73.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Cruise",
@@ -557,7 +626,8 @@
     "country": "China",
     "date": "2026-04-10",
     "url": "https://app.notion.com/p/33f7cf0907d080caa48de356c407c4df?pvs=204",
-    "cover": "./travel-photos/33f7cf0907d080caa48de356c407c4df.jpg"
+    "cover": "./travel-photos/33f7cf0907d080caa48de356c407c4df.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Ferry",
@@ -565,7 +635,8 @@
     "country": "China",
     "date": "2026-04-10",
     "url": "https://app.notion.com/p/33f7cf0907d0806b8250c9e689e1590e?pvs=204",
-    "cover": "./travel-photos/33f7cf0907d0806b8250c9e689e1590e.jpg"
+    "cover": "./travel-photos/33f7cf0907d0806b8250c9e689e1590e.jpg",
+    "featured": false
   },
   {
     "name": "Yellow Crane Tower",
@@ -573,7 +644,8 @@
     "country": "China",
     "date": "2026-04-10",
     "url": "https://app.notion.com/p/1ce7cf0907d08050a048cb05acae44a7?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d08050a048cb05acae44a7.jpg"
+    "cover": "./travel-photos/1ce7cf0907d08050a048cb05acae44a7.jpg",
+    "featured": false
   },
   {
     "name": "Botanical Garden",
@@ -581,7 +653,8 @@
     "country": "China",
     "date": "2026-04-07",
     "url": "https://app.notion.com/p/2517cf0907d08039a76ade3cdb2e5419?pvs=204",
-    "cover": "./travel-photos/2517cf0907d08039a76ade3cdb2e5419.jpg"
+    "cover": "./travel-photos/2517cf0907d08039a76ade3cdb2e5419.jpg",
+    "featured": true
   },
   {
     "name": "Gude Temple",
@@ -589,7 +662,8 @@
     "country": "China",
     "date": "2026-04-04",
     "url": "https://app.notion.com/p/3397cf0907d080ccbb4fcf2c6cdb9f69?pvs=204",
-    "cover": "./travel-photos/3397cf0907d080ccbb4fcf2c6cdb9f69.jpg"
+    "cover": "./travel-photos/3397cf0907d080ccbb4fcf2c6cdb9f69.jpg",
+    "featured": true
   },
   {
     "name": "Qingchuan Pavilion",
@@ -597,7 +671,8 @@
     "country": "China",
     "date": "2026-04-04",
     "url": "https://app.notion.com/p/3397cf0907d080dcad28f523d1c211b8?pvs=204",
-    "cover": "./travel-photos/3397cf0907d080dcad28f523d1c211b8.jpg"
+    "cover": "./travel-photos/3397cf0907d080dcad28f523d1c211b8.jpg",
+    "featured": false
   },
   {
     "name": "Tortoise Mountain Zhiyindian",
@@ -605,7 +680,8 @@
     "country": "China",
     "date": "2026-04-04",
     "url": "https://app.notion.com/p/3397cf0907d0804b98a6d023d49ca860?pvs=204",
-    "cover": "./travel-photos/3397cf0907d0804b98a6d023d49ca860.jpg"
+    "cover": "./travel-photos/3397cf0907d0804b98a6d023d49ca860.jpg",
+    "featured": false
   },
   {
     "name": "Chu River and Han Street",
@@ -613,7 +689,8 @@
     "country": "China",
     "date": "2026-04-01",
     "url": "https://app.notion.com/p/3357cf0907d080bc86e1d2e5cf835706?pvs=204",
-    "cover": "./travel-photos/3357cf0907d080bc86e1d2e5cf835706.jpg"
+    "cover": "./travel-photos/3357cf0907d080bc86e1d2e5cf835706.jpg",
+    "featured": false
   },
   {
     "name": "Hubei Provincial Museum",
@@ -621,7 +698,8 @@
     "country": "China",
     "date": "2026-04-01",
     "url": "https://app.notion.com/p/1ce7cf0907d080d3b998d5ff4ce80ad6?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d080d3b998d5ff4ce80ad6.jpg"
+    "cover": "./travel-photos/1ce7cf0907d080d3b998d5ff4ce80ad6.jpg",
+    "featured": false
   },
   {
     "name": "East Lake",
@@ -629,7 +707,8 @@
     "country": "China",
     "date": "2026-03-27",
     "url": "https://app.notion.com/p/1ce7cf0907d0807b86c4fd04eb4e6200?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d0807b86c4fd04eb4e6200.jpg"
+    "cover": "./travel-photos/1ce7cf0907d0807b86c4fd04eb4e6200.jpg",
+    "featured": true
   },
   {
     "name": "Hubu Alley",
@@ -637,7 +716,8 @@
     "country": "China",
     "date": "2026-03-19",
     "url": "https://app.notion.com/p/32a7cf0907d080d5bacfef561cbdd503?pvs=204",
-    "cover": "./travel-photos/32a7cf0907d080d5bacfef561cbdd503.jpg"
+    "cover": "./travel-photos/32a7cf0907d080d5bacfef561cbdd503.jpg",
+    "featured": false
   },
   {
     "name": "Tanhualin",
@@ -645,7 +725,8 @@
     "country": "China",
     "date": "2026-03-19",
     "url": "https://app.notion.com/p/32a7cf0907d0800790fced45dd26b6cb?pvs=204",
-    "cover": "./travel-photos/32a7cf0907d0800790fced45dd26b6cb.jpg"
+    "cover": "./travel-photos/32a7cf0907d0800790fced45dd26b6cb.jpg",
+    "featured": false
   },
   {
     "name": "Jianghan Road",
@@ -653,7 +734,8 @@
     "country": "China",
     "date": "2026-03-17",
     "url": "https://app.notion.com/p/3277cf0907d08020bf9acf92b9a3e2fb?pvs=204",
-    "cover": "./travel-photos/3277cf0907d08020bf9acf92b9a3e2fb.jpg"
+    "cover": "./travel-photos/3277cf0907d08020bf9acf92b9a3e2fb.jpg",
+    "featured": false
   },
   {
     "name": "Jianghanguan Building",
@@ -661,7 +743,8 @@
     "country": "China",
     "date": "2026-03-17",
     "url": "https://app.notion.com/p/3277cf0907d08055aad9dac348ae4a93?pvs=204",
-    "cover": "./travel-photos/3277cf0907d08055aad9dac348ae4a93.jpg"
+    "cover": "./travel-photos/3277cf0907d08055aad9dac348ae4a93.jpg",
+    "featured": false
   },
   {
     "name": "East Lake Cherry Blossom Park",
@@ -669,7 +752,8 @@
     "country": "China",
     "date": "2026-03-14",
     "url": "https://app.notion.com/p/3237cf0907d0803fac9ff45920afa03e?pvs=204",
-    "cover": "./travel-photos/3237cf0907d0803fac9ff45920afa03e.jpg"
+    "cover": "./travel-photos/3237cf0907d0803fac9ff45920afa03e.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan University",
@@ -677,7 +761,8 @@
     "country": "China",
     "date": "2026-03-11",
     "url": "https://app.notion.com/p/3237cf0907d080299ba3f352dfcaac27?pvs=204",
-    "cover": "./travel-photos/3237cf0907d080299ba3f352dfcaac27.jpg"
+    "cover": "./travel-photos/3237cf0907d080299ba3f352dfcaac27.jpg",
+    "featured": false
   },
   {
     "name": "Windsor Park Plaza",
@@ -685,7 +770,8 @@
     "country": "Canada",
     "date": "2026-02-12",
     "url": "https://app.notion.com/p/1c17cf0907d0819f9fb4fc428b1568d6?pvs=204",
-    "cover": "./travel-photos/1c17cf0907d0819f9fb4fc428b1568d6.jpg"
+    "cover": "./travel-photos/1c17cf0907d0819f9fb4fc428b1568d6.jpg",
+    "featured": false
   },
   {
     "name": "University of Alberta",
@@ -693,7 +779,8 @@
     "country": "Canada",
     "date": "2026-02-10",
     "url": "https://app.notion.com/p/1c17cf0907d081de8f94c527d153f2e9?pvs=204",
-    "cover": "./travel-photos/1c17cf0907d081de8f94c527d153f2e9.jpg"
+    "cover": "./travel-photos/1c17cf0907d081de8f94c527d153f2e9.jpg",
+    "featured": true
   },
   {
     "name": "Frederick G. Todd Lookout",
@@ -701,7 +788,8 @@
     "country": "Canada",
     "date": "2026-02-09",
     "url": "https://app.notion.com/p/2327cf0907d0807b952dc44edfa6a4fc?pvs=204",
-    "cover": "./travel-photos/2327cf0907d0807b952dc44edfa6a4fc.jpg"
+    "cover": "./travel-photos/2327cf0907d0807b952dc44edfa6a4fc.jpg",
+    "featured": false
   },
   {
     "name": "Silver Skate Festival",
@@ -709,7 +797,8 @@
     "country": "Canada",
     "date": "2026-02-07",
     "url": "https://app.notion.com/p/3017cf0907d080d2b011db6b454d0201?pvs=204",
-    "cover": "./travel-photos/3017cf0907d080d2b011db6b454d0201.jpg"
+    "cover": "./travel-photos/3017cf0907d080d2b011db6b454d0201.jpg",
+    "featured": false
   },
   {
     "name": "Edmonton Valley Zoo",
@@ -717,7 +806,8 @@
     "country": "Canada",
     "date": "2026-02-06",
     "url": "https://app.notion.com/p/2577cf0907d0803d95cde854cc95b493?pvs=204",
-    "cover": "./travel-photos/2577cf0907d0803d95cde854cc95b493.jpg"
+    "cover": "./travel-photos/2577cf0907d0803d95cde854cc95b493.jpg",
+    "featured": true
   },
   {
     "name": "Grindstone Theatre",
@@ -725,7 +815,8 @@
     "country": "Canada",
     "date": "2026-02-04",
     "url": "https://app.notion.com/p/2fe7cf0907d08056a0bfcbba5cacaaf2?pvs=204",
-    "cover": "./travel-photos/2fe7cf0907d08056a0bfcbba5cacaaf2.jpg"
+    "cover": "./travel-photos/2fe7cf0907d08056a0bfcbba5cacaaf2.jpg",
+    "featured": false
   },
   {
     "name": "West Edmonton Mall",
@@ -733,7 +824,8 @@
     "country": "Canada",
     "date": "2026-01-29",
     "url": "https://app.notion.com/p/1c17cf0907d081359535c8f2a0045a88?pvs=204",
-    "cover": "./travel-photos/1c17cf0907d081359535c8f2a0045a88.jpg"
+    "cover": "./travel-photos/1c17cf0907d081359535c8f2a0045a88.jpg",
+    "featured": true
   },
   {
     "name": "Flying Canoe Volant",
@@ -741,7 +833,8 @@
     "country": "Canada",
     "date": "2026-01-28",
     "url": "https://app.notion.com/p/2f77cf0907d080208d1bc2002232fe0d?pvs=204",
-    "cover": "./travel-photos/2f77cf0907d080208d1bc2002232fe0d.jpg"
+    "cover": "./travel-photos/2f77cf0907d080208d1bc2002232fe0d.jpg",
+    "featured": false
   },
   {
     "name": "Ice Castles",
@@ -749,7 +842,8 @@
     "country": "Canada",
     "date": "2026-01-26",
     "url": "https://app.notion.com/p/2f57cf0907d0807682c8ffb3896da52c?pvs=204",
-    "cover": "./travel-photos/2f57cf0907d0807682c8ffb3896da52c.jpg"
+    "cover": "./travel-photos/2f57cf0907d0807682c8ffb3896da52c.jpg",
+    "featured": false
   },
   {
     "name": "Deep Freeze Festival",
@@ -757,7 +851,8 @@
     "country": "Canada",
     "date": "2026-01-17",
     "url": "https://app.notion.com/p/2ec7cf0907d0805d9955c6b43cfec084?pvs=204",
-    "cover": "./travel-photos/2ec7cf0907d0805d9955c6b43cfec084.jpg"
+    "cover": "./travel-photos/2ec7cf0907d0805d9955c6b43cfec084.jpg",
+    "featured": false
   },
   {
     "name": "ICE District",
@@ -765,7 +860,8 @@
     "country": "Canada",
     "date": "2026-01-17",
     "url": "https://app.notion.com/p/2ec7cf0907d080759937ee1e262db7a3?pvs=204",
-    "cover": "./travel-photos/2ec7cf0907d080759937ee1e262db7a3.jpg"
+    "cover": "./travel-photos/2ec7cf0907d080759937ee1e262db7a3.jpg",
+    "featured": false
   },
   {
     "name": "Victoria Park Skating Oval",
@@ -773,7 +869,8 @@
     "country": "Canada",
     "date": "2026-01-14",
     "url": "https://app.notion.com/p/2ea7cf0907d0806da084c46fa8cbe356?pvs=204",
-    "cover": "./travel-photos/2ea7cf0907d0806da084c46fa8cbe356.jpg"
+    "cover": "./travel-photos/2ea7cf0907d0806da084c46fa8cbe356.jpg",
+    "featured": false
   },
   {
     "name": "Sir Winston Churchill Square",
@@ -781,7 +878,8 @@
     "country": "Canada",
     "date": "2026-01-11",
     "url": "https://app.notion.com/p/1c17cf0907d081299d1cc037413156d3?pvs=204",
-    "cover": "./travel-photos/1c17cf0907d081299d1cc037413156d3.jpg"
+    "cover": "./travel-photos/1c17cf0907d081299d1cc037413156d3.jpg",
+    "featured": false
   },
   {
     "name": "Candy Cane Lane (Christmas)",
@@ -789,7 +887,8 @@
     "country": "Canada",
     "date": "2025-12-23",
     "url": "https://app.notion.com/p/2d37cf0907d080f788d7df9edab2bf1a?pvs=204",
-    "cover": "./travel-photos/2d37cf0907d080f788d7df9edab2bf1a.jpg"
+    "cover": "./travel-photos/2d37cf0907d080f788d7df9edab2bf1a.jpg",
+    "featured": false
   },
   {
     "name": "ByWard Market",
@@ -797,7 +896,8 @@
     "country": "Canada",
     "date": "2025-12-13",
     "url": "https://app.notion.com/p/2cb7cf0907d0807e8c01d50b6bc6936a?pvs=204",
-    "cover": "./travel-photos/2cb7cf0907d0807e8c01d50b6bc6936a.jpg"
+    "cover": "./travel-photos/2cb7cf0907d0807e8c01d50b6bc6936a.jpg",
+    "featured": false
   },
   {
     "name": "Fairmont Château Laurier",
@@ -805,7 +905,8 @@
     "country": "Canada",
     "date": "2025-12-13",
     "url": "https://app.notion.com/p/2ca7cf0907d0805aaa8bd5f1532fdd14?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0805aaa8bd5f1532fdd14.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0805aaa8bd5f1532fdd14.jpg",
+    "featured": false
   },
   {
     "name": "Parliament Hill",
@@ -813,7 +914,8 @@
     "country": "Canada",
     "date": "2025-12-13",
     "url": "https://app.notion.com/p/2ca7cf0907d0808185a1eba31a718c2d?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0808185a1eba31a718c2d.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0808185a1eba31a718c2d.jpg",
+    "featured": true
   },
   {
     "name": "Habitat 67",
@@ -821,7 +923,8 @@
     "country": "Canada",
     "date": "2025-12-12",
     "url": "https://app.notion.com/p/2ca7cf0907d080ad80d5dc4154f9374c?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080ad80d5dc4154f9374c.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080ad80d5dc4154f9374c.jpg",
+    "featured": false
   },
   {
     "name": "Mount Royal",
@@ -829,7 +932,8 @@
     "country": "Canada",
     "date": "2025-12-12",
     "url": "https://app.notion.com/p/2ca7cf0907d080c19f72c5567a1b2f9a?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080c19f72c5567a1b2f9a.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080c19f72c5567a1b2f9a.jpg",
+    "featured": false
   },
   {
     "name": "Saint-Catherine St",
@@ -837,7 +941,8 @@
     "country": "Canada",
     "date": "2025-12-12",
     "url": "https://app.notion.com/p/2ca7cf0907d080399f0ae317f80b6413?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080399f0ae317f80b6413.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080399f0ae317f80b6413.jpg",
+    "featured": false
   },
   {
     "name": "Montreal Chinatown",
@@ -845,7 +950,8 @@
     "country": "Canada",
     "date": "2025-12-11",
     "url": "https://app.notion.com/p/2cb7cf0907d08033b611dea2d8841c7d?pvs=204",
-    "cover": "./travel-photos/2cb7cf0907d08033b611dea2d8841c7d.jpg"
+    "cover": "./travel-photos/2cb7cf0907d08033b611dea2d8841c7d.jpg",
+    "featured": false
   },
   {
     "name": "Montreal Underground City",
@@ -853,7 +959,8 @@
     "country": "Canada",
     "date": "2025-12-11",
     "url": "https://app.notion.com/p/2ca7cf0907d08027be89e6e58be9b8af?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08027be89e6e58be9b8af.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08027be89e6e58be9b8af.jpg",
+    "featured": true
   },
   {
     "name": "Old Montreal",
@@ -861,7 +968,8 @@
     "country": "Canada",
     "date": "2025-12-11",
     "url": "https://app.notion.com/p/2ca7cf0907d080738cc6d5753fc2ce94?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080738cc6d5753fc2ce94.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080738cc6d5753fc2ce94.jpg",
+    "featured": false
   },
   {
     "name": "Old Port of Montreal",
@@ -869,7 +977,8 @@
     "country": "Canada",
     "date": "2025-12-11",
     "url": "https://app.notion.com/p/2ca7cf0907d0805c8548ee163c8a3dc5?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0805c8548ee163c8a3dc5.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0805c8548ee163c8a3dc5.jpg",
+    "featured": false
   },
   {
     "name": "Saint Joseph's Oratory of Mount Royal",
@@ -877,7 +986,8 @@
     "country": "Canada",
     "date": "2025-12-11",
     "url": "https://app.notion.com/p/2ca7cf0907d08089b274ebd3198ad9d3?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08089b274ebd3198ad9d3.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08089b274ebd3198ad9d3.jpg",
+    "featured": false
   },
   {
     "name": "Notre-Dame Basilica of Montreal",
@@ -885,7 +995,8 @@
     "country": "Canada",
     "date": "2025-12-10",
     "url": "https://app.notion.com/p/2ca7cf0907d080298642c7f7e669be8a?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080298642c7f7e669be8a.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080298642c7f7e669be8a.jpg",
+    "featured": true
   },
   {
     "name": "Montmorency Falls",
@@ -893,7 +1004,8 @@
     "country": "Canada",
     "date": "2025-12-09",
     "url": "https://app.notion.com/p/2ca7cf0907d0801db7d0fdf9c904db1f?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0801db7d0fdf9c904db1f.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0801db7d0fdf9c904db1f.jpg",
+    "featured": false
   },
   {
     "name": "Paquet Pier",
@@ -901,7 +1013,8 @@
     "country": "Canada",
     "date": "2025-12-09",
     "url": "https://app.notion.com/p/2ca7cf0907d080319e9eecc185a6c931?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080319e9eecc185a6c931.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080319e9eecc185a6c931.jpg",
+    "featured": false
   },
   {
     "name": "Terrasse du Chevalier-de-Lévis",
@@ -909,7 +1022,8 @@
     "country": "Canada",
     "date": "2025-12-09",
     "url": "https://app.notion.com/p/2ca7cf0907d08021935ec633312efe22?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08021935ec633312efe22.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08021935ec633312efe22.jpg",
+    "featured": false
   },
   {
     "name": "Escalier Casse-Cou",
@@ -917,7 +1031,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d08014b1e5efc8017f657b?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08014b1e5efc8017f657b.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08014b1e5efc8017f657b.jpg",
+    "featured": false
   },
   {
     "name": "Fairmont Le Château Frontenac",
@@ -925,7 +1040,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d0808dac41dbe7fb3377a8?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0808dac41dbe7fb3377a8.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0808dac41dbe7fb3377a8.jpg",
+    "featured": false
   },
   {
     "name": "G3 Canada Limited",
@@ -933,7 +1049,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d080f6bc68c12a00037cf8?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080f6bc68c12a00037cf8.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080f6bc68c12a00037cf8.jpg",
+    "featured": false
   },
   {
     "name": "Governors' Garden",
@@ -941,7 +1058,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d080c3a8ebf5022e4a3c97?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080c3a8ebf5022e4a3c97.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080c3a8ebf5022e4a3c97.jpg",
+    "featured": false
   },
   {
     "name": "Notre-Dame de Québec Basilica-Cathedral",
@@ -949,7 +1067,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d08008b2f2f0b6b2014f35?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08008b2f2f0b6b2014f35.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08008b2f2f0b6b2014f35.jpg",
+    "featured": true
   },
   {
     "name": "Parliament Building",
@@ -957,7 +1076,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d08076969cc5cb9ee9a959?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08076969cc5cb9ee9a959.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08076969cc5cb9ee9a959.jpg",
+    "featured": false
   },
   {
     "name": "Place Royale",
@@ -965,7 +1085,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d08055a5eaf364172384ad?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08055a5eaf364172384ad.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08055a5eaf364172384ad.jpg",
+    "featured": false
   },
   {
     "name": "Rue du Petit Champlain",
@@ -973,7 +1094,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d0802a883ee420af31ec11?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0802a883ee420af31ec11.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0802a883ee420af31ec11.jpg",
+    "featured": false
   },
   {
     "name": "Saint Lawrence River",
@@ -981,7 +1103,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d080728d6fcdd0e213eb94?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080728d6fcdd0e213eb94.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080728d6fcdd0e213eb94.jpg",
+    "featured": false
   },
   {
     "name": "St. Louis Gate",
@@ -989,7 +1112,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d080938eece3cb181f12a7?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080938eece3cb181f12a7.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080938eece3cb181f12a7.jpg",
+    "featured": false
   },
   {
     "name": "Terrasse Saint-Denis",
@@ -997,7 +1121,8 @@
     "country": "Canada",
     "date": "2025-12-08",
     "url": "https://app.notion.com/p/2ca7cf0907d080349b68c1860d94cddf?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080349b68c1860d94cddf.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080349b68c1860d94cddf.jpg",
+    "featured": false
   },
   {
     "name": "City Hall of Quebec City",
@@ -1005,7 +1130,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d0808db10dfdbd992c101e?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0808db10dfdbd992c101e.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0808db10dfdbd992c101e.jpg",
+    "featured": false
   },
   {
     "name": "Defferin Terrace",
@@ -1013,7 +1139,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d0805a8b52e009dd0d6445?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d0805a8b52e009dd0d6445.jpg"
+    "cover": "./travel-photos/2ca7cf0907d0805a8b52e009dd0d6445.jpg",
+    "featured": true
   },
   {
     "name": "Guardian: The Lonely and Great God",
@@ -1021,7 +1148,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d080c88cb4f9e4f0598190?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080c88cb4f9e4f0598190.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080c88cb4f9e4f0598190.jpg",
+    "featured": false
   },
   {
     "name": "La Boutique de Noël de Québec",
@@ -1029,7 +1157,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d08045acc7ea189348af11?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08045acc7ea189348af11.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08045acc7ea189348af11.jpg",
+    "featured": true
   },
   {
     "name": "Old Quebec",
@@ -1037,7 +1166,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d08030b026cd1f332f37d0?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d08030b026cd1f332f37d0.jpg"
+    "cover": "./travel-photos/2ca7cf0907d08030b026cd1f332f37d0.jpg",
+    "featured": false
   },
   {
     "name": "Rue Saint-Jean",
@@ -1045,7 +1175,8 @@
     "country": "Canada",
     "date": "2025-12-07",
     "url": "https://app.notion.com/p/2ca7cf0907d080df82c7d07e2496e8c6?pvs=204",
-    "cover": "./travel-photos/2ca7cf0907d080df82c7d07e2496e8c6.jpg"
+    "cover": "./travel-photos/2ca7cf0907d080df82c7d07e2496e8c6.jpg",
+    "featured": false
   },
   {
     "name": "Alberta Legislature Building",
@@ -1053,7 +1184,8 @@
     "country": "Canada",
     "date": "2025-12-03",
     "url": "https://app.notion.com/p/1c17cf0907d081208242c3b7647e298f?pvs=204",
-    "cover": "./travel-photos/1c17cf0907d081208242c3b7647e298f.jpg"
+    "cover": "./travel-photos/1c17cf0907d081208242c3b7647e298f.jpg",
+    "featured": true
   },
   {
     "name": "Mcintyre Park",
@@ -1061,7 +1193,8 @@
     "country": "Canada",
     "date": "2025-11-29",
     "url": "https://app.notion.com/p/2bb7cf0907d0805dbae2c0c171657fdd?pvs=204",
-    "cover": "./travel-photos/2bb7cf0907d0805dbae2c0c171657fdd.jpg"
+    "cover": "./travel-photos/2bb7cf0907d0805dbae2c0c171657fdd.jpg",
+    "featured": false
   },
   {
     "name": "Downtown Winterval",
@@ -1069,7 +1202,8 @@
     "country": "Canada",
     "date": "2025-11-22",
     "url": "https://app.notion.com/p/2b47cf0907d080ab840be9515e5925ed?pvs=204",
-    "cover": "./travel-photos/2b47cf0907d080ab840be9515e5925ed.jpg"
+    "cover": "./travel-photos/2b47cf0907d080ab840be9515e5925ed.jpg",
+    "featured": false
   },
   {
     "name": "Keillor Point",
@@ -1077,7 +1211,8 @@
     "country": "Canada",
     "date": "2025-11-15",
     "url": "https://app.notion.com/p/23d7cf0907d08034be74da0a68b6caf7?pvs=204",
-    "cover": "./travel-photos/23d7cf0907d08034be74da0a68b6caf7.jpg"
+    "cover": "./travel-photos/23d7cf0907d08034be74da0a68b6caf7.jpg",
+    "featured": true
   },
   {
     "name": "Aurora",
@@ -1085,7 +1220,8 @@
     "country": "Canada",
     "date": "2025-11-11",
     "url": "https://app.notion.com/p/2a97cf0907d080e5833dfabaefb7ebf8?pvs=204",
-    "cover": "./travel-photos/2a97cf0907d080e5833dfabaefb7ebf8.jpg"
+    "cover": "./travel-photos/2a97cf0907d080e5833dfabaefb7ebf8.jpg",
+    "featured": true
   },
   {
     "name": "Queen Elizabeth Park",
@@ -1093,7 +1229,8 @@
     "country": "Canada",
     "date": "2025-11-07",
     "url": "https://app.notion.com/p/25f7cf0907d0803ea40af467e6751583?pvs=204",
-    "cover": "./travel-photos/25f7cf0907d0803ea40af467e6751583.jpg"
+    "cover": "./travel-photos/25f7cf0907d0803ea40af467e6751583.jpg",
+    "featured": false
   },
   {
     "name": "Deadmonton Haunted House",
@@ -1101,7 +1238,8 @@
     "country": "Canada",
     "date": "2025-10-31",
     "url": "https://app.notion.com/p/29e7cf0907d0804bb6d4c83f8653afaa?pvs=204",
-    "cover": "./travel-photos/29e7cf0907d0804bb6d4c83f8653afaa.jpg"
+    "cover": "./travel-photos/29e7cf0907d0804bb6d4c83f8653afaa.jpg",
+    "featured": false
   },
   {
     "name": "Borden Park (Halloween)",
@@ -1109,7 +1247,8 @@
     "country": "Canada",
     "date": "2025-10-30",
     "url": "https://app.notion.com/p/29d7cf0907d0805185cef07201d32430?pvs=204",
-    "cover": "./travel-photos/29d7cf0907d0805185cef07201d32430.jpg"
+    "cover": "./travel-photos/29d7cf0907d0805185cef07201d32430.jpg",
+    "featured": false
   },
   {
     "name": "Alberta Aviation Museum",
@@ -1117,7 +1256,8 @@
     "country": "Canada",
     "date": "2025-10-11",
     "url": "https://app.notion.com/p/28a7cf0907d080b8b213e884da809f8b?pvs=204",
-    "cover": "./travel-photos/28a7cf0907d080b8b213e884da809f8b.jpg"
+    "cover": "./travel-photos/28a7cf0907d080b8b213e884da809f8b.jpg",
+    "featured": true
   },
   {
     "name": "Kinsmen Park",
@@ -1125,7 +1265,8 @@
     "country": "Canada",
     "date": "2025-10-05",
     "url": "https://app.notion.com/p/2847cf0907d080d0a0a9c51563a02289?pvs=204",
-    "cover": "./travel-photos/2847cf0907d080d0a0a9c51563a02289.jpg"
+    "cover": "./travel-photos/2847cf0907d080d0a0a9c51563a02289.jpg",
+    "featured": false
   },
   {
     "name": "Berczy Park",
@@ -1133,7 +1274,8 @@
     "country": "Canada",
     "date": "2025-09-23",
     "url": "https://app.notion.com/p/2797cf0907d080f2aa9cea5aef2f5d42?pvs=204",
-    "cover": "./travel-photos/2797cf0907d080f2aa9cea5aef2f5d42.jpg"
+    "cover": "./travel-photos/2797cf0907d080f2aa9cea5aef2f5d42.jpg",
+    "featured": false
   },
   {
     "name": "Centre Island",
@@ -1141,7 +1283,8 @@
     "country": "Canada",
     "date": "2025-09-23",
     "url": "https://app.notion.com/p/2797cf0907d08064aa3fe6a0ea953b1b?pvs=204",
-    "cover": "./travel-photos/2797cf0907d08064aa3fe6a0ea953b1b.jpg"
+    "cover": "./travel-photos/2797cf0907d08064aa3fe6a0ea953b1b.jpg",
+    "featured": false
   },
   {
     "name": "Ripley's Aquarium of Canada",
@@ -1149,7 +1292,8 @@
     "country": "Canada",
     "date": "2025-09-23",
     "url": "https://app.notion.com/p/2797cf0907d080efb6d8c213f67ab052?pvs=204",
-    "cover": "./travel-photos/2797cf0907d080efb6d8c213f67ab052.jpg"
+    "cover": "./travel-photos/2797cf0907d080efb6d8c213f67ab052.jpg",
+    "featured": true
   },
   {
     "name": "St. Lawrence Market",
@@ -1157,7 +1301,8 @@
     "country": "Canada",
     "date": "2025-09-23",
     "url": "https://app.notion.com/p/2797cf0907d080fa95a7cd296f2045dd?pvs=204",
-    "cover": "./travel-photos/2797cf0907d080fa95a7cd296f2045dd.jpg"
+    "cover": "./travel-photos/2797cf0907d080fa95a7cd296f2045dd.jpg",
+    "featured": false
   },
   {
     "name": "Dundas Square",
@@ -1165,7 +1310,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2797cf0907d0802881b0fe02272f77a9?pvs=204",
-    "cover": "./travel-photos/2797cf0907d0802881b0fe02272f77a9.jpg"
+    "cover": "./travel-photos/2797cf0907d0802881b0fe02272f77a9.jpg",
+    "featured": false
   },
   {
     "name": "Eaton Centre",
@@ -1173,7 +1319,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2787cf0907d080f789c5c684453f9ddd?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080f789c5c684453f9ddd.jpg"
+    "cover": "./travel-photos/2787cf0907d080f789c5c684453f9ddd.jpg",
+    "featured": false
   },
   {
     "name": "Nathan Phillips Square",
@@ -1181,7 +1328,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2797cf0907d080639073e5ca89973082?pvs=204",
-    "cover": "./travel-photos/2797cf0907d080639073e5ca89973082.jpg"
+    "cover": "./travel-photos/2797cf0907d080639073e5ca89973082.jpg",
+    "featured": false
   },
   {
     "name": "Niagara Falls",
@@ -1189,7 +1337,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2787cf0907d080efaf4dd857fd804989?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080efaf4dd857fd804989.jpg"
+    "cover": "./travel-photos/2787cf0907d080efaf4dd857fd804989.jpg",
+    "featured": true
   },
   {
     "name": "Old City Hall",
@@ -1197,7 +1346,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2787cf0907d080cf9772d3a2a00c2ae5?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080cf9772d3a2a00c2ae5.jpg"
+    "cover": "./travel-photos/2787cf0907d080cf9772d3a2a00c2ae5.jpg",
+    "featured": false
   },
   {
     "name": "Ontario Legislature Building",
@@ -1205,7 +1355,8 @@
     "country": "Canada",
     "date": "2025-09-22",
     "url": "https://app.notion.com/p/2787cf0907d08072858bdede16d9e0a0?pvs=204",
-    "cover": "./travel-photos/2787cf0907d08072858bdede16d9e0a0.jpg"
+    "cover": "./travel-photos/2787cf0907d08072858bdede16d9e0a0.jpg",
+    "featured": false
   },
   {
     "name": "Casa Loma",
@@ -1213,7 +1364,8 @@
     "country": "Canada",
     "date": "2025-09-21",
     "url": "https://app.notion.com/p/2787cf0907d080018f65e8c140adcf93?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080018f65e8c140adcf93.jpg"
+    "cover": "./travel-photos/2787cf0907d080018f65e8c140adcf93.jpg",
+    "featured": false
   },
   {
     "name": "Cathedral Church of St. James",
@@ -1221,7 +1373,8 @@
     "country": "Canada",
     "date": "2025-09-21",
     "url": "https://app.notion.com/p/2787cf0907d080eb91e4f1670c80da6f?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080eb91e4f1670c80da6f.jpg"
+    "cover": "./travel-photos/2787cf0907d080eb91e4f1670c80da6f.jpg",
+    "featured": true
   },
   {
     "name": "City Cruises Toronto",
@@ -1229,7 +1382,8 @@
     "country": "Canada",
     "date": "2025-09-21",
     "url": "https://app.notion.com/p/2787cf0907d08034a3f5dff9b90b44ec?pvs=204",
-    "cover": "./travel-photos/2787cf0907d08034a3f5dff9b90b44ec.jpg"
+    "cover": "./travel-photos/2787cf0907d08034a3f5dff9b90b44ec.jpg",
+    "featured": false
   },
   {
     "name": "CN Tower",
@@ -1237,7 +1391,8 @@
     "country": "Canada",
     "date": "2025-09-21",
     "url": "https://app.notion.com/p/2787cf0907d0803ca39af055f0e9b56d?pvs=204",
-    "cover": "./travel-photos/2787cf0907d0803ca39af055f0e9b56d.jpg"
+    "cover": "./travel-photos/2787cf0907d0803ca39af055f0e9b56d.jpg",
+    "featured": false
   },
   {
     "name": "University of Toronto",
@@ -1245,7 +1400,8 @@
     "country": "Canada",
     "date": "2025-09-21",
     "url": "https://app.notion.com/p/2787cf0907d080ca8a36c7fb8925d15a?pvs=204",
-    "cover": "./travel-photos/2787cf0907d080ca8a36c7fb8925d15a.jpg"
+    "cover": "./travel-photos/2787cf0907d080ca8a36c7fb8925d15a.jpg",
+    "featured": true
   },
   {
     "name": "Strathearn Park",
@@ -1253,7 +1409,8 @@
     "country": "Canada",
     "date": "2025-09-05",
     "url": "https://app.notion.com/p/2677cf0907d08059a1dfeeb1888c2fcc?pvs=204",
-    "cover": "./travel-photos/2677cf0907d08059a1dfeeb1888c2fcc.jpg"
+    "cover": "./travel-photos/2677cf0907d08059a1dfeeb1888c2fcc.jpg",
+    "featured": false
   },
   {
     "name": "Gallagher Park",
@@ -1261,7 +1418,8 @@
     "country": "Canada",
     "date": "2025-08-25",
     "url": "https://app.notion.com/p/25b7cf0907d080a889fecb43e784b11e?pvs=204",
-    "cover": "./travel-photos/25b7cf0907d080a889fecb43e784b11e.jpg"
+    "cover": "./travel-photos/25b7cf0907d080a889fecb43e784b11e.jpg",
+    "featured": false
   },
   {
     "name": "Art Gallery of Alberta",
@@ -1269,7 +1427,8 @@
     "country": "Canada",
     "date": "2025-08-24",
     "url": "https://app.notion.com/p/2597cf0907d080ceb36ecb4102797922?pvs=204",
-    "cover": "./travel-photos/2597cf0907d080ceb36ecb4102797922.jpg"
+    "cover": "./travel-photos/2597cf0907d080ceb36ecb4102797922.jpg",
+    "featured": false
   },
   {
     "name": "Muttart Conservatory",
@@ -1277,7 +1436,8 @@
     "country": "Canada",
     "date": "2025-08-24",
     "url": "https://app.notion.com/p/2597cf0907d080cf81c4f37ad4a6ea48?pvs=204",
-    "cover": "./travel-photos/2597cf0907d080cf81c4f37ad4a6ea48.jpg"
+    "cover": "./travel-photos/2597cf0907d080cf81c4f37ad4a6ea48.jpg",
+    "featured": true
   },
   {
     "name": "Fort Edmonton Park",
@@ -1285,7 +1445,8 @@
     "country": "Canada",
     "date": "2025-08-23",
     "url": "https://app.notion.com/p/2597cf0907d080658214f5c7e0dff204?pvs=204",
-    "cover": "./travel-photos/2597cf0907d080658214f5c7e0dff204.jpg"
+    "cover": "./travel-photos/2597cf0907d080658214f5c7e0dff204.jpg",
+    "featured": false
   },
   {
     "name": "Royal Alberta Museum",
@@ -1293,7 +1454,8 @@
     "country": "Canada",
     "date": "2025-08-22",
     "url": "https://app.notion.com/p/2577cf0907d08063986bc71635da3e16?pvs=204",
-    "cover": "./travel-photos/2577cf0907d08063986bc71635da3e16.jpg"
+    "cover": "./travel-photos/2577cf0907d08063986bc71635da3e16.jpg",
+    "featured": false
   },
   {
     "name": "High Level Bridge Streetcar",
@@ -1301,7 +1463,8 @@
     "country": "Canada",
     "date": "2025-08-11",
     "url": "https://app.notion.com/p/24d7cf0907d080dbb12be0829591642d?pvs=204",
-    "cover": "./travel-photos/24d7cf0907d080dbb12be0829591642d.jpg"
+    "cover": "./travel-photos/24d7cf0907d080dbb12be0829591642d.jpg",
+    "featured": false
   },
   {
     "name": "Wanda",
@@ -1309,7 +1472,8 @@
     "country": "China",
     "date": "2022-08-16",
     "url": "https://app.notion.com/p/2517cf0907d08019ada4c4561becf50a?pvs=204",
-    "cover": "./travel-photos/2517cf0907d08019ada4c4561becf50a.jpg"
+    "cover": "./travel-photos/2517cf0907d08019ada4c4561becf50a.jpg",
+    "featured": false
   },
   {
     "name": "Jianghan Petroleum Administration",
@@ -1317,7 +1481,8 @@
     "country": "China",
     "date": "2022-04-07",
     "url": "https://app.notion.com/p/1cb7cf0907d080259eacf446db3882fc?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d080259eacf446db3882fc.jpg"
+    "cover": "./travel-photos/1cb7cf0907d080259eacf446db3882fc.jpg",
+    "featured": false
   },
   {
     "name": "Xinhai Revolution Research Institution",
@@ -1325,7 +1490,8 @@
     "country": "China",
     "date": "2021-03-07",
     "url": "https://app.notion.com/p/1ce7cf0907d080baaa9befec6321312d?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d080baaa9befec6321312d.jpg"
+    "cover": "./travel-photos/1ce7cf0907d080baaa9befec6321312d.jpg",
+    "featured": false
   },
   {
     "name": "Hai’an Sci-Tech Innovation Park",
@@ -1333,7 +1499,8 @@
     "country": "China",
     "date": "2020-10-09",
     "url": "https://app.notion.com/p/1cb7cf0907d08080a80efb75676b89d4?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d08080a80efb75676b89d4.jpg"
+    "cover": "./travel-photos/1cb7cf0907d08080a80efb75676b89d4.jpg",
+    "featured": false
   },
   {
     "name": "87th Conference Huizhi",
@@ -1341,7 +1508,8 @@
     "country": "China",
     "date": "2019-11-10",
     "url": "https://app.notion.com/p/2517cf0907d080ad99cee53e24559336?pvs=204",
-    "cover": "./travel-photos/2517cf0907d080ad99cee53e24559336.jpg"
+    "cover": "./travel-photos/2517cf0907d080ad99cee53e24559336.jpg",
+    "featured": false
   },
   {
     "name": "CCP 5th National Congress Hist Display",
@@ -1349,7 +1517,8 @@
     "country": "China",
     "date": "2019-10-13",
     "url": "https://app.notion.com/p/2517cf0907d080ae937ae0735a80de7d?pvs=204",
-    "cover": "./travel-photos/2517cf0907d080ae937ae0735a80de7d.jpg"
+    "cover": "./travel-photos/2517cf0907d080ae937ae0735a80de7d.jpg",
+    "featured": false
   },
   {
     "name": "Qingdao International Beer Festival",
@@ -1357,7 +1526,8 @@
     "country": "China",
     "date": "2019-07-26",
     "url": "https://app.notion.com/p/1cb7cf0907d080c6a988f0a813b2330e?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d080c6a988f0a813b2330e.jpg"
+    "cover": "./travel-photos/1cb7cf0907d080c6a988f0a813b2330e.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Happy Valley",
@@ -1365,7 +1535,8 @@
     "country": "China",
     "date": "2019-07-20",
     "url": "https://app.notion.com/p/1ce7cf0907d080fda741dcbfbfaeca66?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d080fda741dcbfbfaeca66.jpg"
+    "cover": "./travel-photos/1ce7cf0907d080fda741dcbfbfaeca66.jpg",
+    "featured": false
   },
   {
     "name": "Jianghan Oilfield",
@@ -1373,7 +1544,8 @@
     "country": "China",
     "date": "2019-07-06",
     "url": "https://app.notion.com/p/1cb7cf0907d0809e98c5c5a049da1cbc?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d0809e98c5c5a049da1cbc.jpg"
+    "cover": "./travel-photos/1cb7cf0907d0809e98c5c5a049da1cbc.jpg",
+    "featured": false
   },
   {
     "name": "Chinatown",
@@ -1381,7 +1553,8 @@
     "country": "Singapore",
     "date": "2019-05-20",
     "url": "https://app.notion.com/p/29b7cf0907d08012bc6be793ccddf7f2?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d08012bc6be793ccddf7f2.jpg"
+    "cover": "./travel-photos/29b7cf0907d08012bc6be793ccddf7f2.jpg",
+    "featured": false
   },
   {
     "name": "Gardens by the Bay",
@@ -1389,7 +1562,8 @@
     "country": "Singapore",
     "date": "2019-05-20",
     "url": "https://app.notion.com/p/29b7cf0907d080778923d6ff91d9af67?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d080778923d6ff91d9af67.jpg"
+    "cover": "./travel-photos/29b7cf0907d080778923d6ff91d9af67.jpg",
+    "featured": true
   },
   {
     "name": "Sentosa Island",
@@ -1397,7 +1571,8 @@
     "country": "Singapore",
     "date": "2019-05-20",
     "url": "https://app.notion.com/p/29b7cf0907d0802686dbf924ffa4816a?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d0802686dbf924ffa4816a.jpg"
+    "cover": "./travel-photos/29b7cf0907d0802686dbf924ffa4816a.jpg",
+    "featured": false
   },
   {
     "name": "Singapore Flyer",
@@ -1405,7 +1580,8 @@
     "country": "Singapore",
     "date": "2019-05-20",
     "url": "https://app.notion.com/p/29b7cf0907d08086b53ad8d3e4a8f467?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d08086b53ad8d3e4a8f467.jpg"
+    "cover": "./travel-photos/29b7cf0907d08086b53ad8d3e4a8f467.jpg",
+    "featured": false
   },
   {
     "name": "Singapore Oceanarium",
@@ -1413,7 +1589,8 @@
     "country": "Singapore",
     "date": "2019-05-20",
     "url": "https://app.notion.com/p/29b7cf0907d080ada240d403cd3388db?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d080ada240d403cd3388db.jpg"
+    "cover": "./travel-photos/29b7cf0907d080ada240d403cd3388db.jpg",
+    "featured": false
   },
   {
     "name": "Merlion Park",
@@ -1421,7 +1598,8 @@
     "country": "Singapore",
     "date": "2019-05-19",
     "url": "https://app.notion.com/p/29b7cf0907d0801194cbdde2388d2d19?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d0801194cbdde2388d2d19.jpg"
+    "cover": "./travel-photos/29b7cf0907d0801194cbdde2388d2d19.jpg",
+    "featured": true
   },
   {
     "name": "National Museum of Singapore",
@@ -1429,7 +1607,8 @@
     "country": "Singapore",
     "date": "2019-05-19",
     "url": "https://app.notion.com/p/29b7cf0907d080de9346f7db0f803e2c?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d080de9346f7db0f803e2c.jpg"
+    "cover": "./travel-photos/29b7cf0907d080de9346f7db0f803e2c.jpg",
+    "featured": false
   },
   {
     "name": "Changi Airport",
@@ -1437,7 +1616,8 @@
     "country": "Singapore",
     "date": "2019-05-18",
     "url": "https://app.notion.com/p/29b7cf0907d080fcbebde1a090ea9591?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d080fcbebde1a090ea9591.jpg"
+    "cover": "./travel-photos/29b7cf0907d080fcbebde1a090ea9591.jpg",
+    "featured": false
   },
   {
     "name": "A*STAR",
@@ -1445,7 +1625,8 @@
     "country": "Singapore",
     "date": "2019-05-17",
     "url": "https://app.notion.com/p/29b7cf0907d080ed99c6d551aa3abdf3?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d080ed99c6d551aa3abdf3.jpg"
+    "cover": "./travel-photos/29b7cf0907d080ed99c6d551aa3abdf3.jpg",
+    "featured": false
   },
   {
     "name": "Labrador Nature Reserve",
@@ -1453,7 +1634,8 @@
     "country": "Singapore",
     "date": "2019-05-16",
     "url": "https://app.notion.com/p/29b7cf0907d0803f81ded3744b3f2f52?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d0803f81ded3744b3f2f52.jpg"
+    "cover": "./travel-photos/29b7cf0907d0803f81ded3744b3f2f52.jpg",
+    "featured": false
   },
   {
     "name": "National University of Singapore",
@@ -1461,7 +1643,8 @@
     "country": "Singapore",
     "date": "2019-05-16",
     "url": "https://app.notion.com/p/29b7cf0907d0808190a1c8aebcd9b8f2?pvs=204",
-    "cover": "./travel-photos/29b7cf0907d0808190a1c8aebcd9b8f2.jpg"
+    "cover": "./travel-photos/29b7cf0907d0808190a1c8aebcd9b8f2.jpg",
+    "featured": false
   },
   {
     "name": "Zigui County",
@@ -1469,7 +1652,8 @@
     "country": "China",
     "date": "2018-09-11",
     "url": "https://app.notion.com/p/1cb7cf0907d080eca7a7e35aa64330a1?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d080eca7a7e35aa64330a1.jpg"
+    "cover": "./travel-photos/1cb7cf0907d080eca7a7e35aa64330a1.jpg",
+    "featured": false
   },
   {
     "name": "The Three Gorges Dam",
@@ -1477,7 +1661,8 @@
     "country": "China",
     "date": "2018-08-21",
     "url": "https://app.notion.com/p/1cb7cf0907d080d9b00df87ec23b245e?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d080d9b00df87ec23b245e.jpg"
+    "cover": "./travel-photos/1cb7cf0907d080d9b00df87ec23b245e.jpg",
+    "featured": false
   },
   {
     "name": "Qinhuangdao",
@@ -1485,7 +1670,8 @@
     "country": "China",
     "date": "2017-08-18",
     "url": "https://app.notion.com/p/1cb7cf0907d08031a978c1808a3c7856?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d08031a978c1808a3c7856.jpg"
+    "cover": "./travel-photos/1cb7cf0907d08031a978c1808a3c7856.jpg",
+    "featured": false
   },
   {
     "name": "Shuangliao First Serior High School",
@@ -1493,7 +1679,8 @@
     "country": "China",
     "date": "2017-07-14",
     "url": "https://app.notion.com/p/1cb7cf0907d0805ebdf4c0ef96edcdaf?pvs=204",
-    "cover": "./travel-photos/1cb7cf0907d0805ebdf4c0ef96edcdaf.jpg"
+    "cover": "./travel-photos/1cb7cf0907d0805ebdf4c0ef96edcdaf.jpg",
+    "featured": false
   },
   {
     "name": "Jiufeng National Forest Park",
@@ -1501,7 +1688,8 @@
     "country": "China",
     "date": "2017-04-12",
     "url": "https://app.notion.com/p/2517cf0907d080228866eb1fdabe35be?pvs=204",
-    "cover": "./travel-photos/2517cf0907d080228866eb1fdabe35be.jpg"
+    "cover": "./travel-photos/2517cf0907d080228866eb1fdabe35be.jpg",
+    "featured": false
   },
   {
     "name": "Wuhan Kangzhan Memorial Park",
@@ -1509,6 +1697,7 @@
     "country": "China",
     "date": "2016-12-12",
     "url": "https://app.notion.com/p/1ce7cf0907d0803d882bf92e8705e102?pvs=204",
-    "cover": "./travel-photos/1ce7cf0907d0803d882bf92e8705e102.jpg"
+    "cover": "./travel-photos/1ce7cf0907d0803d882bf92e8705e102.jpg",
+    "featured": false
   }
 ]
