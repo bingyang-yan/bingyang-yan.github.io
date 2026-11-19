@@ -7,7 +7,7 @@
   const workPlaceholder = document.getElementById('experience-work-placeholder');
   const dialog = document.getElementById('experience-photo-dialog');
   const enlargedPhoto = dialog.querySelector('img');
-  const dataUrl = new URL('./education.json?v=1', document.currentScript.src);
+  const dataUrl = new URL('./education.json?v=2', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
   let educationCards = [];

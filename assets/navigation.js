@@ -62,7 +62,7 @@ updateNavigation();
 
 const pages = [
   { title: 'Work', href: '/' },
-  { title: 'Life', href: '/Life/index.html' },
+  { title: 'Life', href: '/life/index.html' },
   ...sectionLinks.map(({ link }) => ({ title: link.textContent, href: link.href })),
 ];
 
