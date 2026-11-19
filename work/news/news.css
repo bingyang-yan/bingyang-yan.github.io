@@ -147,6 +147,11 @@ a.news-card-title:hover { text-decoration: underline; }
 #experience .news-rail { align-items: stretch; }
 #experience .news-card-copy { flex: 1; }
 
+@media (hover: hover) {
+  #experience .news-card:hover a.news-card-title { text-decoration: underline; }
+}
+#experience a.news-card-title:focus-visible { text-decoration: underline; }
+
 .experience-university,
 .experience-research-topic {
   margin: 5px 0 0;

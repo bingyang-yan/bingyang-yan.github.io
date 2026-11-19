@@ -23,7 +23,8 @@
   function makeCard(entry) {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
     card.querySelector('.news-card-date').textContent = entry.duration;
-    card.querySelector('.news-card-title').textContent = entry.title;
+    const title = card.querySelector('.news-card-title');
+    title.textContent = entry.title;
     card.querySelector('.experience-university strong').textContent = entry.university;
     const topic = card.querySelector('.experience-research-topic');
     topic.textContent = entry.researchTopic;
@@ -31,6 +32,13 @@
 
     const links = card.querySelector('.news-card-links');
     for (const link of entry.links) {
+      if (link.label === 'Details') {
+        const titleLink = makeLink({ label: entry.title, url: link.url });
+        titleLink.className = 'news-card-title';
+        title.replaceChildren(titleLink);
+        continue;
+      }
+
       const item = document.createElement('li');
       item.append(makeLink(link));
       links.append(item);
