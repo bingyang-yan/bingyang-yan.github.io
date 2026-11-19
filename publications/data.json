@@ -1,0 +1,85 @@
+[
+  {
+    "title": "Research on the Optimization of Hydraulic Fracturing Treatment Parameters Based on Deep Reinforcement Learning",
+    "authors": "Bingyang Yan",
+    "venue": "PhD Thesis",
+    "type": "Thesis",
+    "date": "2026-06-16",
+    "description": "Hydraulic fracturing optimization is a challenging sequential decision-making problem involving highly nonlinear multiphysics processes, expensive numerical simulations, and large-scale design spaces. Conventional optimization workflows rely on repeated reservoir simulations combined with gradient-based or heuristic search algorithms, resulting in substantial computational cost, slow convergence, and limited capability for real-time operational decision-making. More fundamentally, the high computational complexity of coupled fracture propagation and reservoir flow simulation prevents conventional approaches from supporting intelligent optimization in practical engineering applications. This dissertation presents a unified deep reinforcement learning (DRL) framework for intelligent hydraulic fracturing optimization by formulating the entire optimization process as a Markov Decision Process (MDP). The proposed framework integrates reinforcement learning, surrogate modeling, and physics-based reservoir simulation to enable efficient sequential optimization and real-time decision-making under complex operational constraints. A reinforcement learning framework is first established to model hydraulic fracturing as an interactive optimization problem, where the learning agent continuously improves operational strategies through interactions with either a high-fidelity numerical simulator or a learned surrogate environment. To address the sparse and delayed reward problem inherent in production optimization, a fracture-scale production prediction surrogate model is developed based on an Embedded Discrete Fracture Model (EDFM) with a hierarchical zone-based representation. The surrogate model enables rapid and accurate production evaluation, providing immediate reward feedback that substantially improves reinforcement learning efficiency. To overcome the computational bottleneck associated with repeated numerical simulations, a novel CNN-LSTM surrogate environment is further proposed to approximate the coupled dynamics of hydraulic fracture propagation and multiphase reservoir flow. By jointly learning the spatial characteristics of reservoir states and the temporal evolution of hydraulic fracturing operations, the proposed surrogate establishes an efficient dynamic mapping between operational parameters, fracture geometry, and production response. This surrogate environment dramatically accelerates environment-agent interactions while preserving the essential physical behavior required for policy learning. Building upon the proposed framework, two state-of-the-art deep reinforcement learning algorithms are employed to solve complementary optimization tasks. Proximal Policy Optimization (PPO) is adopted for hydraulic fracture geometry and fracture property optimization, providing stable policy learning while avoiding uncertainties introduced by explicit fracture propagation calculations. Soft Actor-Critic (SAC) is subsequently applied to optimize real-time hydraulic fracturing operational parameters, including injection rate, pumping duration, injection pressure, and proppant concentration. Leveraging entropy-regularized policy optimization together with the proposed surrogate environment, SAC enables efficient exploration and intelligent operational control for complex hydraulic fracturing processes. Extensive numerical experiments and field-scale case studies demonstrate the effectiveness of the proposed framework. The PPO-based optimization strategy improves the economic performance of hydraulic fracture design by approximately 80%, while the SAC-based operational optimization strategy achieves approximately 25% higher net economic benefit in a real shale reservoir application. The proposed framework significantly reduces computational cost while maintaining high optimization quality, demonstrating strong robustness, scalability, and practical applicability. Overall, this dissertation establishes an intelligent optimization framework that bridges physics-based simulation and data-driven reinforcement learning for hydraulic fracturing. Beyond hydraulic fracturing, the proposed methodology provides a general paradigm for solving computationally intensive sequential optimization problems governed by complex physical systems, highlighting its potential for broader applications in scientific machine learning, digital twins, autonomous engineering systems, and real-time process optimization. Keywords: Deep Reinforcement Learning; Surrogate Modeling; Scientific Machine Learning; Sequential Decision Making; Reservoir Simulation; Hydraulic Fracturing; Intelligent Optimization.",
+    "url": "https://bryce-yan.notion.site/p/3997cf0907d080d7bd6afc51cfaf924e",
+    "cover": "covers/3997cf0907d080d7bd6afc51cfaf924e-814b3ba205d606dd.webp",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://drive.google.com/file/d/1pDQIhPUtPSLSlyae4nhsMu6tWeT-4ZoA/view?usp=share_link"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/bingyang-yan/Thesis26"
+      },
+      {
+        "label": "Slides",
+        "url": "https://drive.google.com/file/d/1ka5k9dumtv-XO5Z_iOpPT2UXEGxk_6Oy/view?usp=sharing"
+      }
+    ]
+  },
+  {
+    "title": "Deep Reinforcement Learning for Optimal Hydraulic Fracturing Design in Real-Time Production Optimization",
+    "authors": "Bingyang Yan, Zhi Zhong",
+    "venue": "Geoenergy Science and Engineering",
+    "type": "Journal Article",
+    "date": "2025-03-12",
+    "description": "Hydraulic fracturing is a common method for improving oil recovery and plays an essential role in optimizing production and managing reservoirs by creating highly permeable channels in subterranean formations. The conventional optimization process, reliant on numerous iterations of numerical simulations, is notably time-intensive and computationally expensive. We introduce an innovative production optimization method that progressively maximizes net present value (NPV) through sequential decision-making. Specifically, the method dynamically adjusts fracture position, length, width, and height in response to newly acquired data on reservoir properties such as porosity and permeability. We formulate the field production optimization challenge as a Markov decision process, examining the hydraulic fracturing pattern as a sequence of decisions. Proximal policy optimization (PPO), a highly stable reinforcement learning (RL) method, is implemented with a deep convolutional neural network (CNN) as the policy function. This network correlates the current state of the reservoir with the optimal actions for the subsequent step. In our DRL approach to formulating the optimal hydraulic fracture design, we define states by the comprehensive reservoir saturation and pressure fields, while actions are the location and characteristics of new induced fractures. Since the trained policy is an explicit function structure, the DRL agent can adjust the fracture locations and properties in real-time under different reservoir states. Comparative tests against genetic algorithm-based optimizations highlight the efficacy of the proposed method. In addition, the durability of the trained policy is confirmed through its application to an untested scenario, the synthetic 3D shale reservoir, where the average NPV attained by our DRL-based approach is 180% of that achieved with the genetic algorithm. This underscores the promise of incorporating DRL into real-time reservoir management and production optimization.",
+    "url": "https://bryce-yan.notion.site/p/1c17cf0907d0816abb40c198091f3274",
+    "cover": "covers/1c17cf0907d0816abb40c198091f3274-efc16a4c42790c78.webp",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://drive.google.com/file/d/1Au_Ee0p9ktv-7cnInrURFPW-sM0p87SO/view?usp=share_link"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/bingyang-yan/PPO25"
+      },
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1016/j.geoen.2025.213815"
+      }
+    ]
+  },
+  {
+    "title": "A Convolutional Neural Network-Based Proxy Model for Field Production Prediction and History Matching",
+    "authors": "Bingyang Yan, Zhi Zhong, Bin Bai",
+    "venue": "Gas Science and Engineering",
+    "type": "Journal Article",
+    "date": "2024-01-24",
+    "description": "Production prediction has been playing an essential role in reservoir development and management. Reservoir history matching, typically involving time-consuming numerical simulations for model calibration and parameter estimation, is most applied to catch several reliable reservoir models for reservoir production prediction. This research introduces the proxy model, mainly based on the convolutional neural network (CNN), to accelerate the forward computation process and improve the history-matching efficiency. Firstly, numerous embedded discrete fracture models designed via Latin Hypercube Sampling and constructed by MATLAB Reservoir Simulation Toolbox are conducted to generate training and testing datasets with high complexity and diversity. Then, we introduced the concept of a tier system consisting of multiple cubes that record reservoir and fracture information in the form of channels in spatial space. Six channels were utilized to record fracture information, including fracture shape, time, matrix porosity, matrix permeability, fracture porosity, and fracture permeability. The cube data of the tier system served as input to our proxy model, whereas oil and water production rates served as output. Finally, we trained and tested the CNN-based proxy model to predict oil and water production accurately. We performed assisted history matching by the genetic algorithm using this artificial intelligence-based proxy model. The results indicate that the CNN-based proxy model can completely match the numerical simulation with an accuracy of 99% on synthetic production data, and the genetic algorithm-based-proxy model can accelerate the history-matching progress more efficiently than that using the traditional method.",
+    "url": "https://bryce-yan.notion.site/p/1c17cf0907d08138bc20c7563df77864",
+    "cover": "covers/1c17cf0907d08138bc20c7563df77864-a9f68b5c4bba8061.webp",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://drive.google.com/file/d/1idY4wvEwc5r28KeRMhJDwBtkV8nrnBMI/view?usp=sharing"
+      },
+      {
+        "label": "Code",
+        "url": "https://github.com/bingyang-yan/CNN24"
+      },
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1016/j.jgsce.2024.205219"
+      }
+    ]
+  },
+  {
+    "title": "An Integrated Deep Reinforcement Learning–Surrogate Modeling Framework for Hydraulic Fracturing Optimization",
+    "authors": "Bingyang Yan",
+    "venue": "Manuscript in Preparation",
+    "type": "Journal Article",
+    "date": "",
+    "description": "Optimizing hydraulic fracturing operations requires sequential decisions that account for reservoir heterogeneity, evolving flow conditions, and treatment costs. However, the computational expense of numerical simulation limits its direct application to reinforcement learning–based optimization. This study develops an integrated framework combining deep reinforcement learning and surrogate modeling to optimize controllable fracturing parameters. Hydraulic fracturing is formulated as a Markov decision process, with porosity, permeability, pressure, and water saturation fields defining the state, and injection rate, injection pressure, injection duration, and proppant concentration defining the action. A hybrid convolutional neural network–long short-term memory (CNN-LSTM) surrogate is trained using two-phase flow simulation data to predict reservoir responses and oil production. The convolutional component extracts spatial features, while the recurrent component captures temporal dependencies associated with fracturing schedules. The surrogate serves as the environment for a soft actor-critic (SAC) agent, which learns an adaptive policy by maximizing an economic reward balancing oil production revenue against treatment costs. Evaluation on a synthetic three-dimensional shale reservoir shows decreasing training and validation errors for the surrogate, together with progressively increasing episode returns during policy learning. The learned policy is further illustrated through pressure and water saturation evolution over successive control steps. These results support the feasibility of combining surrogate modeling with SAC for sequential hydraulic fracturing optimization. The framework provides a basis for adaptive operational decision-making while reducing reliance on numerical simulation during policy training.",
+    "url": "https://bryce-yan.notion.site/p/29c7cf0907d0800ca634eaaf59e4e5f8",
+    "cover": "covers/29c7cf0907d0800ca634eaaf59e4e5f8-69b711f518494227.webp",
+    "links": []
+  }
+]

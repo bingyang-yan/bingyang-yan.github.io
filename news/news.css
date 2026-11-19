@@ -1,6 +1,6 @@
-#news { background: #fff; }
+:is(#news, #publications) { background: #fff; }
 
-#news .travel {
+:is(#news, #publications) .travel {
   --bg: #fff;
   --text: #1d1d1f;
   --travel-muted: #6e6e73;
