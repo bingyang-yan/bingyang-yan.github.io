@@ -42,10 +42,7 @@
     const card = template.content.firstElementChild.cloneNode(true);
     const headline = card.querySelector('.news-card-title');
     headline.href = entry.url;
-    const firstSpace = entry.title.indexOf(' ');
-    const verb = document.createElement('strong');
-    verb.textContent = entry.title.slice(0, firstSpace);
-    headline.append(verb, entry.title.slice(firstSpace));
+    headline.textContent = entry.title;
 
     const photo = card.querySelector('.news-card-photo');
     if (entry.cover) {
