@@ -87,6 +87,7 @@
   font-weight: 700;
 }
 #bio .bio-name { font-weight: 700; }
+#bio .research-emphasis { color: var(--bio-heading, #000); }
 
 #bio .about-bio {
   color: var(--text-2);
