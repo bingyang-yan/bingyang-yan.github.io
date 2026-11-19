@@ -7,7 +7,7 @@
   const workPlaceholder = document.getElementById('experience-work-placeholder');
   const dialog = document.getElementById('experience-photo-dialog');
   const enlargedPhoto = dialog.querySelector('img');
-  const dataUrl = new URL('./education.json?v=2', document.currentScript.src);
+  const dataUrl = new URL('./education.json?v=3', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
   let educationCards = [];
@@ -17,6 +17,8 @@
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
     card.querySelector('.news-card-date').textContent = entry.duration;
     card.querySelector('.news-card-title').textContent = entry.title;
+    card.querySelector('.experience-university').textContent = entry.university;
+    card.querySelector('.experience-research-topic span').textContent = entry.researchTopic;
     const links = card.querySelector('.news-card-links');
     for (const { label, url } of entry.links) {
       const item = document.createElement('li');

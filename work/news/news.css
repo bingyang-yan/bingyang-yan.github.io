@@ -145,6 +145,15 @@ a.news-card-title:hover { text-decoration: underline; }
 #experience .news-rail { align-items: stretch; }
 #experience .news-card-copy { flex: 1; }
 
+.experience-university,
+.experience-research-topic {
+  margin: 5px 0 0;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.experience-research-topic { color: var(--travel-muted); }
+
 .experience-placeholder { aspect-ratio: 16 / 10; }
 
 #experience[data-category="work"] #experience-status {
