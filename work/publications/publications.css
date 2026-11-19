@@ -72,6 +72,9 @@
   object-fit: cover;
 }
 .publication-copy {
+  display: grid;
+  align-content: center;
+  row-gap: 6px;
   min-width: 0;
   padding: 12px 14px;
   overflow-wrap: anywhere;
@@ -80,12 +83,15 @@
   .publication-cover + .publication-copy { padding-inline-start: 20px; }
 }
 .publication-copy h4 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
-.publication-copy p { margin: 3px 0; font-size: 14px; line-height: 1.4; }
+.publication-copy p { margin: 0; font-size: 14px; line-height: 1.4; }
 .publication-authors strong { color: #c55300; font-weight: 700; }
 .publication-copy .publication-venue {
-  margin: 0 0 4px;
+  justify-self: start;
+  padding: 2px 7px;
+  border-radius: 4px;
+  background-color: #e9e9ed;
   font-family: var(--font);
-  font-weight: 700;
+  font-weight: 400;
 }
 .publication-copy a.news-card-title,
 .award-card-details {
@@ -109,7 +115,7 @@
 }
 .publication-copy .news-card-links {
   column-gap: 18px;
-  margin-top: 9px;
+  margin: 0;
   font-size: 13px;
 }
 .publication-copy .news-card-links a {
