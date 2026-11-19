@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bingyang Yan</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      font-family: Inter, system-ui, sans-serif;
+      --header-height: 48px;
+      --header-background: rgb(250 250 252 / 80%);
+      --gutter: max(22px, env(safe-area-inset-left));
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root { --header-background: rgb(22 22 23 / 80%); }
+    }
+
+    body { margin: 0; padding-top: var(--header-height); }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 10;
+      background: var(--header-background);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      backdrop-filter: saturate(180%) blur(20px);
+    }
+
+    .site-nav {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: 16px;
+      min-height: var(--header-height);
+      width: min(1280px, 100% - 2 * var(--gutter));
+      margin-inline: auto;
+    }
+
+    .site-name {
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -.02em;
+      white-space: nowrap;
+    }
+
+    .site-sections {
+      display: flex;
+      align-items: center;
+      gap: clamp(14px, 2.2vw, 30px);
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 12px;
+      letter-spacing: -.01em;
+      opacity: .8;
+    }
+
+    .search-button {
+      display: grid;
+      place-items: center;
+      justify-self: end;
+      width: 36px;
+      height: 36px;
+      border: 0;
+      background: transparent;
+      color: inherit;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      padding: 8px 0 8px 8px;
+      background: transparent;
+      color: inherit;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    @media (max-width: 620px) {
+      .site-nav { grid-template-columns: minmax(0, 1fr) auto auto; }
+      .menu-toggle { display: block; }
+
+      .site-sections {
+        display: none;
+        position: absolute;
+        inset: 100% 0 auto;
+        padding: 16px var(--gutter) 24px;
+        background: Canvas;
+        opacity: 1;
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      .menu-toggle[aria-expanded="true"] + .site-sections {
+        display: grid;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Main">
+      <span class="site-name">Bingyang Yan</span>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-sections">Menu</button>
+      <ul class="site-sections" id="site-sections">
+        <li>Bio</li>
+        <li>News</li>
+        <li>Research</li>
+        <li>Publications</li>
+        <li>Awards</li>
+        <li>Contact</li>
+      </ul>
+      <button class="search-button" type="button" aria-label="Search" disabled>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+             aria-hidden="true">
+          <circle cx="10.5" cy="10.5" r="6.5"/>
+          <path d="m15.2 15.2 4.8 4.8"/>
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <script>
+    const menu = document.querySelector('.menu-toggle');
+    menu.addEventListener('click', () => {
+      menu.setAttribute('aria-expanded', menu.getAttribute('aria-expanded') === 'false');
+    });
+  </script>
+</body>
+</html>
