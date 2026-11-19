@@ -40,6 +40,7 @@
 
   function makeCard(entry, index) {
     const card = template.content.firstElementChild.cloneNode(true);
+    card.dataset.year = yearOf(entry) ?? '';
     const headline = card.querySelector('.news-card-title');
     headline.href = entry.url;
     headline.textContent = entry.title;
@@ -74,6 +75,21 @@
     return card;
   }
 
+  function updateVisibleYear() {
+    const left = grid.getBoundingClientRect().left;
+    const firstVisible = [...grid.children].find((card) => {
+      const bounds = card.getBoundingClientRect();
+      return bounds.right > left + Math.min(bounds.width / 2, 32);
+    });
+    const currentYear = selectedYear || firstVisible?.dataset.year;
+    for (const button of yearGroup.children) {
+      if (currentYear && button.value === currentYear) button.setAttribute('aria-current', 'date');
+      else button.removeAttribute('aria-current');
+    }
+  }
+
+  grid.addEventListener('scroll', updateVisibleYear, { passive: true });
+
   function render(anchorYear) {
     const categoryRecords = entries.filter((entry) => !selectedCategory || entry.category === selectedCategory);
     if (selectedYear && !categoryRecords.some((entry) => yearOf(entry) === selectedYear)) selectedYear = '';
@@ -88,6 +104,7 @@
     grid.scrollLeft = anchor && anchorIndex > 0
       ? anchor.getBoundingClientRect().left - cards[0].getBoundingClientRect().left
       : 0;
+    updateVisibleYear();
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 
