@@ -12,6 +12,7 @@
   let selectedCategory = 'Work';
   let cards = [];
   let pendingFrame = 0;
+  let alignTimer;
 
   function addFilters(group, options, select) {
     group.replaceChildren(...options.map(([value, label]) => {
@@ -73,37 +74,53 @@
     return card;
   }
 
-  function updateViewport() {
-    pendingFrame = 0;
+  function visibleCards() {
     const left = grid.getBoundingClientRect().left + grid.clientLeft;
     const right = left + grid.clientWidth;
-    const visible = cards.filter(({ card }) => {
+    return cards.filter(({ card }) => {
       const bounds = card.getBoundingClientRect();
       return bounds.right > left + 1 && bounds.left < right - 1;
     });
-    const currentYear = visible[0]?.card.dataset.year;
-    const copyHeight = Math.max(0, ...visible.map(({ copy }) => copy.offsetHeight));
-    const height = copyHeight + 'px';
+  }
+
+  function updateVisibleYear() {
+    pendingFrame = 0;
+    const currentYear = visibleCards()[0]?.card.dataset.year;
+    for (const button of yearGroup.children) {
+      const pressed = String(button.value === currentYear);
+      if (button.getAttribute('aria-pressed') !== pressed) {
+        button.setAttribute('aria-pressed', pressed);
+      }
+    }
+  }
+
+  function alignVisiblePhotos() {
+    clearTimeout(alignTimer);
+    const height = Math.max(0, ...visibleCards().map(({ copy }) => copy.offsetHeight)) + 'px';
     if (grid.style.getPropertyValue('--news-visible-copy-height') !== height) {
       grid.style.setProperty('--news-visible-copy-height', height);
     }
-    for (const button of yearGroup.children) {
-      button.setAttribute('aria-pressed', String(button.value === currentYear));
-    }
   }
 
-  function scheduleViewportUpdate() {
-    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateViewport);
+  function updateAfterScroll() {
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateVisibleYear);
+    // Keep card geometry steady while the trackpad or touch scroll is still moving.
+    clearTimeout(alignTimer);
+    alignTimer = setTimeout(alignVisiblePhotos, 180);
   }
 
-  grid.addEventListener('scroll', scheduleViewportUpdate, { passive: true });
-  window.addEventListener('resize', scheduleViewportUpdate);
+  grid.addEventListener('scroll', updateAfterScroll, { passive: true });
+  window.addEventListener('resize', () => {
+    alignVisiblePhotos();
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateVisibleYear);
+  });
 
   function jumpToYear(year) {
     const target = cards.find(({ card }) => card.dataset.year === year)?.card;
     if (!target) return;
     grid.scrollLeft = target.getBoundingClientRect().left - cards[0].card.getBoundingClientRect().left;
-    scheduleViewportUpdate();
+    alignVisiblePhotos();
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateVisibleYear);
   }
 
   function render() {
@@ -116,7 +133,8 @@
     });
     grid.replaceChildren(...cards.map(({ card }) => card));
     grid.scrollLeft = 0;
-    scheduleViewportUpdate();
+    alignVisiblePhotos();
+    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateVisibleYear);
     status.textContent = visible.length ? '' : 'No news matches these filters.';
   }
 

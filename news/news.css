@@ -20,8 +20,7 @@
   margin-top: 24px;
   padding: 4px 4px 14px;
   overflow-x: auto;
-  scroll-padding-inline: 4px;
-  scroll-snap-type: x proximity;
+  overflow-anchor: none;
 }
 .news-rail:not(:empty)::after {
   flex: 0 0 max(0px, calc(100% - var(--news-card-width) - var(--news-gap)));
@@ -36,7 +35,6 @@
   flex-direction: column;
   min-width: 0;
   text-align: start;
-  scroll-snap-align: start;
   border: 1px solid #dddde2;
   border-radius: 16px;
   background: var(--travel-tile);
