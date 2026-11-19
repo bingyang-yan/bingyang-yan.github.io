@@ -10,10 +10,10 @@
   <link rel="stylesheet" href="work/bio/bio.css?v=14">
   <link rel="stylesheet" href="life/travel/travel.css?v=13">
   <link rel="stylesheet" href="work/news/news.css?v=27">
-  <link rel="stylesheet" href="work/publications/publications.css?v=19">
+  <link rel="stylesheet" href="work/publications/publications.css?v=20">
   <script src="work/experience/experience.js?v=8" defer></script>
   <script src="work/news/news.js?v=11" defer></script>
-  <script src="work/publications/publications.js?v=10" defer></script>
+  <script src="work/publications/publications.js?v=11" defer></script>
   <link rel="stylesheet" href="work/awards/awards.css?v=19">
   <script src="work/awards/awards.js?v=10" defer></script>
   <style>
@@ -226,7 +226,7 @@
         <div id="publications-list" class="publications-list"></div>
         <template id="publication-card-template">
           <article class="publication-card">
-            <a class="publication-cover" tabindex="-1" aria-hidden="true"><img alt="" loading="lazy" decoding="async"></a>
+            <button class="publication-cover" type="button" aria-haspopup="dialog" aria-controls="publication-cover-dialog"><img alt="" loading="lazy" decoding="async"></button>
             <div class="publication-copy">
               <p class="publication-venue"></p>
               <h4><a class="news-card-title"></a></h4>
@@ -236,6 +236,12 @@
           </article>
         </template>
       </div>
+      <dialog class="news-photo-dialog" id="publication-cover-dialog" aria-label="Enlarged publication cover">
+        <form method="dialog">
+          <button type="submit" aria-label="Close enlarged cover" autofocus>×</button>
+        </form>
+        <img alt="">
+      </dialog>
     </section>
     <section id="awards" aria-labelledby="awards-title">
       <div class="travel">
