@@ -74,6 +74,11 @@
   transition: background-size 0.3s var(--ease);
 }
 #bio .about-bio .prose a:hover { background-size: 100% 1px; }
+#bio .about-bio .about-intro a {
+  background: none;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
 
 #bio .about-bio h2 {
   color: var(--bio-heading, #000);
