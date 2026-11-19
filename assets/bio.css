@@ -54,7 +54,7 @@
   aspect-ratio: 1; object-fit: cover; border-radius: 50%;
   box-shadow: var(--shadow);
 }
-#bio .about-portrait .name { margin: 0 0 1em; font-size: 32px; font-weight: 700; letter-spacing: 0.004em; }
+#bio .about-portrait .name { margin: 0 0 0.75em; font-size: 32px; font-weight: 700; letter-spacing: 0.004em; }
 #bio .org-list { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 4px; }
 #bio .org-list a { color: var(--text); font-weight: 500; }
 #bio .social {
@@ -69,11 +69,18 @@
 }
 #bio .social a:hover { background: var(--text); color: var(--bg); transform: translateY(-2px); text-decoration: none; }
 #bio .about-bio .prose a {
-  color: var(--text); font-weight: 600; text-decoration: none;
+  color: var(--text); font-weight: inherit; text-decoration: none;
   background: linear-gradient(currentColor, currentColor) 0 100% / 0 1px no-repeat;
   transition: background-size 0.3s var(--ease);
 }
 #bio .about-bio .prose a:hover { background-size: 100% 1px; }
+
+#bio .about-bio h2 {
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-weight: 700;
+}
+#bio .bio-name { color: var(--text); font-size: 20px; font-weight: 700; }
 
 #bio .about-bio .bio-lead { font-size: 16px; line-height: 1.6; letter-spacing: -0.005em; color: var(--text-2); max-width: 760px; }
 #bio .bio-lead p { margin: 0; }
