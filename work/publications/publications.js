@@ -10,11 +10,11 @@
   ];
   const matches = (entry, filter) => !filter.value || filter.valueOf(entry) === filter.value;
   const linkIcons = new Map([
-    ['PDF', 'fa-file-pdf'],
-    ['Code', 'fa-code'],
-    ['DOI', 'fa-link'],
-    ['Slide', 'fa-chalkboard'],
-    ['Slides', 'fa-chalkboard'],
+    ['PDF', ['fa-regular', 'fa-file-lines']],
+    ['Code', ['fa-brands', 'fa-github']],
+    ['DOI', ['fa-solid', 'fa-link']],
+    ['Slide', ['fa-solid', 'fa-chalkboard']],
+    ['Slides', ['fa-solid', 'fa-chalkboard']],
   ]);
   let entries = [];
 
@@ -66,10 +66,10 @@
       const item = document.createElement('li');
       const anchor = document.createElement('a');
       anchor.href = new URL(url, dataUrl).href;
-      const iconClass = linkIcons.get(label);
-      if (iconClass) {
+      const iconClasses = linkIcons.get(label);
+      if (iconClasses) {
         const icon = document.createElement('i');
-        icon.classList.add('fa-solid', 'fa-fw', iconClass);
+        icon.classList.add('fa-fw', ...iconClasses);
         icon.setAttribute('aria-hidden', 'true');
         anchor.append(icon, ' ');
       }
