@@ -157,11 +157,13 @@ a.news-card-title:hover { text-decoration: underline; }
   box-shadow: 0 2px 5px rgb(0 0 0 / 8%), 0 7px 14px -3px rgb(0 0 0 / 16%);
 }
 
-#experience .news-card-photo { border-radius: 0 0 16px 16px; }
 #experience .news-card-copy { flex: 1; }
 
 #experience .experience-linked-card { position: relative; }
-#experience .news-card-photo { cursor: inherit; }
+#experience .news-card-photo {
+  border-radius: 16px;
+  cursor: inherit;
+}
 #experience .experience-details-link { text-decoration-skip-ink: none; }
 #experience .experience-details-link::after {
   position: absolute;
@@ -175,7 +177,10 @@ a.news-card-title:hover { text-decoration: underline; }
   cursor: pointer;
 }
 @media (hover: hover) {
-  #experience .experience-linked-card:hover .experience-details-link { text-decoration: underline; }
+  #experience .experience-linked-card:hover .experience-details-link {
+    color: var(--travel-link);
+    text-decoration: underline;
+  }
 }
 #experience .experience-details-link:focus-visible { text-decoration: underline; }
 #experience .experience-details-link:focus-visible::after {
