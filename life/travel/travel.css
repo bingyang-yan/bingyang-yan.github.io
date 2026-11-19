@@ -124,6 +124,8 @@
 .travel-card:focus-visible::after {
   opacity: 0;
 }
+.travel-grid--featured .travel-card::after { content: none; }
+.travel-grid--featured .travel-card-label { text-shadow: 0 1px 4px rgb(0 0 0 / 85%); }
 .travel-card img {
   position: absolute;
   inset: 0;
