@@ -1,14 +1,15 @@
 .publications-list {
   display: grid;
   gap: 24px;
-  width: min(92%, 68rem);
+  width: min(92%, 64rem);
   margin: 20px auto 0;
 }
 
 .publication-year-group {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 10px;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  align-items: start;
+  gap: 16px;
   padding-top: 20px;
   border-top: 1px solid var(--hairline);
   text-align: start;
@@ -24,7 +25,7 @@
 
 .publication-year-cards {
   display: grid;
-  gap: 10px;
+  gap: 16px;
 }
 
 .publications-list:empty,
@@ -41,9 +42,9 @@
   grid-template-columns: clamp(216px, 22vw, 288px) minmax(0, 1fr);
   overflow: hidden;
   text-align: start;
-  border: 1px solid #dddde2;
   border-radius: 16px;
   background: var(--travel-tile);
+  box-shadow: var(--work-card-shadow);
 }
 
 .publication-card:not(:has(.publication-cover)) { grid-template-columns: minmax(0, 1fr); }
@@ -93,6 +94,7 @@
 
 @media (max-width: 650px) {
   .publications-list { width: 100%; }
+  .publication-year-group { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .publication-card { grid-template-columns: minmax(0, 1fr); }
   .publication-cover { min-height: clamp(136px, 42vw, 210px); }
 }
