@@ -65,9 +65,19 @@
 
 .award-card-cover {
   position: relative;
+  display: block;
   flex: none;
   width: 100%;
   aspect-ratio: 16 / 10;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.award-card-cover:focus-visible {
+  outline: 2px solid var(--travel-link);
+  outline-offset: -3px;
 }
 
 .award-card-cover img {
@@ -91,6 +101,10 @@
   font-size: 1rem;
   font-weight: 650;
   line-height: 1.35;
+}
+
+.award-card-title-link {
+  color: inherit;
 }
 
 .award-card-meta {
@@ -125,7 +139,7 @@
   text-decoration: underline;
 }
 
-:is(.award-card, .award-card-details, .award-load-more):focus-visible {
+:is(.award-card, .award-card-title-link, .award-card-details, .award-load-more):focus-visible {
   outline: 2px solid var(--travel-link);
   outline-offset: 2px;
 }

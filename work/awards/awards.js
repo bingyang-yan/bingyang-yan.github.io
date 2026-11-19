@@ -5,6 +5,8 @@
   const controls = section.querySelector('.travel-filters');
   const yearPicker = controls.querySelector('[data-filter="year"]');
   const status = section.querySelector('[role="status"]');
+  const photoDialog = section.querySelector('#awards-photo-dialog');
+  const enlargedPhoto = photoDialog.querySelector('img');
   const yearGroups = [...section.querySelectorAll('.awards-year')].map((group) => ({
     group,
     count: group.querySelector('.award-year-count'),
@@ -147,6 +149,19 @@
       }
     });
   }
+
+  yearRail.addEventListener('click', (event) => {
+    const cover = event.target.closest('.award-card-cover');
+    if (!cover) return;
+    const image = cover.querySelector('img');
+    enlargedPhoto.src = image.currentSrc || image.src;
+    enlargedPhoto.alt = cover.closest('.award-card').querySelector('.award-card-title').textContent;
+    photoDialog.showModal();
+  });
+
+  photoDialog.addEventListener('click', (event) => {
+    if (event.target === photoDialog) photoDialog.close();
+  });
 
   yearRail.addEventListener('scroll', scheduleVisibleYear, { passive: true });
   window.addEventListener('resize', scheduleVisibleYear);

@@ -94,24 +94,28 @@
   font-weight: 400;
 }
 .publication-copy a.news-card-title,
-.award-card-details {
+.award-card-details,
+.award-card-title-link {
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 0.15em;
   transition: text-decoration-color 180ms ease;
 }
 .publication-copy .news-card-title:focus-visible,
-.award-card-details:focus-visible {
+.award-card-details:focus-visible,
+.award-card-title-link:focus-visible {
   text-decoration-color: currentColor;
 }
 
 @media (hover: hover) {
   .publication-copy a.news-card-title:hover,
-  .award-card-details:hover { text-decoration-color: currentColor; }
+  .award-card-details:hover,
+  .award-card:hover .award-card-title-link { text-decoration-color: currentColor; }
 }
 @media (prefers-reduced-motion: reduce) {
   .publication-copy .news-card-title,
-  .award-card-details { transition: none; }
+  .award-card-details,
+  .award-card-title-link { transition: none; }
 }
 .publication-copy .news-card-links {
   column-gap: 18px;
