@@ -9,7 +9,7 @@
   });
   const yearOf = (entry) => entry.date?.slice(0, 4);
   let entries = [];
-  let selectedCategory = '';
+  let selectedCategory = 'Work';
   let selectedYear = '';
 
   function addFilters(group, options, select) {
@@ -61,8 +61,6 @@
     } else {
       date.remove();
     }
-    card.querySelector('.news-card-meta span').textContent =
-      [entry.category, entry.type].filter(Boolean).join(' · ');
 
     const links = card.querySelector('.news-card-links');
     for (const { label, url } of entry.links) {

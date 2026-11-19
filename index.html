@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link rel="stylesheet" href="assets/bio.css?v=11">
   <link rel="stylesheet" href="life/travel.css?v=13">
-  <link rel="stylesheet" href="news/news.css?v=2">
-  <script src="news/news.js?v=2" defer></script>
+  <link rel="stylesheet" href="news/news.css?v=3">
+  <script src="news/news.js?v=3" defer></script>
   <script src="assets/navigation.js?v=2" defer></script>
 </head>
 <body class="has-site-footer">
@@ -21,7 +21,7 @@
       <a class="gnav-brand" href="./">Bingyang Yan</a>
       <ul class="gnav-links" id="gnav-links">
         <li><a href="#bio" data-section="bio">Bio</a></li>
-        <li><span data-section="news">News</span></li>
+        <li><a href="#news" data-section="news">News</a></li>
         <li><span data-section="research">Research</span></li>
         <li><span data-section="publications">Publications</span></li>
         <li><span data-section="awards">Awards</span></li>
@@ -75,27 +75,29 @@
         </div>
       </div>
     </section>
-    <section class="travel" id="news" aria-labelledby="news-title">
-      <div class="travel-heading">
-        <h2 id="news-title">News</h2>
-        <a class="travel-source-link" href="https://bryce-yan.notion.site/db-news">View source database</a>
+    <section id="news" aria-labelledby="news-title">
+      <div class="travel">
+        <div class="travel-heading">
+          <h2 id="news-title">News</h2>
+          <a class="travel-source-link" href="https://bryce-yan.notion.site/db-news">View source database</a>
+        </div>
+        <div class="travel-filters">
+          <div class="travel-filter-group" id="news-category" role="group" aria-label="Filter by category"></div>
+          <div class="travel-filter-group" id="news-year" role="group" aria-label="Filter by year"></div>
+        </div>
+        <p id="news-status" role="status">Loading news…</p>
+        <div class="travel-grid" id="news-grid"></div>
+        <template id="news-card-template">
+          <article class="news-card">
+            <a class="news-card-photo" tabindex="-1" aria-hidden="true"><img alt="" decoding="async"></a>
+            <div class="news-card-copy">
+              <time class="news-card-date"></time>
+              <h3><a class="news-card-title"></a></h3>
+              <ul class="news-card-links"></ul>
+            </div>
+          </article>
+        </template>
       </div>
-      <div class="travel-filters">
-        <div class="travel-filter-group" id="news-category" role="group" aria-label="Filter by category"></div>
-        <div class="travel-filter-group" id="news-year" role="group" aria-label="Filter by year"></div>
-      </div>
-      <p id="news-status" role="status">Loading news…</p>
-      <div class="travel-grid" id="news-grid"></div>
-      <template id="news-card-template">
-        <article class="news-card">
-          <a class="news-card-photo" tabindex="-1" aria-hidden="true"><img alt="" decoding="async"></a>
-          <div class="news-card-copy">
-            <div class="news-card-meta"><time></time><span></span></div>
-            <h3><a class="news-card-title"></a></h3>
-            <ul class="news-card-links"></ul>
-          </div>
-        </article>
-      </template>
     </section>
   </main>
   <footer class="site-footer">This site is currently under development.</footer>
