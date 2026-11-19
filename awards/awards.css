@@ -6,13 +6,17 @@
   min-height: 156px;
   align-items: end;
   text-align: start;
-  background: #24394d;
+  background: var(--travel-tile);
 }
-.award-card[data-type="Scholarship"] {
-  background: #21453e;
+.award-card img {
+  box-sizing: border-box;
+  padding: 10px;
+  object-fit: contain;
 }
-.award-card[data-type="Certificate"] {
-  background: #4a3b52;
+@media (hover: hover) {
+  .award-card:hover img {
+    transform: none;
+  }
 }
 .award-card:not([href]) {
   cursor: default;
