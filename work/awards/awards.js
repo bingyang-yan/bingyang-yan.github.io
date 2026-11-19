@@ -4,15 +4,18 @@
   const status = section.querySelector('[role="status"]');
   const cards = [...section.querySelectorAll('.award-card')];
 
+  const levelOrder = ['National Level', 'School Level', 'University Level', 'Misc'];
   const filters = [...controls.querySelectorAll('[data-filter]')].map((group) => {
     const key = group.dataset.filter;
     const values = [...new Set(cards.map((card) => card.dataset[key]))].sort();
-    if (key === 'year') values.reverse();
+    const orderedValues = key === 'level'
+      ? [...levelOrder.filter((level) => values.includes(level)), ...values.filter((level) => !levelOrder.includes(level))]
+      : key === 'year' ? values.reverse() : values;
     return {
       group,
       key,
       value: '',
-      options: [['', group.dataset.all], ...values.map((value) => [value, value])],
+      options: [['', group.dataset.all], ...orderedValues.map((value) => [value, value])],
     };
   });
 
@@ -37,7 +40,7 @@
           ? candidates.filter((card) => card.dataset[filter.key] === value).length
           : candidates.length;
         button.setAttribute('aria-pressed', String(value === filter.value));
-        button.disabled = count === 0 && value !== filter.value;
+        button.hidden = count === 0 && value !== filter.value;
         button.lastElementChild.textContent = count;
       }
     }
@@ -54,7 +57,7 @@
       button.textContent = label;
       button.append(document.createElement('span'));
       button.addEventListener('click', () => {
-        filter.value = value;
+        filter.value = filter.value === value ? '' : value;
         render();
       });
       filter.group.append(button);
