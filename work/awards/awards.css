@@ -99,10 +99,6 @@
   font-weight: 600;
 }
 
-.award-card-date {
-  white-space: nowrap;
-}
-
 .award-card-details {
   color: var(--travel-link);
   font-weight: normal;
