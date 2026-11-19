@@ -20,6 +20,8 @@
   }
 
   function render() {
+    const featured = selectedCountry === featuredFilter;
+    grid.classList.toggle('travel-grid--featured', featured);
     const visible = entries.filter((entry) => matchesCountry(entry) && matchesYear(entry));
     updateFilters(country, selectedCountry, entries.filter(matchesYear), matchesPlaceFilter);
     updateFilters(year, selectedYear, entries.filter(matchesCountry), (entry, value) => yearOf(entry) === value);
@@ -33,12 +35,14 @@
       } else {
         photo.remove();
       }
-      const details = [locationOf(entry), yearOf(entry)].filter(Boolean).join(' · ');
-      card.querySelector('strong').textContent = entry.name;
-      card.querySelector('small').textContent = details;
-      card.querySelector('.travel-card-label').textContent =
-        selectedCountry === featuredFilter && entry.city ? entry.city : entry.name;
-      card.setAttribute('aria-label', [entry.name, details].filter(Boolean).join(', '));
+      const location = locationOf(entry);
+      const visitYear = yearOf(entry);
+      card.querySelector('strong').textContent = featured && entry.city ? entry.city : entry.name;
+      card.querySelector('.travel-card-country').textContent = featured ? (entry.country ?? '') : '';
+      card.querySelector('small').textContent = [featured ? entry.name : location, visitYear]
+        .filter(Boolean).join(' · ');
+      card.querySelector('.travel-card-label').textContent = featured ? '' : entry.name;
+      card.setAttribute('aria-label', [entry.name, location, visitYear].filter(Boolean).join(', '));
       card.addEventListener('click', revealOnTouch);
       return card;
     });
