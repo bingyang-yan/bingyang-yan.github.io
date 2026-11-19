@@ -2,178 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Bingyang Yan</title>
-  <style>
-    :root {
-      color-scheme: light dark;
-      font-family: Inter, system-ui, sans-serif;
-      --header-height: 48px;
-      --header-background: rgb(250 250 252 / 80%);
-      --gutter: max(22px, env(safe-area-inset-left));
-    }
-
-    @media (prefers-color-scheme: dark) {
-      :root { --header-background: rgb(22 22 23 / 80%); }
-    }
-
-    body { margin: 0; padding-top: var(--header-height); }
-
-    .site-header {
-      position: fixed;
-      inset: 0 0 auto;
-      z-index: 10;
-      background: var(--header-background);
-      -webkit-backdrop-filter: saturate(180%) blur(20px);
-      backdrop-filter: saturate(180%) blur(20px);
-    }
-
-    .site-nav {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-      align-items: center;
-      gap: 16px;
-      min-height: var(--header-height);
-      width: min(1280px, 100% - 2 * var(--gutter));
-      margin-inline: auto;
-    }
-
-    .site-name {
-      font-size: 17px;
-      font-weight: 600;
-      letter-spacing: -.02em;
-      white-space: nowrap;
-    }
-
-    .site-sections {
-      display: flex;
-      align-items: center;
-      gap: clamp(14px, 2.2vw, 30px);
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      font-size: 12px;
-      letter-spacing: -.01em;
-      opacity: .8;
-    }
-
-    .site-sections a {
-      color: inherit;
-      opacity: .78;
-      text-decoration: none;
-      transition: opacity 160ms ease-out;
-    }
-
-    .site-sections a:hover,
-    .site-sections a:focus-visible {
-      opacity: 1;
-      text-decoration: underline;
-    }
-
-    .search-button {
-      display: grid;
-      place-items: center;
-      justify-self: end;
-      width: 36px;
-      height: 36px;
-      border: 0;
-      background: transparent;
-      color: inherit;
-    }
-
-    .menu-toggle {
-      display: none;
-      border: 0;
-      padding: 8px 0 8px 8px;
-      background: transparent;
-      color: inherit;
-      font: inherit;
-      cursor: pointer;
-    }
-
-    @media (max-width: 620px) {
-      .site-nav { grid-template-columns: minmax(0, 1fr) auto auto; }
-      .menu-toggle { display: block; }
-
-      .site-sections {
-        display: grid;
-        gap: 12px;
-        position: absolute;
-        inset: 100% 0 auto;
-        max-height: calc(100dvh - var(--header-height));
-        box-sizing: border-box;
-        overflow-y: auto;
-        visibility: hidden;
-        transform: translateY(-6px);
-        padding: 16px var(--gutter) 24px;
-        background: Canvas;
-        opacity: 0;
-        transition: opacity 180ms ease-out, transform 180ms ease-out,
-          visibility 0s linear 180ms;
-        font-size: 24px;
-        font-weight: 600;
+  <link rel="stylesheet" href="assets/navigation.css">
+  <script>
+    try {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'light' || savedTheme === 'dark') {
+        document.documentElement.dataset.theme = savedTheme;
       }
-
-      .menu-toggle[aria-expanded="true"] + .site-sections {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
-        transition-delay: 0s;
-      }
+    } catch {
+      // Follow the system theme when storage is unavailable.
     }
-
-    @media (prefers-reduced-motion: no-preference) {
-      @view-transition { navigation: auto; }
-
-      ::view-transition-old(root),
-      ::view-transition-new(root) {
-        animation-duration: 180ms;
-        animation-timing-function: ease-out;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .site-sections,
-      .site-sections a { transition: none; }
-    }
-  </style>
+  </script>
+  <script src="assets/navigation.js" defer></script>
 </head>
 <body>
-  <header class="site-header">
-    <nav class="site-nav" aria-label="Main">
-      <span class="site-name">Bingyang Yan</span>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-sections">Menu</button>
-      <ul class="site-sections" id="site-sections">
-        <li>Bio</li>
-        <li>News</li>
-        <li>Research</li>
-        <li>Publications</li>
-        <li>Awards</li>
-        <li>Contact</li>
+  <!-- Navigation adapted from breadli428/breadli428.github.io (MIT).
+       See assets/navigation.LICENSE.txt. -->
+  <header class="gnav">
+    <nav class="gnav-inner" aria-label="Main">
+      <a class="gnav-brand" href="./">Bingyang Yan</a>
+      <ul class="gnav-links" id="gnav-links">
+        <li><span data-section="bio">Bio</span></li>
+        <li><span data-section="news">News</span></li>
+        <li><span data-section="research">Research</span></li>
+        <li><span data-section="publications">Publications</span></li>
+        <li><span data-section="awards">Awards</span></li>
+        <li><span data-section="contact">Contact</span></li>
         <li><a href="life/index.html">Life</a></li>
       </ul>
-      <button class="search-button" type="button" aria-label="Search" disabled>
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none"
-             stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
-             aria-hidden="true">
-          <circle cx="10.5" cy="10.5" r="6.5"/>
-          <path d="m15.2 15.2 4.8 4.8"/>
-        </svg>
-      </button>
+      <div class="gnav-tools">
+        <button class="icon-btn" type="button" data-search aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5"/><path d="m20 20-4.6-4.6"/>
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
+          <svg data-theme-icon="light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg data-theme-icon="dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/>
+          </svg>
+        </button>
+        <button class="icon-btn gnav-menu-btn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="gnav-links">
+          <span aria-hidden="true"></span><span aria-hidden="true"></span>
+        </button>
+      </div>
     </nav>
   </header>
-  <script>
-    const menu = document.querySelector('.menu-toggle');
-    menu.addEventListener('click', () => {
-      menu.setAttribute('aria-expanded', menu.getAttribute('aria-expanded') === 'false');
-    });
-
-    document.querySelector('.site-nav').addEventListener('keydown', (event) => {
-      if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') {
-        menu.setAttribute('aria-expanded', 'false');
-        menu.focus();
-      }
-    });
-  </script>
+  <dialog class="search-modal" aria-label="Search">
+    <div class="search-field">
+      <input type="search" aria-label="Search pages" placeholder="Search pages" autofocus>
+      <button class="icon-btn" type="button" data-close aria-label="Close search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+          <path d="m6 6 12 12M18 6 6 18"/>
+        </svg>
+      </button>
+    </div>
+    <ul class="search-results"></ul>
+    <div role="status"></div>
+  </dialog>
 </body>
 </html>
