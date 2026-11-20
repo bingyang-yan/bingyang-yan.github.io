@@ -1,108 +1,35 @@
 (() => {
   const section = document.getElementById('awards');
-  const pageSize = 2;
-  const yearRail = section.querySelector('.awards-years');
+  const grid = section.querySelector('#awards-grid');
   const controls = section.querySelector('.travel-filters');
   const yearPicker = controls.querySelector('[data-filter="year"]');
-  const status = section.querySelector('[role="status"]');
+  const status = section.querySelector('#awards-status');
   const photoDialog = section.querySelector('#awards-photo-dialog');
   const enlargedPhoto = photoDialog.querySelector('img');
-  const yearGroups = [...section.querySelectorAll('.awards-year')].map((group) => ({
-    group,
-    count: group.querySelector('.award-year-count'),
-    moreButton: group.querySelector('.award-load-more'),
-    cards: [...group.querySelectorAll('.award-card')],
-  }));
-  const cards = yearGroups.flatMap((yearGroup) => yearGroup.cards);
-
+  const cards = [...grid.querySelectorAll('.award-card')];
   const levelOrder = ['National Level', 'School Level', 'University Level', 'Misc'];
-  const filters = [...controls.querySelectorAll('[data-filter]:not([data-filter="year"])')].map((group) => {
-    const key = group.dataset.filter;
+  const filters = [...controls.querySelectorAll('[data-all]')].map((group) => {
+    const { filter: key, all } = group.dataset;
     const values = [...new Set(cards.map((card) => card.dataset[key]))].sort();
-    const orderedValues = key === 'level'
+    const options = key === 'level'
       ? [...levelOrder.filter((level) => values.includes(level)), ...values.filter((level) => !levelOrder.includes(level))]
       : values;
     return {
       group,
       key,
       value: '',
-      options: [['', group.dataset.all], ...orderedValues.map((value) => [value, value])],
+      options: [['', all], ...(key === 'type' ? [['featured', 'Featured']] : []),
+        ...options.map((value) => [value, value])],
     };
   });
 
-  let expanded = false;
-  let pendingFrame = 0;
+  let shownCards = cards;
+  let scrollFrame = 0;
+  let alignTimer;
 
-  function updateVisibleYear() {
-    pendingFrame = 0;
-    const left = yearRail.getBoundingClientRect().left + yearRail.clientLeft;
-    const right = left + yearRail.clientWidth;
-    const firstVisibleYear = yearGroups.find(({ group }) => {
-      if (group.hidden) return false;
-      const bounds = group.getBoundingClientRect();
-      return bounds.right > left + 1 && bounds.left < right - 1;
-    });
-    for (const { button } of yearGroups) {
-      button.setAttribute('aria-pressed', String(button === firstVisibleYear?.button));
-    }
-  }
-
-  function scheduleVisibleYear() {
-    if (!pendingFrame) pendingFrame = requestAnimationFrame(updateVisibleYear);
-  }
-
-  function jumpToYear(target) {
-    const first = yearGroups.find(({ group }) => !group.hidden)?.group;
-    if (!first || target.hidden) return;
-    yearRail.scrollLeft = target.getBoundingClientRect().left - first.getBoundingClientRect().left;
-    scheduleVisibleYear();
-  }
-
-  function matches(card, filter) {
-    return !filter.value || card.dataset[filter.key] === filter.value;
-  }
-
-  function renderYear(yearGroup) {
-    const matchingCards = yearGroup.cards.filter((card) =>
-      filters.every((filter) => matches(card, filter))
-    );
-    const shownCards = expanded ? matchingCards : matchingCards.slice(0, pageSize);
-    for (const card of yearGroup.cards) {
-      card.hidden = !shownCards.includes(card);
-    }
-    yearGroup.group.hidden = matchingCards.length === 0;
-    yearGroup.button.hidden = yearGroup.group.hidden;
-    yearGroup.button.lastElementChild.textContent = matchingCards.length;
-    yearGroup.count.textContent = matchingCards.length;
-    const { moreButton } = yearGroup;
-    const buttonText = expanded ? 'Show less' : 'Load more';
-    moreButton.hidden = matchingCards.length <= pageSize;
-    moreButton.textContent = buttonText;
-    moreButton.setAttribute('aria-expanded', String(expanded));
-    moreButton.setAttribute('aria-label', `${buttonText} for all years`);
-    return shownCards;
-  }
-
-  function render() {
-    const visible = yearGroups.reduce((total, yearGroup) => total + renderYear(yearGroup).length, 0);
-
-    for (const filter of filters) {
-      const candidates = cards.filter((card) =>
-        filters.every((other) => other === filter || matches(card, other))
-      );
-      for (const button of filter.group.children) {
-        const { value } = button;
-        const count = value
-          ? candidates.filter((card) => card.dataset[filter.key] === value).length
-          : candidates.length;
-        button.setAttribute('aria-pressed', String(value === filter.value));
-        button.hidden = count === 0 && value !== filter.value;
-        button.lastElementChild.textContent = count;
-      }
-    }
-
-    scheduleVisibleYear();
-    status.textContent = visible === 1 ? '1 award shown.' : `${visible} awards shown.`;
+  function matches(card, key, value) {
+    if (key === 'type' && value === 'featured') return card.dataset.featured === 'true';
+    return !value || card.dataset[key] === value;
   }
 
   function makeButton(value, label, onClick) {
@@ -116,62 +43,113 @@
     return button;
   }
 
+  function visibleCards() {
+    const left = grid.getBoundingClientRect().left + grid.clientLeft;
+    const right = left + grid.clientWidth;
+    return shownCards.filter((card) => {
+      const bounds = card.getBoundingClientRect();
+      return bounds.right > left + 1 && bounds.left < right - 1;
+    });
+  }
+
+  function updateVisibleYear() {
+    scrollFrame = 0;
+    const year = visibleCards()[0]?.dataset.year;
+    for (const button of yearPicker.children) {
+      const pressed = String(button.value === year);
+      if (button.getAttribute('aria-pressed') !== pressed) {
+        button.setAttribute('aria-pressed', pressed);
+      }
+    }
+  }
+
+  function alignPhotos() {
+    clearTimeout(alignTimer);
+    const copyHeights = visibleCards().map((card) =>
+      card.querySelector('.news-card-copy-content').offsetHeight
+    );
+    grid.style.setProperty('--news-visible-copy-height', Math.max(0, ...copyHeights) + 'px');
+  }
+
+  function scheduleVisibleYear() {
+    if (!scrollFrame) scrollFrame = requestAnimationFrame(updateVisibleYear);
+  }
+
+  function render() {
+    shownCards = cards.filter((card) => filters.every(({ key, value }) => matches(card, key, value)));
+    for (const card of cards) card.hidden = !shownCards.includes(card);
+    grid.hidden = shownCards.length === 0;
+    grid.scrollLeft = 0;
+
+    for (const filter of filters) {
+      const candidates = cards.filter((card) =>
+        filters.every((other) => other === filter || matches(card, other.key, other.value))
+      );
+      for (const button of filter.group.children) {
+        const count = candidates.filter((card) => matches(card, filter.key, button.value)).length;
+        button.setAttribute('aria-pressed', String(button.value === filter.value));
+        button.hidden = !count && button.value !== filter.value && button.value !== 'featured';
+        button.lastElementChild.textContent = count;
+      }
+    }
+
+    for (const button of yearPicker.children) {
+      const count = shownCards.filter((card) => card.dataset.year === button.value).length;
+      button.hidden = !count;
+      button.lastElementChild.textContent = count;
+    }
+
+    alignPhotos();
+    scheduleVisibleYear();
+    status.textContent = shownCards.length
+      ? `${shownCards.length} ${shownCards.length === 1 ? 'award' : 'awards'} shown.`
+      : 'No awards match these filters.';
+    status.classList.toggle('award-status', shownCards.length > 0);
+  }
+
   for (const filter of filters) {
     for (const [value, label] of filter.options) {
       filter.group.append(makeButton(value, label, () => {
         filter.value = filter.value === value ? '' : value;
-        expanded = false;
         render();
-        yearRail.scrollLeft = 0;
       }));
     }
   }
-  for (const yearGroup of yearGroups) {
-    const year = yearGroup.cards[0].dataset.year;
-    yearGroup.button = makeButton(year, year, () => jumpToYear(yearGroup.group));
-    yearPicker.append(yearGroup.button);
-    yearGroup.moreButton.addEventListener('click', () => {
-      if (expanded) {
-        expanded = false;
-        render();
-        yearGroup.moreButton.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-        return;
-      }
 
-      const nextCard = yearGroup.cards.find((card) =>
-        card.hidden && filters.every((filter) => matches(card, filter))
-      );
-      expanded = true;
-      render();
-      if (nextCard) {
-        nextCard.tabIndex = -1;
-        nextCard.focus();
-      }
-    });
+  for (const year of new Set(cards.map((card) => card.dataset.year))) {
+    yearPicker.append(makeButton(year, year, () => {
+      const target = shownCards.find((card) => card.dataset.year === year);
+      if (!target) return;
+      grid.scrollLeft = target.getBoundingClientRect().left - shownCards[0].getBoundingClientRect().left;
+      alignPhotos();
+      scheduleVisibleYear();
+    }));
   }
 
-  yearRail.addEventListener('mousedown', (event) => {
-    if (event.button === 0 && event.target.closest('.award-card-cover')) {
-      event.preventDefault();
-    }
+  grid.addEventListener('scroll', () => {
+    scheduleVisibleYear();
+    // Align covers after scrolling stops so the card geometry stays steady during a swipe.
+    clearTimeout(alignTimer);
+    alignTimer = setTimeout(alignPhotos, 180);
+  }, { passive: true });
+
+  window.addEventListener('resize', () => {
+    alignPhotos();
+    scheduleVisibleYear();
   });
 
-  yearRail.addEventListener('click', (event) => {
-    const cover = event.target.closest('.award-card-cover');
+  grid.addEventListener('click', (event) => {
+    const cover = event.target.closest('.news-card-photo');
     if (!cover) return;
-    if (event.detail > 0 && document.activeElement === cover) cover.blur();
     const image = cover.querySelector('img');
     enlargedPhoto.src = image.currentSrc || image.src;
-    enlargedPhoto.alt = cover.closest('.award-card').querySelector('.award-card-title').textContent;
+    enlargedPhoto.alt = cover.closest('.award-card').querySelector('.news-card-title').textContent;
     photoDialog.showModal();
   });
 
   photoDialog.addEventListener('click', (event) => {
     if (event.target === photoDialog) photoDialog.close();
   });
-
-  yearRail.addEventListener('scroll', scheduleVisibleYear, { passive: true });
-  window.addEventListener('resize', scheduleVisibleYear);
 
   render();
   controls.hidden = false;
