@@ -66,7 +66,6 @@
   display: block;
   width: fit-content;
   margin-inline: auto;
-  font-size: clamp(2.875rem, 7.4vw, 5.5rem);
   line-height: 1.12;
 }
 
