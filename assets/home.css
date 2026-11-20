@@ -4,6 +4,7 @@
   --home-primary: #1d1d1f;
   --home-secondary: #6e6e73;
   --home-accent: #0071e3;
+  --home-name-accent: #bf4800;
   --home-width: 1140px;
   --home-prose-width: 700px;
   --home-section-padding: clamp(40px, 5vw, 56px);
@@ -29,6 +30,7 @@
     --home-primary: #f5f5f7;
     --home-secondary: #aeaeb2;
     --home-accent: #70baff;
+    --home-name-accent: #ff9f0a;
   }
 }
 
@@ -137,6 +139,11 @@
   letter-spacing: -0.045em;
 }
 
+.home-page-work .gnav-brand,
+.home-page-work #bio .about-portrait .name {
+  color: var(--home-name-accent);
+}
+
 .home-page .travel-source-link {
   font-size: 1rem;
 }
@@ -238,10 +245,9 @@
   box-shadow: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  .home-page .publication-copy .publication-venue {
-    background-color: #3a3a3c;
-  }
+.home-page .publication-copy .publication-venue {
+  background-color: #000;
+  color: #fff;
 }
 
 .home-page .publication-authors strong {
