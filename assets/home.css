@@ -140,11 +140,6 @@
   letter-spacing: -0.045em;
 }
 
-.home-page-work .gnav-brand,
-.home-page-work #bio .about-portrait .name {
-  color: var(--home-name-accent);
-}
-
 .home-page .travel-source-link {
   font-size: 1rem;
 }
@@ -256,7 +251,7 @@
 }
 
 .home-page .publication-authors strong {
-  color: var(--home-primary);
+  color: var(--home-name-accent);
 }
 
 .home-page .site-footer {
