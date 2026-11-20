@@ -59,28 +59,11 @@
       opacity: 1;
     }
 
-    @media (prefers-color-scheme: light) {
-      #work-index > section {
-        background-color: #fff;
-      }
-
-      #work-index > section:nth-of-type(even) {
-        --work-section-background: #f5f5f7;
-        background-color: var(--work-section-background);
-      }
-
-      #work-index > section > .travel {
-        background-color: transparent;
-      }
-
-      #work-index > section:nth-of-type(even) > .travel {
-        --travel-tile: #fff;
-      }
-    }
   </style>
   <script src="assets/navigation.js?v=4" defer></script>
+  <link rel="stylesheet" href="assets/home.css?v=1">
 </head>
-<body class="has-site-footer">
+<body class="has-site-footer home-page home-page-work">
   <!-- Navigation adapted from breadli428/breadli428.github.io (MIT).
        See assets/navigation.LICENSE.txt. -->
   <header class="gnav">
@@ -108,13 +91,17 @@
     </nav>
   </header>
   <main id="work-index">
+    <section class="home-hero" aria-labelledby="home-title">
+      <h1 id="home-title">Reinforcement Learning. <span>Decision-Making &amp; Optimal Control.</span></h1>
+      <p>Research at the intersection of reinforcement learning and engineering optimization.</p>
+    </section>
     <!-- Bio adapted from breadli428/breadli428.github.io (MIT).
          See assets/navigation.LICENSE.txt. -->
     <section id="bio" class="section" aria-labelledby="bio-title">
       <div class="wrap about-grid">
         <aside class="about-portrait" aria-label="Bingyang Yan’s profile">
           <img src="work/bio/bingyang-yan-portrait.jpg" alt="Portrait of Bingyang Yan" width="660" height="660" decoding="async">
-          <h1 class="name" id="bio-title">Bingyang Yan</h1>
+          <h2 class="name" id="bio-title">Bingyang Yan</h2>
           <ul class="org-list">
             <li><a href="https://bryce-yan.notion.site/el-edu-cug/">China University of Geosciences, China</a></li>
             <li><a href="https://bryce-yan.notion.site/el-edu-ua/">University of Alberta, Canada</a></li>
@@ -124,15 +111,15 @@
           </ul>
         </aside>
         <div class="about-bio">
-          <h2>About</h2>
+          <h3>About</h3>
           <div class="bio-lead prose about-intro">
             <p>Bingyang Yan received his PhD from <a href="https://bryce-yan.notion.site/el-edu-cug">China University of Geosciences</a> in June 2026 under the supervision of <a href="https://grzy.cug.edu.cn/zhongzhi/en/about.htm">Prof. Zhi Zhong</a>. From Sep 2024 to Feb 2026, he was a visiting PhD student at the <a href="https://bryce-yan.notion.site/el-edu-ua">University of Alberta</a>, working with <a href="https://sites.ualberta.ca/~jbb/">Prof. Jeff Boisvert</a>.</p>
           </div>
-          <h2>Research</h2>
+          <h3>Research</h3>
           <div class="bio-lead prose">
             <p>His research focused on model-free <strong class="research-emphasis">reinforcement learning</strong> for optimal control in complex engineering systems, particularly those involving high-dimensional spatiotemporal dynamics and computationally expensive simulations. His expertise lies in modeling these dynamics and developing learned surrogate environments to accelerate policy learning. By combining physics-based simulation, surrogate modeling, and policy optimization, he addressed computational bottlenecks in continuous control and engineering decision-making. He implemented these methods primarily in Python and PyTorch.</p>
           </div>
-          <h2>Interests</h2>
+          <h3>Interests</h3>
           <ul class="bio-lead">
             <li>Multi-Agent RL, Hierarchical RL, Safe RL, Model-Based RL (World Models, MPC)</li>
             <li>RL with GNNs and Transformers</li>
