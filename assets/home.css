@@ -238,10 +238,10 @@
   box-shadow: none;
 }
 
-.home-page .publication-venue {
-  background: transparent;
-  color: var(--home-secondary);
-  padding: 0;
+@media (prefers-color-scheme: dark) {
+  .home-page .publication-copy .publication-venue {
+    background-color: #3a3a3c;
+  }
 }
 
 .home-page .publication-authors strong {
