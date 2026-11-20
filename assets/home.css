@@ -171,7 +171,7 @@
 
 .home-page #bio {
   --font: inherit;
-  --wrap: var(--home-feature-width);
+  --wrap: 1120px;
   --text-2: var(--home-secondary);
   --bio-heading: var(--home-primary);
   --bg-tile: var(--home-card);
