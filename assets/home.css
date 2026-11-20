@@ -2,7 +2,8 @@
   --home-white: #fff;
   --home-surface: #f5f5f7;
   --home-primary: #1d1d1f;
-  --home-secondary: #6e6e73;
+  --home-gray: #6e6e73;
+  --home-secondary: var(--home-gray);
   --home-accent: #0071e3;
   --home-name-accent: #bf4800;
   --home-width: 1140px;
@@ -250,7 +251,7 @@
 }
 
 .home-page .publication-copy .publication-venue {
-  background-color: #000;
+  background-color: var(--home-gray);
   color: #fff;
 }
 
