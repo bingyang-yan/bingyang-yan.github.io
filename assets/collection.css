@@ -58,7 +58,7 @@
   cursor: pointer;
   white-space: nowrap;
   font: inherit;
-  padding: 5px 14px; border-radius: 980px;
+  padding: 6px 14px; border-radius: 980px;
   font-size: 14px; line-height: 18px; font-weight: 500; color: var(--travel-muted);
   transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
 }
