@@ -186,7 +186,7 @@
 }
 
 .home-page #bio .about-grid {
-  grid-template-columns: minmax(240px, 0.85fr) minmax(0, 700px);
+  grid-template-columns: minmax(max-content, 0.85fr) minmax(0, var(--home-prose-width));
   gap: clamp(32px, 5vw, 76px);
 }
 
@@ -297,6 +297,12 @@
 
   .home-page #bio .about-portrait img {
     max-width: 152px;
+  }
+}
+
+@media (max-width: 420px) {
+  .home-page #bio .org-list a {
+    font-size: clamp(0.875rem, 4vw, 1rem);
   }
 }
 
