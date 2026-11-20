@@ -27,6 +27,10 @@
   line-height: 1.65;
 }
 
+.home-page-work {
+  --home-width: 1240px;
+}
+
 @media (prefers-color-scheme: dark) {
   .home-page {
     --home-white: #1d1d1f;
@@ -166,6 +170,7 @@
 
 .home-page #bio {
   --font: inherit;
+  --gutter: inherit;
   --wrap: var(--home-width);
   --text-2: var(--home-secondary);
   --bio-heading: var(--home-primary);
@@ -253,6 +258,11 @@
 .home-page :is(.news-card, .publication-card, .award-card) {
   border-radius: var(--home-radius);
   box-shadow: none;
+}
+
+.home-page-work #work-index .news-rail {
+  margin-inline: 0;
+  padding-inline: 0;
 }
 
 .home-page .news-card-photo {
