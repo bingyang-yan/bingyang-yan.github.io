@@ -49,7 +49,7 @@
 
 .travel-filter-group {
   display: flex; gap: 4px; flex-wrap: wrap; width: fit-content; max-width: 100%;
-  padding: 4px;
+  padding: 3px;
   border-radius: 980px; background: var(--travel-tile);
 }
 .travel-filter {
@@ -58,8 +58,8 @@
   cursor: pointer;
   white-space: nowrap;
   font: inherit;
-  padding: 7px 14px; border-radius: 980px;
-  font-size: 14px; font-weight: 500; color: var(--travel-muted);
+  padding: 5px 14px; border-radius: 980px;
+  font-size: 14px; line-height: 18px; font-weight: 500; color: var(--travel-muted);
   transition: background-color 0.25s var(--ease), color 0.25s var(--ease);
 }
 .travel-filter span { margin-left: 4px; font-size: 12px; color: var(--travel-count); font-variant-numeric: tabular-nums; }
