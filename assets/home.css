@@ -140,6 +140,10 @@
   letter-spacing: -0.045em;
 }
 
+.home-page-work #work-index .travel-heading h2 {
+  font-size: var(--home-title);
+}
+
 .home-page .travel-source-link {
   font-size: 1rem;
 }
