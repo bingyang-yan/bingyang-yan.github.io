@@ -191,8 +191,8 @@
   margin-bottom: 12px;
 }
 
-.home-page #bio .org-list {
-  font-size: 0.9375rem;
+.home-page #bio .org-list a {
+  font: inherit;
 }
 
 .home-page #bio .about-bio {
