@@ -236,6 +236,10 @@
   border-radius: calc(var(--home-radius) - 4px);
 }
 
+.home-page-work .publications-list {
+  width: 100%;
+}
+
 .home-page .publication-card {
   background: var(--travel-tile);
   border: 0;
