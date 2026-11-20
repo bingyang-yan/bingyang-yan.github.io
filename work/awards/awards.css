@@ -1,5 +1,14 @@
 #awards [hidden] { display: none; }
 
+#awards-grid,
+#awards .news-card-photo {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#awards .news-card-photo:focus:not(:focus-visible) {
+  outline: none;
+}
+
 #awards-grid:focus-visible {
   outline: 2px solid var(--travel-link);
   outline-offset: 2px;

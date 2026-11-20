@@ -17,7 +17,7 @@
     return {
       group,
       key,
-      value: '',
+      value: key === 'type' ? 'featured' : '',
       options: [['', all], ...(key === 'type' ? [['featured', 'Featured']] : []),
         ...options.map((value) => [value, value])],
     };
@@ -136,6 +136,12 @@
   window.addEventListener('resize', () => {
     alignPhotos();
     scheduleVisibleYear();
+  });
+
+  grid.addEventListener('mousedown', (event) => {
+    if (event.button === 0 && event.target.closest('.news-card-photo')) {
+      event.preventDefault();
+    }
   });
 
   grid.addEventListener('click', (event) => {
