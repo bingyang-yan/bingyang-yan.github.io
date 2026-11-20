@@ -12,7 +12,10 @@
   --home-radius: 20px;
   --home-heading: clamp(2rem, 3.1vw, 2.5rem);
   --home-title: clamp(2.5rem, 5.15vw, 4rem);
-  --home-body: clamp(1rem, 1.3vw, 1.125rem);
+  --home-body: 1rem;
+  --home-subheading: 1.25rem;
+  --home-detail: 0.875rem;
+  --home-count: 0.75rem;
   --home-duration: 180ms;
   --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
   --wrap-wide: var(--home-width);
@@ -206,7 +209,7 @@
 .home-page #bio .about-bio h3 {
   margin: 0 0 6px;
   color: var(--home-primary);
-  font-size: 1.25rem;
+  font-size: var(--home-subheading);
   line-height: 1.3;
 }
 
@@ -225,6 +228,26 @@
 
 .home-page #bio .about-bio .prose a:is(:hover, :focus-visible) {
   text-decoration-color: currentColor;
+}
+
+.home-page-work #work-index :is(.news-card h3, .publication-copy h4) {
+  font-size: var(--home-subheading);
+}
+
+.home-page-work #work-index :is(
+  .travel-filter,
+  .news-card-date,
+  .news-card-links,
+  .experience-university,
+  .experience-research-topic,
+  .publication-copy p,
+  .award-card-meta
+) {
+  font-size: var(--home-detail);
+}
+
+.home-page-work #work-index .travel-filter span {
+  font-size: var(--home-count);
 }
 
 .home-page :is(.news-card, .publication-card, .award-card) {
