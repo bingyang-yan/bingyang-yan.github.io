@@ -27,6 +27,11 @@
   line-height: 1.65;
 }
 
+.home-page-work {
+  --home-width: 1280px;
+  --home-feature-width: 1068px;
+}
+
 @media (prefers-color-scheme: dark) {
   .home-page {
     --home-white: #1d1d1f;
@@ -59,7 +64,7 @@
 }
 
 .home-hero h1 {
-  max-width: var(--home-width);
+  max-width: var(--home-feature-width);
   margin: 0 auto;
   font-size: var(--home-title);
   font-weight: 700;
@@ -166,7 +171,7 @@
 
 .home-page #bio {
   --font: inherit;
-  --wrap: var(--home-width);
+  --wrap: var(--home-feature-width);
   --text-2: var(--home-secondary);
   --bio-heading: var(--home-primary);
   --bg-tile: var(--home-card);
