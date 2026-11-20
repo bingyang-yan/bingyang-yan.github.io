@@ -260,8 +260,8 @@
   box-shadow: none;
 }
 
-.home-page .news-card-photo {
-  border-radius: calc(var(--home-radius) - 4px);
+.home-page #work-index .news-card-photo {
+  border-radius: 0 0 var(--home-radius) var(--home-radius);
 }
 
 .home-page-work .publications-list {
@@ -274,7 +274,14 @@
 }
 
 .home-page .publication-cover {
+  border-radius: var(--home-radius) 0 0 var(--home-radius);
   box-shadow: none;
+}
+
+@media (max-width: 650px) {
+  .home-page .publication-cover {
+    border-radius: var(--home-radius) var(--home-radius) 0 0;
+  }
 }
 
 .home-page .publication-copy .publication-venue {
