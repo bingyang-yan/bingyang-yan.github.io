@@ -204,7 +204,7 @@ a.news-card-title:hover { text-decoration: underline; }
   .experience-university { font-size: 14px; }
 }
 
-.experience-university strong { font-weight: 700; }
+.experience-university strong { font-weight: 600; }
 
 .experience-card-cover {
   position: relative;
