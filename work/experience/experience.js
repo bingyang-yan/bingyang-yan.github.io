@@ -10,6 +10,12 @@
   let selected = 'education';
   let educationCards = [];
   let educationStatus = 'Loading education…';
+  const cardResizeObserver = new ResizeObserver((entries) => {
+    for (const { target, borderBoxSize } of entries) {
+      const width = borderBoxSize[0].inlineSize;
+      if (width > 0) target.style.setProperty('--experience-hover-scale', (width + 6) / width);
+    }
+  });
 
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
@@ -33,6 +39,7 @@
     if (details?.url) {
       link.href = new URL(details.url, dataUrl);
       link.setAttribute('aria-label', 'Learn more about ' + entry.title);
+      cardResizeObserver.observe(card, { box: 'border-box' });
     } else {
       link.remove();
     }
