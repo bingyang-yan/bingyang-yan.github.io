@@ -157,7 +157,7 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 
 #experience .news-rail {
-  --news-card-width: min(86%, clamp(300px, 30vw, 400px));
+  --news-card-width: min(83%, clamp(286px, 28vw, 376px));
   align-items: stretch;
   margin-inline: -16px;
   padding: 16px 16px 28px;
@@ -182,7 +182,7 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 
 #experience .experience-card h3 {
-  margin: 10px 0 0;
+  margin: 16px 0 0;
   line-height: 1.35;
 }
 
@@ -196,7 +196,7 @@ a.news-card-title:hover { text-decoration: underline; }
 
 .experience-card-cover {
   overflow: hidden;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 4 / 3;
 }
 
 .experience-card-cover img {

@@ -2,7 +2,7 @@
   {
     "duration": "2024.09 – 2026.02",
     "title": "Visiting PhD",
-    "university": "University of Alberta (UA)",
+    "university": "University of Alberta",
     "researchTopic": "Reinforcement Learning for Sequential Decision-Making and Optimal Control in Mining and Petroleum Engineering.",
     "cover": "../news/photos/3e17cf0907d08096a38bdf074d44b45c.jpg",
     "researchLink": {
@@ -19,7 +19,7 @@
   {
     "duration": "2020.09 – 2026.06",
     "title": "PhD",
-    "university": "China University of Geosciences (CUG)",
+    "university": "China University of Geosciences",
     "researchTopic": "Reinforcement Learning for Hydraulic Fracturing Treatment Parameter Optimization.",
     "cover": "../news/photos/3e17cf0907d0800981d6f66c89201c34.jpg",
     "researchLink": {
@@ -44,7 +44,7 @@
   {
     "duration": "2016.09 – 2020.06",
     "title": "BEng",
-    "university": "China University of Geosciences (CUG)",
+    "university": "China University of Geosciences",
     "researchTopic": "Petroleum Engineering.",
     "cover": "./covers/cug-campus.jpg",
     "researchLink": {

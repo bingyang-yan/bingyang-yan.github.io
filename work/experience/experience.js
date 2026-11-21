@@ -5,7 +5,7 @@
   const status = document.getElementById('experience-status');
   const cardTemplate = document.getElementById('experience-card-template');
   const workPlaceholder = document.getElementById('experience-work-placeholder');
-  const dataUrl = new URL('./education.json?v=6', document.currentScript.src);
+  const dataUrl = new URL('./education.json?v=7', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
   let educationCards = [];
