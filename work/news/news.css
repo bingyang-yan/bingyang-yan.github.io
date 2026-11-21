@@ -185,8 +185,8 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 
 .experience-card-copy:has(+ .experience-card-cover) {
-  /* Make room for the full 4:3 cover. */
-  padding-block-end: calc(var(--experience-copy-padding) - 6px);
+  /* Preserve the card height when moving from a 4:3 cover to 3:2. */
+  padding-block-end: calc(var(--experience-copy-padding) + 100% / 12 - 6px);
 }
 
 #experience .experience-card h3 {
@@ -209,7 +209,7 @@ a.news-card-title:hover { text-decoration: underline; }
 .experience-card-cover {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 2;
 }
 
 .experience-card-cover img {
