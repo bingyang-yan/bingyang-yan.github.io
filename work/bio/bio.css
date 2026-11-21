@@ -52,7 +52,7 @@
   aspect-ratio: 1; object-fit: cover; border-radius: 50%;
   box-shadow: var(--shadow);
 }
-#bio .about-portrait .name { margin: 0 0 1em; font-size: 32px; font-weight: 700; letter-spacing: 0.004em; }
+#bio .about-portrait .name { margin: 0 0 1em; font-size: 32px; font-weight: 600; letter-spacing: 0.004em; }
 #bio .org-list { list-style: none; padding: 0; margin: 0 0 20px; display: grid; gap: 4px; }
 #bio .org-list a { color: var(--text); font-weight: 600; }
 #bio .social {
@@ -78,14 +78,14 @@
   text-underline-offset: 0.15em;
 }
 
-#bio .about-bio h2 {
+#bio .about-bio :is(h2, h3) {
   color: var(--bio-heading, #000);
   margin: 0 0 8px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: 600;
 }
-#bio .bio-name { font-weight: 700; }
-#bio .research-emphasis { color: var(--bio-heading, #000); }
+#bio .bio-name { font-weight: 600; }
+#bio .research-emphasis { color: var(--bio-heading, #000); font-weight: 600; }
 
 #bio .about-bio {
   color: var(--text-2);

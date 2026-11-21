@@ -74,13 +74,13 @@
   display: block;
   color: var(--travel-muted);
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.4;
 }
 .news-card h3 {
   margin: 5px 0 0;
   font-size: clamp(17px, 1.4vw, 20px);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.2;
 }
 a.news-card-title { color: inherit; text-decoration: none; }
@@ -188,6 +188,8 @@ a.news-card-title:hover { text-decoration: underline; }
   font-size: 14px;
   line-height: 1.55;
 }
+
+.experience-university strong { font-weight: 600; }
 
 .experience-card-cover {
   overflow: hidden;

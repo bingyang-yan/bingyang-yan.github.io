@@ -23,7 +23,7 @@
   inset-block-start: calc(var(--publication-sticky-top) + 12px);
   margin: 0;
   font-size: clamp(1.25rem, 2.5vw, 2rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
   font-variant-numeric: tabular-nums;
 }
@@ -90,9 +90,9 @@
 @media (width > 650px) {
   .publication-cover + .publication-copy { padding-inline-start: 20px; }
 }
-.publication-copy h4 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); line-height: 1.25; }
+.publication-copy h4 { margin: 0; font-size: clamp(17px, 1.45vw, 20px); font-weight: 600; line-height: 1.25; }
 .publication-copy p { margin: 0; font-size: 14px; line-height: 1.4; }
-.publication-authors strong { color: #c55300; font-weight: 700; }
+.publication-authors strong { color: #c55300; font-weight: 600; }
 .publication-copy .publication-venue {
   justify-self: start;
   padding: 2px 7px;

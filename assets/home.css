@@ -162,7 +162,7 @@
 .home-page #bio .about-portrait .name {
   color: var(--home-primary);
   font-size: var(--home-heading);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.12;
   letter-spacing: -0.045em;
 }
