@@ -184,6 +184,11 @@ a.news-card-title:hover { text-decoration: underline; }
   padding-block-end: calc(var(--experience-copy-padding) + 6px);
 }
 
+.experience-card-copy:has(+ .experience-card-cover) {
+  /* Keep the card height as the cover changes from 75% minus 12px to 62.5%. */
+  padding-block-end: calc(var(--experience-copy-padding) + 12.5% - 6px);
+}
+
 #experience .experience-card h3 {
   margin: var(--experience-title-gap) 0 0;
   line-height: 1.35;
@@ -200,8 +205,7 @@ a.news-card-title:hover { text-decoration: underline; }
 .experience-card-cover {
   position: relative;
   overflow: hidden;
-  /* Offset the 12px added to the copy area. */
-  padding-block-start: calc(75% - 12px);
+  aspect-ratio: 16 / 10;
 }
 
 .experience-card-cover img {
