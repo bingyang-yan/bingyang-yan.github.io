@@ -170,6 +170,7 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 
 #experience .experience-card {
+  --experience-title-gap: 16px;
   position: relative;
   overflow: hidden;
   border-radius: 24px;
@@ -177,12 +178,14 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 
 .experience-card-copy {
+  --experience-copy-padding: clamp(20px, 3vw, 30px);
   flex: 1;
-  padding: clamp(20px, 3vw, 30px);
+  padding: var(--experience-copy-padding);
+  padding-block-end: calc(var(--experience-copy-padding) + 6px);
 }
 
 #experience .experience-card h3 {
-  margin: 16px 0 0;
+  margin: var(--experience-title-gap) 0 0;
   line-height: 1.35;
 }
 
@@ -195,18 +198,21 @@ a.news-card-title:hover { text-decoration: underline; }
 .experience-university strong { font-weight: 600; }
 
 .experience-card-cover {
+  position: relative;
   overflow: hidden;
-  aspect-ratio: 4 / 3;
+  /* Offset the 12px added to the copy area. */
+  padding-block-start: calc(75% - 12px);
 }
 
 .experience-card-cover img {
-  display: block;
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.experience-details-link { margin-top: 10px; }
+.experience-details-link { margin-top: var(--experience-title-gap); }
 
 .experience-details-link::before {
   position: absolute;
