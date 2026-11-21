@@ -6,7 +6,6 @@
   --home-secondary: var(--home-gray);
   --home-accent: #0071e3;
   --home-name-accent: #bf4800;
-  --home-width: 1140px;
   --home-prose-width: 700px;
   --home-section-padding: clamp(40px, 5vw, 56px);
   --home-radius: 20px;
@@ -17,7 +16,6 @@
   --home-count: 0.75rem;
   --home-duration: 180ms;
   --font: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-  --wrap-wide: var(--home-width);
   --bg: var(--home-white);
   --text: var(--home-primary);
   --nav-bg: color-mix(in srgb, var(--home-white) 88%, transparent);
@@ -27,7 +25,6 @@
 }
 
 .home-page-work {
-  --home-width: 1280px;
   --home-feature-width: 1068px;
 }
 
@@ -52,7 +49,8 @@
   align-content: center;
   min-block-size: calc(100vh - var(--nav-h) - env(safe-area-inset-top, 0px));
   min-block-size: calc(100svh - var(--nav-h) - env(safe-area-inset-top, 0px));
-  padding: clamp(40px, 8vh, 96px) var(--gutter);
+  padding-block: clamp(40px, 8vh, 96px);
+  padding-inline: max(6.25%, (100% - var(--page-header-max-width)) / 2);
   text-align: center;
 }
 
@@ -156,8 +154,7 @@
   --travel-shadow: none;
   --news-section-background: transparent;
   --work-card-shadow: none;
-  max-width: calc(var(--home-width) + 2 * var(--gutter));
-  padding: var(--home-section-padding) var(--gutter);
+  padding-block: var(--home-section-padding);
   background: transparent;
   font: inherit;
 }
@@ -217,7 +214,6 @@
 
 .home-page #bio {
   --font: inherit;
-  --wrap: 1120px;
   --text-2: var(--home-secondary);
   --bio-heading: var(--home-primary);
   --bg-tile: var(--home-card);

@@ -1,7 +1,7 @@
 const nav = document.querySelector('.gnav');
 const menuButton = nav.querySelector('.gnav-menu-btn');
 const menuLinks = nav.querySelector('.gnav-links');
-const compact = window.matchMedia('(max-width: 900px)');
+const compact = window.matchMedia('(max-width: 833px)');
 const dialog = document.querySelector('.search-modal');
 const searchField = dialog.querySelector('input');
 const searchResults = dialog.querySelector('.search-results');

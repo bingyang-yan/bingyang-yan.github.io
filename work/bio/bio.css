@@ -10,8 +10,6 @@
   --accent: #bf4800;
   --shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
   --radius-m: 18px;
-  --wrap: 1068px;
-  --gutter: max(22px, env(safe-area-inset-left));
 
   font-family: var(--font);
   font-size: 17px;
@@ -33,7 +31,7 @@
   }
 }
 
-#bio .wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
+#bio .wrap { width: var(--page-content-width); margin-inline: auto; }
 #bio img { display: block; height: auto; }
 #bio .about-portrait img { background: #f0fafa; }
 #bio a { color: var(--link); text-decoration: none; }
