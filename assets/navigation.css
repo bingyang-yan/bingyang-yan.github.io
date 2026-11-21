@@ -74,11 +74,9 @@ body {
 .gnav-inner {
   height: var(--nav-h);
   display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px;
-  width: 100%;
-  max-width: 1024px;
-  margin-inline: auto;
-  padding-left: max(var(--chrome-inset), env(safe-area-inset-left, 0px));
-  padding-right: max(var(--chrome-inset), env(safe-area-inset-right, 0px));
+  --nav-gutter: calc((100% - var(--page-content-width)) / 2);
+  padding-left: max(var(--nav-gutter), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--nav-gutter), env(safe-area-inset-right, 0px));
 }
 .gnav-brand {
   font-size: 17px; font-weight: 600; letter-spacing: -0.02em;
@@ -112,6 +110,7 @@ body {
 }
 .icon-btn:hover { background: var(--hairline); }
 .icon-btn svg { width: 17px; height: 17px; }
+.gnav-tools [data-search] svg { justify-self: end; margin-inline-end: -2px; }
 
 .gnav-menu-btn { display: none; flex-direction: column; align-items: center; justify-content: center; }
 .gnav-menu-btn span {
