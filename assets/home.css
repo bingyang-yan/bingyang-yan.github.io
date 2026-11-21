@@ -162,7 +162,7 @@
 .home-page #bio .about-portrait .name {
   color: var(--home-primary);
   font-size: var(--home-heading);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.12;
   letter-spacing: -0.045em;
 }
@@ -229,11 +229,12 @@
 }
 
 .home-page #bio .about-portrait .name {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
 .home-page #bio .org-list a {
   font: inherit;
+  font-weight: 600;
 }
 
 .home-page #bio .about-bio {
