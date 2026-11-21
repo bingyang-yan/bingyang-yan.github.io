@@ -77,6 +77,8 @@
   display: block;
   width: fit-content;
   margin-inline: auto;
+  font-size: clamp(2rem, 7.5vw, 80px);
+  font-weight: 600;
   line-height: 1.12;
 }
 
