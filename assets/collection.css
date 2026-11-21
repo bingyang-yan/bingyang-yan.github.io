@@ -42,9 +42,7 @@
 }
 
 .travel-source-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
+  display: inline-block;
   color: #0066cc;
   font-family: "SF Pro Text", -apple-system, "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 17px;
@@ -56,9 +54,11 @@
 }
 
 .travel-source-link::after {
+  display: inline-block;
   width: 0.42em;
   height: 0.42em;
-  flex: none;
+  margin-inline-start: 0.24em;
+  vertical-align: calc(0.5ex - 0.21em);
   border-inline-end: 1.5px solid;
   border-block-start: 1.5px solid;
   transform: rotate(45deg);
