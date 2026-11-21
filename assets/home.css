@@ -159,10 +159,6 @@
   font: inherit;
 }
 
-.home-page .travel-heading {
-  margin-block-end: clamp(22px, 3vw, 32px);
-}
-
 .home-page #bio .about-portrait .name {
   color: var(--home-primary);
   font-size: var(--home-heading);
@@ -193,10 +189,6 @@
     letter-spacing: 0.007em;
     line-height: 1.1428571429;
   }
-}
-
-.home-page .travel-source-link {
-  font-size: 1rem;
 }
 
 .home-page .travel-filter[aria-pressed="true"] {
