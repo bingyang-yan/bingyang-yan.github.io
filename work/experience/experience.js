@@ -34,14 +34,15 @@
     card.querySelector('.news-card-title').textContent = entry.title;
     card.querySelector('.experience-university strong').textContent = entry.university;
 
-    const link = card.querySelector('.experience-details-link');
+    const link = card.querySelector('.experience-card-link');
     const details = entry.links?.find(({ label }) => label === 'Details');
     if (details?.url) {
       link.href = new URL(details.url, dataUrl);
       link.setAttribute('aria-label', 'Learn more about ' + entry.title);
       cardResizeObserver.observe(card, { box: 'border-box' });
     } else {
-      link.remove();
+      link.querySelector('.experience-details-label').remove();
+      link.replaceWith(...link.childNodes);
     }
 
     const cover = card.querySelector('.experience-card-cover');
