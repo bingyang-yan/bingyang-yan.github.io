@@ -11,7 +11,6 @@
   --home-section-padding: clamp(40px, 5vw, 56px);
   --home-radius: 20px;
   --home-heading: clamp(2rem, 3.1vw, 2.5rem);
-  --home-title: clamp(2.5rem, 5.15vw, 4rem);
   --home-body: 1rem;
   --home-subheading: 1.25rem;
   --home-detail: 0.875rem;
@@ -43,12 +42,6 @@
   }
 }
 
-@media (min-width: 1024px) {
-  .home-page {
-    --home-title: clamp(3.5rem, 5.15vw, 4rem);
-  }
-}
-
 .home-page .gnav {
   transition-duration: var(--home-duration);
 }
@@ -76,7 +69,8 @@
   font-size: 80px;
   font-weight: 700;
   letter-spacing: -0.035em;
-  line-height: 1.05;
+  line-height: 1.16;
+  padding-block-end: 0.05em;
 }
 
 @supports (background-clip: text) or (-webkit-background-clip: text) {
@@ -117,7 +111,6 @@
 @media (max-width: 1068px) {
   .home-hero-title {
     font-size: clamp(58px, 8vw, 64px);
-    line-height: 1.0625;
   }
 
   .home-hero-subtitle {
@@ -130,7 +123,7 @@
   .home-hero-title {
     font-size: clamp(34px, 10vw, 48px);
     letter-spacing: -0.03em;
-    line-height: 1.085;
+    line-height: 1.18;
   }
 
   .home-hero-subtitle {
@@ -173,7 +166,6 @@
   margin-block-end: clamp(22px, 3vw, 32px);
 }
 
-.home-page .travel-heading :is(h1, h2),
 .home-page #bio .about-portrait .name {
   color: var(--home-primary);
   font-size: var(--home-heading);
@@ -183,7 +175,27 @@
 }
 
 .home-page-work #work-index .travel-heading h2 {
-  font-size: var(--home-title);
+  font-family: "SF Pro Display", -apple-system, "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  line-height: 1.0714285714;
+}
+
+@media (max-width: 1068px) {
+  .home-page-work #work-index .travel-heading h2 {
+    font-size: 48px;
+    letter-spacing: -0.003em;
+    line-height: 1.0834933333;
+  }
+}
+
+@media (max-width: 734px) {
+  .home-page-work #work-index .travel-heading h2 {
+    font-size: 28px;
+    letter-spacing: 0.007em;
+    line-height: 1.1428571429;
+  }
 }
 
 .home-page .travel-source-link {
