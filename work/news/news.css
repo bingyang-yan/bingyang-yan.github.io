@@ -96,9 +96,7 @@ a.news-card-title:hover { text-decoration: underline; }
 }
 :is(#experience, #news) .news-card-links { margin-top: 6px; font-size: 14px; }
 .news-card-links:empty { display: none; }
-.experience-research-topic a,
 .news-card-links a { color: var(--travel-link); text-decoration: none; }
-.experience-research-topic a:hover,
 .news-card-links a:hover { text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
@@ -158,7 +156,10 @@ a.news-card-title:hover { text-decoration: underline; }
   padding-inline: 0;
 }
 
-#experience .news-rail { align-items: stretch; }
+#experience .news-rail {
+  --news-card-width: min(86%, clamp(300px, 30vw, 400px));
+  align-items: stretch;
+}
 
 :is(#experience, #news, #awards) .news-card { border: 0; }
 
@@ -166,46 +167,93 @@ a.news-card-title:hover { text-decoration: underline; }
   box-shadow: var(--work-card-shadow);
 }
 
-#experience .news-card-copy { flex: 1; }
-
-#experience .experience-linked-card { position: relative; }
-#experience .news-card-photo {
+#experience .experience-card {
   position: relative;
-  z-index: 1;
-  border-radius: 16px;
+  overflow: hidden;
+  border-radius: 24px;
 }
-#experience .experience-details-link { text-decoration-skip-ink: none; }
-#experience .experience-details-link::after {
+
+.experience-card-copy {
+  flex: 1;
+  padding: clamp(20px, 3vw, 30px);
+}
+
+#experience .experience-card h3 {
+  margin: 10px 0 0;
+  line-height: 1.35;
+}
+
+.experience-university {
+  margin: 8px 0 0;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.experience-card-cover {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.experience-card-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-details-link {
+  align-self: end;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 16px 16px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: var(--home-white, #fff);
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-decoration: none;
+}
+
+.experience-card-cover + .experience-details-link { margin-top: -54px; }
+
+.experience-details-link span {
+  width: 7px;
+  height: 7px;
+  border: solid currentColor;
+  border-width: 2px 2px 0 0;
+  transform: rotate(45deg);
+}
+
+.experience-details-link::after {
   position: absolute;
   inset: 0;
-  cursor: pointer;
   content: "";
 }
-#experience .experience-research-topic a {
-  position: relative;
-  z-index: 1;
-  cursor: pointer;
+
+.experience-card:has(.experience-details-link:focus-visible) {
+  outline: 2px solid var(--travel-link);
+  outline-offset: -3px;
 }
-#experience .experience-research-topic a + a { margin-inline-start: 0.45em; }
-@media (hover: hover) {
-  #experience .experience-linked-card:hover .experience-details-link {
-    text-decoration: underline;
+
+.experience-details-link:focus-visible,
+.experience-card:has(.experience-details-link:hover) .experience-details-link {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .experience-card-cover img { transition: transform 250ms ease; }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .experience-card:has(.experience-details-link:hover) .experience-card-cover img {
+    transform: scale(1.035);
   }
 }
-#experience .experience-details-link:focus-visible { text-decoration: underline; }
-#experience .experience-details-link:focus-visible::after {
-  outline: 2px solid currentColor;
-  outline-offset: -2px;
-}
-
-.experience-university,
-.experience-research-topic {
-  margin: 5px 0 0;
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-.experience-research-topic { color: var(--travel-muted); }
 
 .experience-placeholder { aspect-ratio: 16 / 10; }
 

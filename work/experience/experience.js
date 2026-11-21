@@ -5,55 +5,43 @@
   const status = document.getElementById('experience-status');
   const cardTemplate = document.getElementById('experience-card-template');
   const workPlaceholder = document.getElementById('experience-work-placeholder');
-  const photoDialog = document.getElementById('experience-photo-dialog');
-  const enlargedPhoto = photoDialog.querySelector('img');
   const dataUrl = new URL('./education.json?v=6', document.currentScript.src);
   const educationFilter = filters.querySelector('[value="education"]');
   let selected = 'education';
   let educationCards = [];
   let educationStatus = 'Loading education…';
 
-  function makeLink({ label, url }) {
-    const link = document.createElement('a');
-    link.href = url;
-    link.textContent = label;
-    return link;
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  function formatDuration(duration) {
+    const range = /^(\d{4})\.(0[1-9]|1[0-2])\s*[-–]\s*(\d{4})\.(0[1-9]|1[0-2])$/.exec(duration);
+    if (!range) return duration;
+    const [, startYear, startMonth, endYear, endMonth] = range;
+    return [startYear + startMonth, endYear + endMonth].sort().reverse()
+      .map((date) => months[Number(date.slice(4)) - 1] + ' ' + date.slice(0, 4))
+      .join(' - ');
   }
 
   function makeCard(entry) {
     const card = cardTemplate.content.firstElementChild.cloneNode(true);
-    card.querySelector('.news-card-date').textContent = entry.duration;
-    const title = card.querySelector('.news-card-title');
-    title.textContent = entry.title;
+    card.querySelector('.news-card-date').textContent = formatDuration(entry.duration);
+    card.querySelector('.news-card-title').textContent = entry.title;
     card.querySelector('.experience-university strong').textContent = entry.university;
-    const topic = card.querySelector('.experience-research-topic');
-    topic.textContent = entry.researchTopic;
-    if (entry.researchLink) topic.append(' ', makeLink(entry.researchLink));
 
-    for (const link of entry.links) {
-      if (link.label === 'Details') {
-        const titleLink = makeLink({ label: entry.title, url: link.url });
-        titleLink.className = 'news-card-title experience-details-link';
-        card.classList.add('experience-linked-card');
-        title.replaceChildren(titleLink);
-        continue;
-      }
-
-      topic.append(' ', makeLink(link));
+    const link = card.querySelector('.experience-details-link');
+    const details = entry.links?.find(({ label }) => label === 'Details');
+    if (details?.url) {
+      link.href = new URL(details.url, dataUrl);
+      link.setAttribute('aria-label', 'Learn more about ' + entry.title);
+    } else {
+      link.remove();
     }
 
-    const photo = card.querySelector('.news-card-photo');
+    const cover = card.querySelector('.experience-card-cover');
     if (entry.cover) {
-      const coverUrl = new URL(entry.cover, dataUrl);
-      photo.querySelector('img').src = coverUrl;
-      photo.setAttribute('aria-label', 'Enlarge photo: ' + entry.title);
-      photo.addEventListener('click', () => {
-        enlargedPhoto.src = coverUrl;
-        enlargedPhoto.alt = entry.title;
-        photoDialog.showModal();
-      });
+      cover.querySelector('img').src = new URL(entry.cover, dataUrl);
     } else {
-      photo.remove();
+      cover.remove();
     }
     return card;
   }
@@ -78,10 +66,6 @@
     selected = button.value;
     grid.scrollLeft = 0;
     render();
-  });
-
-  photoDialog.addEventListener('click', (event) => {
-    if (event.target === photoDialog) photoDialog.close();
   });
 
   fetch(dataUrl)
